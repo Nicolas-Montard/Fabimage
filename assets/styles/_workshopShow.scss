@@ -1,0 +1,49 @@
+.workshop-show{
+  .description{
+    width: 35%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .picture{
+    object-fit: cover;
+  }
+  .picture-container{
+    width: 50%;
+    height: 350px;
+    @include media-breakpoint-down(md){
+      width: 100%;
+    }
+  }
+  .logo{
+    height: 25px;
+    width: 25px;
+  }
+  .commentaries{
+    height: 700px;
+    width: 100%;
+  }
+  .quote-container{
+    height: 45px;
+    width: 45px;
+  }
+  .commentaries-carousel{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+
+    .container-text{
+      min-height: 300px;
+      .text{
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        font-style: italic;
+        @include media-breakpoint-down(md){
+          width: 80%;
+        }
+      }
+    }
+  }
+}

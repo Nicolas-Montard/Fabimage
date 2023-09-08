@@ -1,0 +1,38 @@
+.fabienne{
+  width: 60%;
+  @include media-breakpoint-down(md){
+    width: 90%;
+  }
+  .title{
+    width: 60%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+    p{
+      line-height: normal;
+    }
+  }
+  .container-column{
+    margin-top: 100px;
+    .column{
+      width: 40%;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
+    }
+
+  }
+  .decoration{
+    background-color: #FFEEE2;
+    width: 85%;
+    height: 150px;
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+  .image-2{
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+</head>
+<body>
+    <h3>{{ form.firstName }} {{ form.lastName }} est intéréssé par un atelier</h3>
+    <p>ateliers: {% for workshope in form.workshop %}
+            {{ workshope.titleFr }},
+        {% endfor %}</p>
+    <p>Email : {{ form.email }}</p>
+    <p>Numéro de téléphone : {{ form.phoneNumber }}</p>
+    <p>{{ form.firstName }} {{ form.lastName }} a découvert les ateliers et les masterclasses par {{ form.informed }}</p>
+    {% if form.agreements %}
+        <p>{{ form.firstName }} {{ form.lastName }} ne souhaite pas recevoir des nouvelles ou offres.</p>
+    {% endif %}
+    <p>{{ form.message|nl2br }}</p>
+</body>
+</html>

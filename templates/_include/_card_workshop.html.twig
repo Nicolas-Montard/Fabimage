@@ -1,0 +1,16 @@
+<div class="image-container">
+    <img src="{{ asset('uploads/images/pictures/' ~ workshop.smallPicture) }}" alt="">
+    <div class="bg-primary text-center text-white footer w-75 mx-auto d-flex flex-column justify-content-between align-items-center">
+        <p class="fs-5 fst-italic m-0 my-3">
+            {% if app.request.locale == 'fr' %}
+                {{ workshop.titleFr|raw}}
+            {% elseif app.request.locale == 'es' %}
+                {{ workshop.titleEs|raw}}
+            {% elseif app.request.locale == 'et' %}
+                {{ workshop.titleEt|raw}}
+            {% endif %}
+        </p>
+        <a href="{{ path('app_workshop_show', {id: workshop.id}) }}"><button class="btn btn-secondary rounded-0 p-1 text-white fs-3">
+            <img src="{{ asset('build/images/icons8-plus-que-50.png') }}" alt="" class="h-100"></button></a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+.contact-workshop{
+  .form-container{
+    width: 30%;
+    @include media-breakpoint-down(md){
+      width: 85%;
+    }
+  }
+  .title-container{
+    width: 45%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .widget{
+    height: 40px;
+    @include media-breakpoint-down(md){
+      height: 60px;
+    }
+  }
+  .message{
+    height: 120px;
+    @include media-breakpoint-down(md){
+      height: 180px;
+    }
+  }
+  .form-confirmation{
+    width: 40%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .workshop-checkbox{
+    label{
+      margin-right: 10px;
+    }
+    input{
+      margin-right: 3px;
+    }
+  }
+}

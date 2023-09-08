@@ -1,0 +1,27 @@
+<div class="image-container mx-auto">
+    <img src="{{ asset('uploads/images/pictures/' ~ service.picture) }}" alt="" class="w-100 h-100">
+</div>
+<div>
+    <div class="d-flex flex-column text-container mx-auto rounded-1">
+        <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-0">
+            {% if app.request.locale == 'fr' %}
+                {{ service.titleFr }}
+            {% elseif app.request.locale == 'es' %}
+                {{ service.titleEs }}
+            {% else %}
+                {{ service.titleEt }}
+            {% endif %}</h3>
+        <p class="mt-2 mx-3">
+            {% if app.request.locale == 'fr' %}
+                {{ service.underTitleFr|nl2br }}
+            {% elseif app.request.locale == 'es' %}
+                {{ service.underTitleEs|nl2br }}
+            {% else %}
+                {{ service.underTitleEt|nl2br }}
+            {% endif %}
+        </p>
+        <div class="d-flex justify-content-center">
+            <a href="{{ path('app_service_show', {id: service.id}) }}"><button class="btn btn-secondary text-white fs-5">En lire plus</button></a>
+        </div>
+    </div>
+</div>

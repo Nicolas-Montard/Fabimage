@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Workshop{% endblock %}
+
+{% block body %}
+    <div class="form-workshop edit-workshop">
+        <h1 class="text-center text-primary mb-5">Créer un nouvelle atelier</h1>
+        {{ include('workshop/_form.html.twig') }}
+    </div>
+{% endblock %}

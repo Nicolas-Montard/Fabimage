@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <main class="registerForm">
+        {% for flash_error in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+        {% endfor %}
+
+        <h1 class="text-primary mb-3">S'enregistrer</h1>
+
+        {{ form_start(registrationForm, {
+            attr: {
+                class: 'mx-auto'
+            }
+        }) }}
+        <div class="form-floating mb-3">
+            {{ form_widget(registrationForm.email, {
+                attr: {
+                    placeholder: 'john@doe.fr',
+                    class: 'form-control'
+                },
+            }) }}
+            {{ form_label(registrationForm.email) }}
+        </div>
+        <div class="form-floating mb-3">
+            {{ form_widget(registrationForm.plainPassword, {
+                attr: {
+                    placeholder: 'Mot de passe',
+                    class: 'form-control'
+                },
+                row_attr: {
+                    class: 'form-floating mb-3'
+                }
+            }) }}
+            {{ form_label(registrationForm.plainPassword, 'Mot de passe') }}
+        </div>
+        {{ form_widget(registrationForm.agreeTerms, {
+            attr: {
+                class: 'me-2'
+            }
+        }) }}
+        {{ form_label(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn btn-secondary text-white">S'enregistrer</button>
+        {{ form_end(registrationForm) }}
+    </main>
+{% endblock %}

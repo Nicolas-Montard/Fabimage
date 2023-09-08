@@ -1,0 +1,23 @@
+.coachingImage{
+  width: 75%;
+  @include media-breakpoint-down(md){
+    width: 90%;
+  }
+  .column{
+    width: 40%;
+    @include media-breakpoint-down(md){
+      width: 100%;
+    }
+  }
+  .container-column{
+    margin-top: 100px;
+  }
+  .left-column-list{
+    margin-bottom: -10px;
+  }
+  .right-column-image{
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+}

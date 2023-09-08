@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'coachingImage.title' }}{% endblock %}
+
+{% block body %}
+    <div class="coachingImage mx-auto">
+        <h1 class="text-center text-primary">{{ 'coachingImage.h1'|trans }}</h1>
+        <p class="text-center mt-3">{{ 'coachingImage.h1.p1'|trans|raw }}</p>
+        <p class="text-center mt-4">{{ 'coachingImage.h1.p2'|trans }}</p>
+        <div class="d-flex flex-column flex-md-row-reverse container-column justify-content-between">
+            <div class="column">
+                <h2 class="text-primary fs-1">{{ 'coachingImage.rightColumn.h2'|trans }}</h2>
+                <p class="mt-5">{{ 'coachingImage.rightColumn.p.1'|trans|raw }}</p>
+                <img src="{{ asset('build/images/coachingImage2.png') }}" alt="{{ 'coachingImage.rightColumn.img.alt'|trans }}" class="w-100 right-column-image">
+            </div>
+            <div class="column">
+                <img src="{{ asset('build/images/coachingImage1.png') }}" alt="{{ 'coachingImage.leftColumn.img.alt'|trans }}" class="w-100">
+                <p class="mt-4">{{'coachingImage.leftColumn.p.1'|trans|raw}}</p>
+                <div class="d-flex justify-content-center">
+                    <a href="{{ path('app_service_index') }}">
+                    <button class="btn-secondary btn fs-5 text-white px-5 mt-3">{{ 'coachingImage.button.services'|trans }}</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

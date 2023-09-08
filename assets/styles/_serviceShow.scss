@@ -1,0 +1,17 @@
+.service-show{
+  .description{
+    width: 45%;
+  }
+  .picture{
+    width: 275px;
+    height: 345px;
+    object-fit: cover;
+  }
+  .title{
+    margin-left: 100px;
+    max-width: 450px;
+    h1{
+      font-size: 50px;
+    }
+  }
+}

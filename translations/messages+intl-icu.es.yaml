@@ -1,0 +1,126 @@
+home.title: "Eres tú el artista de tu  imagen."
+home.underTitle: "Fabimage - coaching de imagen"
+home.video: __home.video
+home.presentaion.head.title: "¿Cómo puedo apoyarte en la realización de tus sueños?"
+home.presentation.head.text: "¿Quieres tener un <strong>estilo auténtico</strong> que te represente al 100%, con el que te sientas cómodo en cualquier circunstancia, pero no sabes por dónde empezar?"
+home.presentation.body.text: "Tener un <strong>estilo auténtico</strong> y \"a mi medida\" es el sueño de muchos de nosotros. Y esa es la oferta de mi método de coaching de imagen.<br><br>Estoy aquí para ayudarte a descubrir la parte oculta de tu iceberg y guiarte hacia un <strong>cambio positivo</strong> que te permita descubrir y utilizar <strong>todo tu potencial,</strong> a través de las tres dimensiones de tu imagen: tu imagen interna, tu cuerpo y tu apariencia.<br><br>Estoy aquí para ayudarte a <strong>ser más “tú mismo”.</strong><br><br>Echa un vistazo, explora mi página web y no dudes en ponerte en contacto conmigo si tienes alguna pregunta!"
+home.knowMore: "seguir leyendo"
+home.flowerImage: __home.flowerImage
+workshop.show.appointment: __workshop.show.appointment
+navbar.CoachingAndImage: "Coaching de imagen"
+navbar.language: "Español"
+navbar.coachingOfImage: "Coaching de imagen"
+navbar.workshop: "Talleres"
+navbar.contact: "contacto"
+contact.contactMe: 'Contáctame :'
+contact.service.form.type: 'Mi solicitud se refiere a :'
+contact.service.form.client: 'Yo soy :'
+contact.form.firstName: Nombre
+contact.form.lastName: Apellidos
+contact.form.Email: 'Correo electrónico'
+contact.form.phoneNumber: Teléfono
+contact.service.form.message: 'Su mensaje'
+contact.workshop.validation: 'Gracias por su mensaje.<br><br>Si no ha recibido respuesta en dos o tres días, es posible que el mensaje haya llegado como Spam o “correo no deseado” o, si utiliza Gmail, mire en la pestaña Notificaciones.'
+contact.workshop.title: 'Deseo inscribirme en un taller de Fabimage o en un masterclass en línea'
+contact.workshop.undertitle: 'Los talleres tienen lugar en : P. Süda 13, centro de la ciudad de Tallin.<br><br>Las clases magistrales en línea tienen lugar en Zoom. El enlace para participar se enviará a tu dirección de correo electrónico el día antes del taller.'
+contact.workshop.form.workshop: 'Elige un taller/talleres. Precio reducido si te inscribes en dos talleres o con un amigo.'
+contact.workshop.form.informed: '¿Cómo se enteró de los talleres y masterclasses de Fabimage?'
+contact.workshop.form.message: Comentarios
+contact.workshop.commentary.info: 'Por ejemplo, si desea recibir una factura a nombre de su empresa, o si dispone de un código promocional, indíquelo en este campo.'
+contact.workshop.agreements.info: 'Hemos creado una lista de personas que desean ser informadas de las actividades y talleres de Fabimage. Sólo escribo una o dos veces al mes o incluso menos ;-)'
+home.commentary.title.1: __home.commentary.title.1
+home.commentary.text.1: __home.commentary.text.1
+home.commentary.author.1: __home.commentary.author.1
+home.commentary.title.2: __home.commentary.title.2
+home.commentary.text.2: __home.commentary.text.2
+home.commentary.author.2: __home.commentary.author.2
+home.commentary.title.3: __home.commentary.title.3
+home.commentary.text.3: __home.commentary.text.3
+home.commentary.author.3: __home.commentary.author.3
+home.commentary.title.4: __home.commentary.title.4
+home.commentary.text.4: __home.commentary.text.4
+home.commentary.author.4: __home.commentary.author.4
+home.commentary.title.5: __home.commentary.title.5
+home.commentary.text.5: __home.commentary.text.5
+home.commentary.author.5: __home.commentary.author.5
+home.commentary.title.6: __home.commentary.title.6
+home.commentary.text.6: __home.commentary.text.6
+home.commentary.author.6: __home.commentary.author.6
+home.commentary.title.7: __home.commentary.title.7
+home.commentary.text.7: __home.commentary.text.7
+home.commentary.author.7: __home.commentary.author.7
+home.commentary.title.8: __home.commentary.title.8
+home.commentary.text.8: __home.commentary.text.8
+home.commentary.author.8: __home.commentary.author.8
+home.commentary.title.9: __home.commentary.title.9
+home.commentary.text.9: __home.commentary.text.9
+home.commentary.author.9: __home.commentary.author.9
+coachingImage.h1: __coachingImage.h1
+coachingImage.h1.p1: __coachingImage.h1.p1
+coachingImage.h1.p2: __coachingImage.h1.p2
+coachingImage.rightColumn.h2: __coachingImage.rightColumn.h2
+coachingImage.rightColumn.p.1: __coachingImage.rightColumn.p.1
+coachingImage.rightColumn.img.alt: __coachingImage.rightColumn.img.alt
+coachingImage.leftColumn.img.alt: __coachingImage.leftColumn.img.alt
+coachingImage.leftColumn.p.1: __coachingImage.leftColumn.p.1
+coachingImage.button.services: __coachingImage.button.services
+coachingImage.valueOfFabimage: __coachingImage.valueOfFabimage
+coachingImage.kindness: __coachingImage.kindness
+coachingImage.respectOfWhoYouAre: __coachingImage.respectOfWhoYouAre
+coachingImage.listen: __coachingImage.listen
+coachingImage.optimism: __coachingImage.optimism
+coachingImage.authenticity: __coachingImage.authenticity
+coachingImage.professionalism: __coachingImage.professionalism
+coachingImage.rightColumn.h2.2: __coachingImage.rightColumn.h2.2
+coachingImage.rightColumn.p.2: __coachingImage.rightColumn.p.2
+coachingImage.button.requestQuote: __coachingImage.button.requestQuote
+fabienne.title.p: 'Coach de imagen<br><br>Creadora de bienestar a través de la imagen'
+fabienne.leftColumn.p.1: 'Siempre he pensado que la imagen es la clave de la comunicación. Después de trabajar en diferentes sectores, me di cuenta de que me encantaba ayudar a las personas a sentirse más seguras y radiantes. En 2019 lancé FABIMAGE con el objetivo de ayudarte <strong>a sentirte lo mejor posible.</strong><br>Mi papel es proporcionarte herramientas experimentadas para ayudarte a construir un <strong>estilo personal coherente con quién eres</strong> y un vestuario que <strong>cuente la historia de tu belleza interior.</strong><br><br>Soy francesa y vivo en Estonia desde hace muchos años.<br><strong>¿Qué imagen tengo de mí misma?</strong><br><br>Aunque a veces fluctuante, es colorida, sólida, sensible y profunda.<br>Soy reflexiva, idealista, un poco tímida pero apasionada por las relaciones humanas y, sobre todo, muy joven de corazón 😊 Me gusta mucho salir con amigos. Tengo un oído atento que escucha a las personas que quieren confiar en mí. Me gusta pensar y llegar al fondo de las cosas. La gente dice que tengo un corazón grande.<br><br>Puedo maquillarme o no, pero rara vez voy sin pintarme los labios. Soy de estatura media, ojos color avellana, piel bastante clara y pelo castaño liso. A pesar de mis incursiones en otros estilos, el bob asimétrico vuelve a mí como el estribillo de una canción favorita.<br><br>Me gusta reír, tengo un sentido del humor que no siempre se entiende 😊 Lloro si me emociona mucho una historia, puede ser viendo una película. O me pongo de buen humor con Jean Jacques Goldman (Je te donne), El Arrebato, Zaz, Curly Strings y muchos otros. Me encanta hablar y contar historias. Si tengo confianza, ¡puedo no parar!<br><br>La confianza es uno de los temas que trabajé durante mi formación en coaching de imagen, durante la cual pasé por un proceso de <strong>transformación total in & out</strong> que me llevó hasta donde estoy hoy. Así que yo misma pasé por este maravilloso viaje que hoy te ofrezco. Y te lo garantizo: <strong>si te gusta la idea de trabajar toda tu imagen, ¡merece mucho la pena!</strong> ¡Hoy disfruto de un estilo más auténtico y libre!<br><br>¡Descubre lo que puedo hacer por tu bienestar y tu estilo!'
+fabienne.Idiscover: '¡ Descubro !'
+fabienne.AFIPP: 'AFIPP - <a href="https://www.afipp.org/">Association Francophone pour l''Image et la Posture Professionnelle</a> (Asociación Francófona para la Imagen y la Postura Profesional).<br><br>Soy miembro del AFIPP desde marzo de 2020.<br>Somos profesionales de la imagen, asesores, consultores, formadores y coaches, mujeres y hombres, con un deseo comun: crear un circulo convivial entre pares, que permita a cada uno intercambiar, mantener una dinamica, promover un desarollo calitativo para mantener un alto nivel profesional.'
+service.index.p.1: __service.index.p.1
+service.index.p.2: __service.index.p.2
+service.show.appointment: __service.show.appointment
+workshop.index.p.1: __workshop.index.p.1
+navbar.frenchFlag: __navbar.frenchFlag
+navbar.spanishFlag: __navbar.spanishFlag
+contact.form.informed.friend: 'Recomendación de un amigo'
+contact.form.informed.facebook: Facebook
+contact.form.informed.instagram: Instagram
+contact.form.informed.searchEngine: 'Buscador de Internet'
+contact.form.informed.other: Otro
+contact.workshop.form.choice.rendez-vous: 'Solicitar una cita'
+contact.workshop.form.choice.info: 'Solicitar información'
+contact.workshop.form.client.particular: Particular
+contact.workshop.form.business: Empresa
+contact.workshop.form.AssociationSchool: 'Asociación, colegio'
+home.video.link: 'https://www.youtube.com/embed/RJwIilLRpvo'
+navbar.deconnect: "Desconectarse"
+Fabienne.title: 'Minust | Fabienne, Fabimage Eesti'
+Company.title: "__Company.title"
+contact.workshop.form.agreements.info: 'Me kogume neid andmeid selleks, et saata teile e-posti teel teie poolt soovitud teavet/ pakkumist. Kasutame teie e-posti aadressi ka selleks, et saata teile teavet meie teenuste kohta.<br><br>Kui te ei soovi selliseid kirju saada, märgistage palun allpool olev kast:'
+contact.workshop.form.agreements: 'Olen vastu sellele, et minu e-posti aadressi kasutatakse Fabimage OÜ uudiste ja/või pakkumiste saamiseks.'
+company.title: __company.title
+company.content.title: __company.content.title
+company.top-section.title: __company.top-section.title
+company.top-section.text: __company.top-section.text
+company.top-section-list.list.personalRessources: __company.top-section-list.list.personalRessources
+company.top-section-list.list.myBody: __company.top-section-list.list.myBody
+company.top-section-list.list.style: __company.top-section-list.list.style
+company.top-section-list.list.image: __company.top-section-list.list.image
+company.top-section-list.list.modeEthic: __company.top-section-list.list.modeEthic
+company.top-section.text.contactMe: __company.top-section.text.contactMe
+company.button.contact: __company.button.contact
+company.bottom-section.title: __company.bottom-section.title
+company.bottom-section.text: __company.bottom-section.text
+company.bottom-section.ol.accompaniedMember: __company.bottom-section.ol.accompaniedMember
+company.bottom-section.ol.collectifWorkshop: __company.bottom-section.ol.collectifWorkshop
+company.bottom-section.list.label: __company.bottom-section.list.label
+company.bottom-section.list.colorCloth: __company.bottom-section.list.colorCloth
+company.bottom-section.list.colorimetry: __company.bottom-section.list.colorimetry
+company.bottom-section.list.accessories: __company.bottom-section.list.accessories
+company.bottom-section.list.image: __company.bottom-section.list.image
+company.bottom-section.list.sevenStyle: __company.bottom-section.list.sevenStyle
+company.bottom-section.list.treeOfLife: __company.bottom-section.list.treeOfLife
+company.bottom-section.endText: __company.bottom-section.endText
+navbar.company: __navbar.company

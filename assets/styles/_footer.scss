@@ -1,0 +1,35 @@
+.footer-container{
+  flex-shrink: 0;
+  .footer{
+    min-height: 150px;
+    width: 100%;
+    @include media-breakpoint-up(md){
+      .block{
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+    }
+    p{
+      font-size: 16px!important;
+      @include media-breakpoint-down(md){
+        font-size: 12px!important;
+      }
+    }
+    a{
+      color: $white;
+      font-size: 16px!important;
+      @include media-breakpoint-down(md){
+        font-size: 12px!important;
+      }
+    }
+    img{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .pre-footer{
+    background-color: #ED1566;
+    height: 15px;
+    width: 100%;
+  }
+}

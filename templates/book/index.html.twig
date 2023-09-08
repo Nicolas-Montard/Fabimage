@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book index{% endblock %}
+
+{% block body %}
+    <div class="book-index">
+        {% for book in books %}
+            <div class="column-container d-flex justify-content-between mx-auto">
+                <div class="left-column column">
+                    <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="">
+                </div>
+                <div class="right-column column">
+                    <p class="mt-5">{{ book.descriptionFr|raw }}</p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="{{ path('app_checkout', {'id': book.id}) }}">
+                            <button class="btn btn-secondary text-white px-3">Acheter</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

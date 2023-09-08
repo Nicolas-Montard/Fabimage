@@ -1,0 +1,17 @@
+.book-index{
+  .column-container{
+    width: 70%;
+    .column{
+      width: 40%;
+    }
+    .left-column{
+      img{
+        width: 550px;
+        height: 770px;
+        object-fit: cover;
+      }
+    }
+    .right-column{
+    }
+  }
+}

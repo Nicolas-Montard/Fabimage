@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Workshop{% endblock %}
+
+{% block body %}
+    <div class="form-workshop">
+    <h1 class="text-center text-primary mb-5">Mettre a jour l'atelier</h1>
+
+    {{ include('workshop/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+    {{ include('workshop/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

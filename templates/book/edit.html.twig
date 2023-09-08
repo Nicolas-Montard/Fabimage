@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Book{% endblock %}
+
+{% block body %}
+    <div class="book-form">
+        <h1 class="text-center mb-4 text-primary">Mettre a jour le livre</h1>
+
+        {{ include('book/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+        {{ include('book/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

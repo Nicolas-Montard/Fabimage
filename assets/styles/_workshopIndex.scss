@@ -1,0 +1,14 @@
+.workshop-index{
+  .container-text{
+    width: 35%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .workshop-card-container{
+    width: 60%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+}

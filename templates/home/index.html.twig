@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="home">
+        <div class="d-flex justify-content-around flex-column flex-md-row-reverse">
+            <div class="d-flex flex-column justify-content-center align-items-center text-primary me-md-5">
+                <h1 class="w-75 text-center">{{ 'home.title'|trans }}</h1>
+                <p class="fs-4">{{ 'home.underTitle'|trans }}</p>
+            </div>
+            <div class="container-video ms-md-5 d-flex">
+                <iframe src="{{ 'home.video.link'|trans }}" title="{{ 'home.video'|trans }}" class="video"></iframe>
+            </div>
+        </div>
+        <div class="presentation d-md-flex">
+            <div class="left d-flex flex-column justify-content-center">
+                <div class="head text-white d-flex flex-column">
+                    <h2 class="mx-4 mt-4 fs-2">{{ 'home.presentaion.head.title'|trans }}</h2>
+                    <h3 class="mx-4 my-4 fs-5 lh-sm">{{ 'home.presentation.head.text'|trans }}</h3>
+                </div>
+                <div>
+                    <p class="text text-dark mt-2 mb-5 mx-2">{{ 'home.presentation.body.text'|trans|raw }}</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="{{ path('app_image_coaching') }}"><button class="btn btn-secondary text-white fs-4">
+                            {{ 'home.knowMore'|trans }}</button></a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{ asset('build/images/flower.jpg') }}" alt="{{ 'home.flowerImage'|trans }}" class="image">
+                <div class="decoration"></div>
+            </div>
+        </div>
+        <div class="quote-container d-flex justify-content-center align-items-center mt-5">
+            <img src="{{ asset('build/images/home-quote.jpg') }}" alt="" class="quote-image">
+            <div class="quote mx-auto py-4 px-5 rounded-1">
+                <p class="mx-0 mx-md-5 fst-italic my-0">{{ 'home.quote'|trans }}</p>
+            </div>
+        </div>
+
+        <div class="row row-cols-md-5 row-cols-1 service-card-container mx-auto mt-5">
+            {% for service in services %}
+                <div class="service-card mt-5 d-flex flex-column">
+                    {% include '_include/_card_service.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide mt-5">
+            <div class="carousel-inner commentaries-carousel">
+                <div class="carousel-item active h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.1'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.1'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.1'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.2'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.2'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.2'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.3'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.3'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.3'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.4'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.4'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.4'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.5'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.5'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.5'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.6'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.6'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.6'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.7'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.7'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.7'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.8'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.8'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.8'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 commentary d-flex align-items-center">
+                        <div>
+                            <h2 class="fs-4">{{'home.commentary.title.9'|trans|raw }}</h2>
+                            <p class="mt-4">{{ 'home.commentary.text.9'|trans|raw }}</p>
+                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.9'|trans|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
+            </button>
+        </div>
+    </div>
+{% endblock %}
