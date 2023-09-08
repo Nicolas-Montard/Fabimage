@@ -131,4 +131,6 @@ service.index.myOffer: 'Mes offres'
 service.index.admin.newService: 'Créer une nouvelle prestation'
 workshop.index.body.title: Ateliers
 home.quote: "<< Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! >>"
-workshop.index.admin.newWorkshop: "Créer un nouvel atelier"
+workshop.index.admin.newWorkshop: 'Créer un nouvel atelier'
+navbar.book: "Mes livres"
+navbar.user: __navbar.user

@@ -6,7 +6,7 @@ home.presentation.head.text: 'Kas soovid omada autentset stiili, mis esindab sin
 home.presentation.body.text: 'Autentne ja "kohandatud" stiil on paljudele meist unistuseks. Ja see ongi minu imago coachingu meetodi lubadus!<br><br> Olen siin selleks, et juhatada sind <strong>positiivse muutuse</strong> suunas, mis võimaldab sul avastada ja kasutada  oma <strong>täielikku potentsiaali</strong>, kasutades selleks oma imago kolme mõõdet: sinu minapilti, kehapilti ja kuvandit.<br><br> Ma olen siin, et toetada sind oma jäämäe varjatud osa avastamisel ning <strong>rohkem iseendaks saamisel!</strong><br><br> Uudista, uuri minu kodulehte ja kui tekib huvi ja/või küsimusi, siis võta ühendust !<br><br>'
 home.knowMore: 'rohkem teada'
 home.flowerImage: 'Lille kujutis'
-workshop.show.appointment: "Kohtumist kokku leppima"
+workshop.show.appointment: 'Kohtumist kokku leppima'
 navbar.CoachingAndImage: 'Imago coaching'
 navbar.language: Eesti
 navbar.coachingOfImage: 'Imago coaching'
@@ -69,8 +69,8 @@ fabienne.Idiscover: Avastan
 fabienne.AFIPP: 'AFIPP - <a href="https://www.afipp.org/">Association Francophone pour l''Image et la Posture Professionnelle</a> (Prantsuse  professionaalse imago ja hoiaku ühing).<br><br>AFIPP on prantsuse imago konsultantide ametlik ühing, mille liige olen alates märtsist 2020. Oleme elukutselised imago konsultandid ja coachid, naised ja mehed, kellel on ühine soov arendavas keskkonnas kogemusi vahetada, end toimuvaga kursis hoida, parandada oma töökvaliteeti, et säilitada kõrge professionaalne tase.'
 service.index.p.1: 'Õpi ennast paremini tundma ja täiusta oma stiili, et see peegeldaks seda, kes sa oled!<br><br>Kasutades <strong>järeleproovitud</strong> meetodit, mis on <strong>uuenduslik ja ainulaadne</strong> Eesti turul, töötan sinuga <strong>kolmemõõtmelise</strong> coachinguga: sinu sisemine imago, sinu kehapilt ja sinu väline kuvand.<br><br>Imago coachingu teenus, mis iganes see ka poleks, on alati <strong>sügavalt inimlik lähenemine,</strong> mis ei koosne lineaarsest programmist. See sõltub sinu eesmärgist, ootustest ja vajadustest sel hetkel. Seetõttu võib seansside arv vastavalt sinu edusammudele veidi varieeruda.<br><br>Minu kasutatav metoodika on <strong>toetav</strong>, mitte nõuandev, mis tähendab, et sa pead ise <strong>panustama</strong> oma protsessi: eesmärgid, ülesanded ja plaanid, mille me koos välja töötame.'
 service.index.p.2: 'Kõik teenused on saadaval nii <strong>videokonverentsil</strong> kui ka <strong>kohapeal*</strong> ja neid kahte võimalust saab ka <strong>kombineerida!</strong><br><br>Coaching-paketid toimuvad täiesti <strong>personaalsete 1:1 seansside</strong> vormis. Pärast mõningaid seansse saad <strong>isikliku dokumendi,</strong> milles on välja toodud punktid, mida oleme läbi töötanud.<br><br>Coaching-sessioonid kestavad 60-90 minutit.<br><br>Pakettide juurde kuulub <strong>tasuta 30-minutiline esmane kontakt,</strong> mille käigus saad vajalikke selgitusi ja esitada küsimusi, ning mille järel saad kinnitada oma otsust jätkata valitud teel.'
-service.show.appointment: __service.show.appointment
-workshop.index.p.1: "Fabimage pakub temaatilisi õpitubasid, mille eesmärk on aidata osalejatel sobitada kokku oma välimus, keha ja isiksus.<br>Õpitubade eelis on <strong>grupidünaamika.</strong> Õpitoad soodustavad mõttevahetust osalejate vahel ning aitavad end paremini tundma õppida tänu sõbralikule ja <strong>heasoovlikule</strong> õhkkonnale, mis on ühtlasi Fabimage üks oluline väärtus.<br>Õpid oma imagot väärtustama mänguliselt ja rikastavalt!<br>Lisaks on õpitoad soodsaks alternatiiviks isiklikule imago teenusele.<br><br>Koosveedetud aeg aitab meil:<br>-mõelda ja esitada endale küsimusi <strong>imago tähenduse</strong> kohta,<br>-teadvustada endale <strong>oma imago sõnumit,</strong><br>-seostada <strong>enesehinnang ja eneseimago</strong><br>-leida <strong>enesearengu</strong> võimalusi ning edeneda nii isiklikus kui professionaalses elus.<br><br>Õpituba saab tellida ka enda poolt moodustatud grupile."
+service.show.appointment: "kohtumist kokku leppima"
+workshop.index.p.1: 'Fabimage pakub temaatilisi õpitubasid, mille eesmärk on aidata osalejatel sobitada kokku oma välimus, keha ja isiksus.<br>Õpitubade eelis on <strong>grupidünaamika.</strong> Õpitoad soodustavad mõttevahetust osalejate vahel ning aitavad end paremini tundma õppida tänu sõbralikule ja <strong>heasoovlikule</strong> õhkkonnale, mis on ühtlasi Fabimage üks oluline väärtus.<br>Õpid oma imagot väärtustama mänguliselt ja rikastavalt!<br>Lisaks on õpitoad soodsaks alternatiiviks isiklikule imago teenusele.<br><br>Koosveedetud aeg aitab meil:<br>-mõelda ja esitada endale küsimusi <strong>imago tähenduse</strong> kohta,<br>-teadvustada endale <strong>oma imago sõnumit,</strong><br>-seostada <strong>enesehinnang ja eneseimago</strong><br>-leida <strong>enesearengu</strong> võimalusi ning edeneda nii isiklikus kui professionaalses elus.<br><br>Õpituba saab tellida ka enda poolt moodustatud grupile.'
 navbar.frenchFlag: __navbar.frenchFlag
 navbar.spanishFlag: __navbar.spanishFlag
 contact.form.Email: E-post
@@ -85,7 +85,7 @@ contact.workshop.form.client.particular: Eraisik
 contact.workshop.form.business: Firma
 contact.workshop.form.AssociationSchool: 'Ühing, kool'
 home.video.link: 'https://www.youtube.com/embed/F-IvyQHEPnc'
-navbar.deconnect: "Logi välja"
+navbar.deconnect: 'Logi välja'
 Fabienne.title: 'Ainukene Coach Eestis, kelle eriala on imago'
 contact.workshop.form.agreements.info: 'Recogemos estos datos para enviarle la información/presupuesto que ha solicitado por correo electrónico. También utilizamos su dirección de correo electrónico para enviarle información sobre nuestros servicios.<br><br>Si no desea recibir este tipo de correos, marque la casilla siguiente:'
 contact.workshop.form.agreements: 'Me opongo a que mi dirección de correo electrónico sea utilizada para recibir noticias y/u ofertas de Fabimage OÜ.'
@@ -118,4 +118,8 @@ navbar.services: Teenused
 service.index.body.title: 'Mida sinu jaoks tähendab olla autentne ?'
 service.index.myOffer: 'Minu teenused'
 service.index.admin.newService: 'luua uus teenus'
-workshop.index.body.title: "Õpitoad"
+workshop.index.body.title: Õpitoad
+home.quote: "<< Minu arusaamises imago coachingust ei ole ilu standardit, tõeline ja ainus ilu on sinu. Sinu sees on valgus, mis lihtsalt ootab, et särada! >>"
+workshop.index.admin.newWorkshop: "Looge uus töökoda"
+navbar.book: "Minu raamatud"
+navbar.user: __navbar.user

@@ -1,17 +1,17 @@
-home.title: "Eres tú el artista de tu  imagen."
-home.underTitle: "Fabimage - coaching de imagen"
+home.title: 'Eres tú el artista de tu  imagen.'
+home.underTitle: 'Fabimage - coaching de imagen'
 home.video: __home.video
-home.presentaion.head.title: "¿Cómo puedo apoyarte en la realización de tus sueños?"
-home.presentation.head.text: "¿Quieres tener un <strong>estilo auténtico</strong> que te represente al 100%, con el que te sientas cómodo en cualquier circunstancia, pero no sabes por dónde empezar?"
-home.presentation.body.text: "Tener un <strong>estilo auténtico</strong> y \"a mi medida\" es el sueño de muchos de nosotros. Y esa es la oferta de mi método de coaching de imagen.<br><br>Estoy aquí para ayudarte a descubrir la parte oculta de tu iceberg y guiarte hacia un <strong>cambio positivo</strong> que te permita descubrir y utilizar <strong>todo tu potencial,</strong> a través de las tres dimensiones de tu imagen: tu imagen interna, tu cuerpo y tu apariencia.<br><br>Estoy aquí para ayudarte a <strong>ser más “tú mismo”.</strong><br><br>Echa un vistazo, explora mi página web y no dudes en ponerte en contacto conmigo si tienes alguna pregunta!"
-home.knowMore: "seguir leyendo"
+home.presentaion.head.title: '¿Cómo puedo apoyarte en la realización de tus sueños?'
+home.presentation.head.text: '¿Quieres tener un <strong>estilo auténtico</strong> que te represente al 100%, con el que te sientas cómodo en cualquier circunstancia, pero no sabes por dónde empezar?'
+home.presentation.body.text: 'Tener un <strong>estilo auténtico</strong> y "a mi medida" es el sueño de muchos de nosotros. Y esa es la oferta de mi método de coaching de imagen.<br><br>Estoy aquí para ayudarte a descubrir la parte oculta de tu iceberg y guiarte hacia un <strong>cambio positivo</strong> que te permita descubrir y utilizar <strong>todo tu potencial,</strong> a través de las tres dimensiones de tu imagen: tu imagen interna, tu cuerpo y tu apariencia.<br><br>Estoy aquí para ayudarte a <strong>ser más “tú mismo”.</strong><br><br>Echa un vistazo, explora mi página web y no dudes en ponerte en contacto conmigo si tienes alguna pregunta!'
+home.knowMore: 'seguir leyendo'
 home.flowerImage: __home.flowerImage
-workshop.show.appointment: __workshop.show.appointment
-navbar.CoachingAndImage: "Coaching de imagen"
-navbar.language: "Español"
-navbar.coachingOfImage: "Coaching de imagen"
-navbar.workshop: "Talleres"
-navbar.contact: "contacto"
+workshop.show.appointment: 'pedir hora'
+navbar.CoachingAndImage: 'Coaching de imagen'
+navbar.language: Español
+navbar.coachingOfImage: 'Coaching de imagen'
+navbar.workshop: Talleres
+navbar.contact: contacto
 contact.contactMe: 'Contáctame :'
 contact.service.form.type: 'Mi solicitud se refiere a :'
 contact.service.form.client: 'Yo soy :'
@@ -28,9 +28,9 @@ contact.workshop.form.informed: '¿Cómo se enteró de los talleres y masterclas
 contact.workshop.form.message: Comentarios
 contact.workshop.commentary.info: 'Por ejemplo, si desea recibir una factura a nombre de su empresa, o si dispone de un código promocional, indíquelo en este campo.'
 contact.workshop.agreements.info: 'Hemos creado una lista de personas que desean ser informadas de las actividades y talleres de Fabimage. Sólo escribo una o dos veces al mes o incluso menos ;-)'
-home.commentary.title.1: __home.commentary.title.1
-home.commentary.text.1: __home.commentary.text.1
-home.commentary.author.1: __home.commentary.author.1
+home.commentary.title.1: 'Programa "plata"'
+home.commentary.text.1: 'Llevaba mucho tiempo queriendo hacer esto. El servicio fue muy informativo y Fabienne se tomó el tiempo necesario para llevar y explicar bien el proceso. <strong>He dado un gran paso adelante para mí.</strong><br><br>No estoy a la moda en el sentido de que no me gusta seguir las tendencias. Pero quiero verme bien y sentirme cómoda. Buscaba información sobre estilo más que sobre moda, y así fue como encontré Fabimage.<br><br><strong>Llegué en un momento difícil para mí.</strong> Nunca pensé ni presté atención a lo que veía la gente a mi alrededor. Me di cuenta de que los que me rodean me ven como una persona cariñosa y cálida. Y eso es bueno. Como resultado, he sido un poco más audaz en mi trato con la gente, un poco más extrovertida que antes.<br><br><strong>En cuanto a la ropa,</strong> me he vuelto más selectiva con lo que me pongo y más racional en mi enfoque. Mi guardarropa se renueva poco a poco.<br>Me sorprendió el <strong>analisis de colores,</strong> ya que muchas de mis prendas no coincidían con el. ¡También he entendido mejor por qué algunas de mis prendas siempre han escapado al vacío del armario! Tengo un abrigo gris oscuro que nunca pensé en tirar. Resulta que el gris es mi color.<br><br>Recomiendo los servicios de Fabimage a cualquier persona <strong>que tenga curiosidad y quiera ser más consciente de quién es y cómo es.</strong>'
+home.commentary.author.1: 'Marge, 36 años'
 home.commentary.title.2: __home.commentary.title.2
 home.commentary.text.2: __home.commentary.text.2
 home.commentary.author.2: __home.commentary.author.2
@@ -95,9 +95,9 @@ contact.workshop.form.client.particular: Particular
 contact.workshop.form.business: Empresa
 contact.workshop.form.AssociationSchool: 'Asociación, colegio'
 home.video.link: 'https://www.youtube.com/embed/RJwIilLRpvo'
-navbar.deconnect: "Desconectarse"
+navbar.deconnect: Desconectarse
 Fabienne.title: 'Minust | Fabienne, Fabimage Eesti'
-Company.title: "__Company.title"
+Company.title: __Company.title
 contact.workshop.form.agreements.info: 'Me kogume neid andmeid selleks, et saata teile e-posti teel teie poolt soovitud teavet/ pakkumist. Kasutame teie e-posti aadressi ka selleks, et saata teile teavet meie teenuste kohta.<br><br>Kui te ei soovi selliseid kirju saada, märgistage palun allpool olev kast:'
 contact.workshop.form.agreements: 'Olen vastu sellele, et minu e-posti aadressi kasutatakse Fabimage OÜ uudiste ja/või pakkumiste saamiseks.'
 company.title: __company.title
@@ -123,4 +123,14 @@ company.bottom-section.list.image: __company.bottom-section.list.image
 company.bottom-section.list.sevenStyle: __company.bottom-section.list.sevenStyle
 company.bottom-section.list.treeOfLife: __company.bottom-section.list.treeOfLife
 company.bottom-section.endText: __company.bottom-section.endText
-navbar.company: __navbar.company
+navbar.company: compañía
+home.quote: "<< En mi concepción del coaching de imagen no existe un estándar de belleza, la verdadera y única belleza es la tuya. ¡Hay una luz dentro de ti, esperando brillar! >>"
+service.index.body.title: __service.index.body.title
+service.index.myOffer: __service.index.myOffer
+service.index.admin.newService: __service.index.admin.newService
+workshop.index.body.title: __workshop.index.body.title
+workshop.index.admin.newWorkshop: __workshop.index.admin.newWorkshop
+navbar.fabienne: "Sobre mi"
+navbar.services: "Servicios"
+navbar.book: "Mis libros"
+navbar.user: __navbar.user
