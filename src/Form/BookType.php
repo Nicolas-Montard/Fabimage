@@ -51,7 +51,8 @@ class BookType extends AbstractType
                 ],
                 'label_attr' => [
                     'class' => 'label'
-                ]
+                ],
+                'divisor' => 100,
             ])
             ->add('pictureFrFile', VichFileType::class,[
                 'required' => $options['image_required'],

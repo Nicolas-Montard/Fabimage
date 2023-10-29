@@ -80,6 +80,7 @@
     }
     .quote{
       background-color: $light;
+      opacity: 0.85;
       width: 35%;
       @include media-breakpoint-down(md){
         width: 90%;

@@ -1,23 +1,71 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Book index{% endblock %}
+{% block title %}{{ "book.head.title"|trans }}{% endblock %}
+{% block metaDescription %}{{ "book.head.metaDescription"|trans }}{% endblock %}
 
 {% block body %}
     <div class="book-index">
+        {% if buyed %}
+            <p class="buyed-text mx-auto">{{ 'book.index.buyedBook'|trans|raw }}</p>
+        {% endif %}
+        {% if error %}
+            <p class="buyed-text mx-auto">{{ 'book.index.error'|trans|raw }}</p>
+        {% endif %}
         {% for book in books %}
-            <div class="column-container d-flex justify-content-between mx-auto">
-                <div class="left-column column">
-                    <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="">
+            <div class="column-container d-flex justify-content-between mx-auto mt-5 flex-column flex-md-row">
+                <div class="left-column column d-flex justify-content-center">
+                    {% if app.request.locale == 'fr' %}
+                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="">
+                    {% elseif app.request.locale == 'es' %}
+                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEs) }}" alt="">
+                    {% elseif app.request.locale == 'et' %}
+                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEt) }}" alt="">
+                    {% endif %}
                 </div>
                 <div class="right-column column">
-                    <p class="mt-5">{{ book.descriptionFr|raw }}</p>
+                    {% if app.request.locale == 'fr' %}
+                        <p class="mt-5">{{ book.descriptionFr|raw }}</p>
+                    {% elseif app.request.locale == 'es' %}
+                        <p class="mt-5">{{ book.descriptionEs|raw }}</p>
+                    {% elseif app.request.locale == 'et' %}
+                        <p class="mt-5">{{ book.descriptionEt|raw }}</p>
+                    {% endif %}
                     <div class="d-flex justify-content-center mt-4">
-                        <a href="{{ path('app_checkout', {'id': book.id}) }}">
-                            <button class="btn btn-secondary text-white px-3">Acheter</button>
-                        </a>
+                        {% if book.price == 0 %}
+                            <a href="{{ path('app_download_free', {'id': book.id}) }}">
+                                <button class="btn btn-secondary text-white px-3">{{ 'book.download'|trans }}</button>
+                            </a>
+                        {% else %}
+                            <form action="{{ path('app_checkout', {'id': book.id}) }}" method="get">
+                                <div class="d-flex">
+                                    <button class="btn btn-secondary text-white px-3 my-2">{{ 'book.buy'|trans }}</button>
+                                    <div class="d-flex flex-column ms-2 promotionalCode">
+                                        <label for="promotionalCode">{{ 'book.index.promotionalCode'|trans }}</label>
+                                        <input type="text" name="promotionalCode" id="promotionalCode">
+                                    </div>
+                                </div>
+                                {% if app.request.get('wrongCode') and app.request.get('id') == book.id %}
+                                    <p class="">
+                                        {{ 'book.index.wrongCode'|trans }}
+                                    </p>
+                                {% endif %}
+                            </form>
+                        {% endif %}
+                        {% if app.user %}
+                            <a href="{{ path('app_book_edit', {'id': book.id}) }}" class="ms-5">
+                                <button class="btn btn-secondary text-white px-3">{{ 'book.update'|trans }}</button>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         {% endfor %}
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{{ path('app_book_new') }}">
+                    <button class="btn btn-secondary rounded px-3 text-white">{{'book.createNewBook'|trans}}</button>
+                </a>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

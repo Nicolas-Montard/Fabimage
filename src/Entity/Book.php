@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\BookRepository;
 use DateTime;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
@@ -104,6 +106,18 @@ class Book
     #[ORM\Column(length: 255)]
     private ?string $nameEt = null;
 
+    #[ORM\OneToMany(mappedBy: 'Book', targetEntity: Token::class, orphanRemoval: true)]
+    private Collection $tokens;
+
+    #[ORM\OneToMany(mappedBy: 'Book', targetEntity: PromotionalCode::class, orphanRemoval: true)]
+    private Collection $promotionalCodes;
+
+    public function __construct()
+    {
+        $this->tokens = new ArrayCollection();
+        $this->promotionalCodes = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -138,7 +152,7 @@ class Book
         return $this->pictureFr;
     }
 
-    public function setPictureFr(string $pictureFr): static
+    public function setPictureFr(?string $pictureFr): static
     {
         $this->pictureFr = $pictureFr;
 
@@ -150,7 +164,7 @@ class Book
         return $this->pictureEs;
     }
 
-    public function setPictureEs(string $pictureEs): static
+    public function setPictureEs(?string $pictureEs): static
     {
         $this->pictureEs = $pictureEs;
 
@@ -162,7 +176,7 @@ class Book
         return $this->pictureEt;
     }
 
-    public function setPictureEt(string $pictureEt): static
+    public function setPictureEt(?string $pictureEt): static
     {
         $this->pictureEt = $pictureEt;
 
@@ -361,6 +375,66 @@ class Book
     public function setNameEt(string $nameEt): static
     {
         $this->nameEt = $nameEt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Token>
+     */
+    public function getTokens(): Collection
+    {
+        return $this->tokens;
+    }
+
+    public function addToken(Token $token): static
+    {
+        if (!$this->tokens->contains($token)) {
+            $this->tokens->add($token);
+            $token->setBook($this);
+        }
+
+        return $this;
+    }
+
+    public function removeToken(Token $token): static
+    {
+        if ($this->tokens->removeElement($token)) {
+            // set the owning side to null (unless already changed)
+            if ($token->getBook() === $this) {
+                $token->setBook(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PromotionalCode>
+     */
+    public function getPromotionalCodes(): Collection
+    {
+        return $this->promotionalCodes;
+    }
+
+    public function addPromotionalCode(PromotionalCode $promotionalCode): static
+    {
+        if (!$this->promotionalCodes->contains($promotionalCode)) {
+            $this->promotionalCodes->add($promotionalCode);
+            $promotionalCode->setBook($this);
+        }
+
+        return $this;
+    }
+
+    public function removePromotionalCode(PromotionalCode $promotionalCode): static
+    {
+        if ($this->promotionalCodes->removeElement($promotionalCode)) {
+            // set the owning side to null (unless already changed)
+            if ($promotionalCode->getBook() === $this) {
+                $promotionalCode->setBook(null);
+            }
+        }
 
         return $this;
     }

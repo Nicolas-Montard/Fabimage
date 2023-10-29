@@ -3,6 +3,12 @@
   @include media-breakpoint-down(md){
     width: 90%;
   }
+  .p-iframe{
+    width: 60%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
   .column{
     width: 40%;
     @include media-breakpoint-down(md){

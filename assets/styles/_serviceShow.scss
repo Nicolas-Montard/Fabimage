@@ -1,6 +1,14 @@
 .service-show{
   .description{
     width: 45%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .picture-container{
+    @include media-breakpoint-down(md){
+      width: 275px;
+    }
   }
   .picture{
     width: 275px;
@@ -8,10 +16,9 @@
     object-fit: cover;
   }
   .title{
-    margin-left: 100px;
-    max-width: 450px;
-    h1{
-      font-size: 50px;
+    @include media-breakpoint-up(md){
+      margin-left: 100px;
+      max-width: 450px;
     }
   }
 }

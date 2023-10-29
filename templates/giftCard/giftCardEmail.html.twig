@@ -1,0 +1,18 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+</head>
+<body>
+<h3>{{ form.name }} Souhaite acheter une carte cadeau</h3>
+<p>Nom: {{ form.name }}</p>
+<p>Email : {{ form.email }}</p>
+<p>Numéro de téléphone : {{ form.phoneNumber }}</p>
+<p>prestation : {{ form.service.titleFr }}</p>
+{% if form.isComing %}
+    <p>{{ form.name }} viendra chercher la carte cadeau</p>
+{% endif %}
+<p>{{ form.commentary|nl2br }}</p>
+</body>
+</html>

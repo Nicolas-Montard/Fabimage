@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{{ "home.head.title"|trans }}{% endblock %}
+{% block metaDescription %}{{ "home.head.metaDescription"|trans }}{% endblock %}
 
 {% block body %}
     <div class="home">
@@ -35,7 +36,7 @@
         <div class="quote-container d-flex justify-content-center align-items-center mt-5">
             <img src="{{ asset('build/images/home-quote.jpg') }}" alt="" class="quote-image">
             <div class="quote mx-auto py-4 px-5 rounded-1">
-                <p class="mx-0 mx-md-5 fst-italic my-0">{{ 'home.quote'|trans }}</p>
+                <p class="mx-0 mx-md-5 fst-italic my-0 fs-4">{{ 'home.quote'|trans }}</p>
             </div>
         </div>
 
@@ -45,98 +46,92 @@
                     {% include '_include/_card_service.html.twig' %}
                 </div>
             {% endfor %}
-        </div>
-
-        <div id="carouselExampleIndicators" class="carousel slide mt-5">
-            <div class="carousel-inner commentaries-carousel">
-                <div class="carousel-item active h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.1'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.1'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.1'|trans|raw }}</p>
-                        </div>
-                    </div>
+            <div class="service-card mt-5 d-flex flex-column">
+                <div class="image-container mx-auto">
+                    <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
                 </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.2'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.2'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.2'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.3'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.3'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.3'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.4'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.4'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.4'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.5'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.5'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.5'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.6'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.6'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.6'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.7'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.7'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.7'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.8'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.8'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.8'|trans|raw }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100">
-                    <div class="h-100 commentary d-flex align-items-center">
-                        <div>
-                            <h2 class="fs-4">{{'home.commentary.title.9'|trans|raw }}</h2>
-                            <p class="mt-4">{{ 'home.commentary.text.9'|trans|raw }}</p>
-                            <p class="fst-italic fw-bold fs-5 mt-4">{{ 'home.commentary.author.9'|trans|raw }}</p>
+                <div>
+                    <div class="d-flex flex-column text-container mx-auto rounded-1">
+                        <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white fs-5">
+                                    {{ 'Service.readMore'|trans }}</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
-            </button>
         </div>
+        {% if commentaries is defined and commentaries|length > 0 %}
+            <div id="carouselExampleIndicators" class="carousel slide mt-5">
+                <div class="carousel-inner commentaries-carousel d-flex align-items-center">
+                    {% for commentary in commentaries %}
+                        {% if loop.first %}
+                            <div class="carousel-item active h-100">
+                                <div class="h-100 commentary d-flex align-items-center">
+                                    <div class="mx-auto">
+                                        {% if app.request.locale == 'fr' %}
+                                            <h2 class="fs-4">{{ commentary.titleFr|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentFr|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                        {% elseif app.request.locale == 'es' %}
+                                            <h2 class="fs-4">{{ commentary.titleEs|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentEs|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                        {% else %}
+                                            <h2 class="fs-4">{{ commentary.titleEt|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentEt|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                        {% endif %}
+                                        <div class="d-flex justify-content-center mt-5">
+                                            <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="carousel-item h-100">
+                                <div class="h-100 commentary d-flex align-items-center">
+                                    <div class="mx-auto">
+                                        {% if app.request.locale == 'fr' %}
+                                            <h2 class="fs-4">{{ commentary.titleFr|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentFr|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                        {% elseif app.request.locale == 'es' %}
+                                            <h2 class="fs-4">{{ commentary.titleEs|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentEs|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                        {% else %}
+                                            <h2 class="fs-4">{{ commentary.titleEt|raw }}</h2>
+                                            <p class="mt-4">{{ commentary.contentEt|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                        {% endif %}
+                                        <div class="d-flex justify-content-center mt-5">
+                                            <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
+                </button>
+            </div>
+        {% endif %}
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{{ path('app_commentary_home_new') }}">
+                    <button class="btn btn-secondary text-white">{{'commentaryHome.new'|trans}}</button>
+                </a>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

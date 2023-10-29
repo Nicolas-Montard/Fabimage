@@ -114,13 +114,16 @@
         <div class="d-flex justify-content-center mt-4 gap-3">
             <a href="{{ path('contact_workshop') }}"><button class="btn btn-primary text-white">{{ 'workshop.show.appointment'|trans }}</button></a>
             {% if app.user %}
-                <a href="{{ path('app_workshop_edit', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">Mettre a jour</button></a>
+                <a href="{{ path('app_workshop_edit', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">
+                    {{ 'workshop.update'|trans }}</button></a>
             {% endif %}
         </div>
         <div class="d-flex justify-content-center mt-4 gap-3">
             {% if app.user %}
-                <a href="{{ path('app_commentary_new', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">Créer un commentaire</button></a>
-                <a href="{{ path('app_commentary_index', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">Mettre a jour les commentaires</button></a>
+                <a href="{{ path('app_commentary_new', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">
+                    {{'workshop.createCommentary'|trans}}</button></a>
+                <a href="{{ path('app_commentary_index', {id: workshop.id}) }}" class=""><button class="btn btn-primary text-white">
+                    {{ 'workshop.updateCommentary'|trans }}</button></a>
             {% endif %}
         </div>
     </div>

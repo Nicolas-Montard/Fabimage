@@ -1,17 +1,37 @@
 .book-index{
+  .buyed-text{
+    width: 50%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
   .column-container{
     width: 70%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
     .column{
       width: 40%;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
     }
     .left-column{
       img{
         width: 550px;
         height: 770px;
         object-fit: cover;
+        @include media-breakpoint-down(md){
+          width: 300px;
+          height: 420px;
+        }
       }
     }
     .right-column{
+      .promotionalCode{
+        position: relative;
+        bottom: 10px;
+      }
     }
   }
 }

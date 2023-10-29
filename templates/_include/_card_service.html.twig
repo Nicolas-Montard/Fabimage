@@ -21,7 +21,8 @@
             {% endif %}
         </p>
         <div class="d-flex justify-content-center">
-            <a href="{{ path('app_service_show', {id: service.id}) }}"><button class="btn btn-secondary text-white fs-5">En lire plus</button></a>
+            <a href="{{ path('app_service_show', {id: service.id}) }}"><button class="btn btn-secondary text-white fs-5">
+                {{ 'Service.readMore'|trans }}</button></a>
         </div>
     </div>
 </div>

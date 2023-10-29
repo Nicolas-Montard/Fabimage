@@ -4,11 +4,11 @@
 
 {% block body %}
     <div class="service-show">
-        <div class="d-flex justify-content-center">
-            <div class="p-1 bg-light shadow me-3">
+        <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+            <div class="p-1 shadow me-md-3 d-flex justify-content-center picture-container">
                 <img class="picture" src="{{ asset('uploads/images/pictures/' ~ service.picture) }}" alt="">
             </div>
-            <div class="title d-flex justify-content-center flex-column">
+            <div class="title d-flex justify-content-center flex-column mt-5 mt-md-0">
                 <h1 class="fs-1">
                     {% if app.request.locale == 'fr' %}
                         {{ service.titleFr }}
@@ -29,7 +29,7 @@
                 </p>
             </div>
         </div>
-        <div class="description mx-auto mt-5">
+        <div class="description mx-auto mt-3 mt-md-5">
             <p class="">
                 {% if app.request.locale == 'fr' %}
                     {{ service.descriptionFr|raw }}

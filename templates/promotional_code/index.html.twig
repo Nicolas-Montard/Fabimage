@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PromotionalCode index{% endblock %}
+
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for promotional_code in promotional_codes %}
+            <tr>
+                <td>{{ promotional_code.name }}</td>
+                <td>{{ promotional_code.price/100 }}</td>
+                <td>
+                    <a href="{{ path('app_promotional_code_edit', {'id': promotional_code.id}) }}">Mettre a jour</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
