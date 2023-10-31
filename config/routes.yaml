@@ -8,17 +8,9 @@ controllers:
         _locale: et
 app_logout:
     path: /logout
-index_home:
-    path: /
-    controller: App\Controller\HomeController::index
-    requirements:
-        _locale: et|fr|es
-    defaults:
-        _locale: et  # Remplacez "fr" par la langue par défaut de votre choix
-
 index_no_locale:
     path: /
     controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
     defaults:
-        path: /{_locale}/
+        path: /et/
         permanent: true
