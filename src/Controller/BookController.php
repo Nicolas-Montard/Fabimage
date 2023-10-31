@@ -148,8 +148,8 @@ class BookController extends AbstractController
                     'quantity'=> 1
                 ]],
                 'mode'=> 'payment',
-                'success_url'=> __DIR__ . $request->getLocale() .'/book/success/'. $book->getId() . '?id_sessions={CHECKOUT_SESSION_ID}',
-                'cancel_url'=> __DIR__ . $request->getLocale() .'/book/cancel?id_sessions={CHECKOUT_SESSION_ID}',
+                'success_url'=> __DIR__ . "/" . $request->getLocale() .'/book/success/'. $book->getId() . '?id_sessions={CHECKOUT_SESSION_ID}',
+                'cancel_url'=> __DIR__ . "/" . $request->getLocale() .'/book/cancel?id_sessions={CHECKOUT_SESSION_ID}',
             ]
         );
         return $this->redirect($checkout->url);
