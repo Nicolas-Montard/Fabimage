@@ -30,7 +30,7 @@
       }
     }
     .right{
-      width: 45%;
+      width: 350px;
       @include media-breakpoint-down(lg){
         display: none;
       }

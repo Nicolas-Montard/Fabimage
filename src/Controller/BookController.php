@@ -53,6 +53,9 @@ class BookController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData()){
+                return $this->redirectToRoute('app_book_new', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $bookRepository->save($book, true);
 
             return $this->redirectToRoute('app_book_index', [], Response::HTTP_SEE_OTHER);
@@ -61,6 +64,7 @@ class BookController extends AbstractController
         return $this->renderForm('book/new.html.twig', [
             'book' => $book,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 
@@ -74,6 +78,9 @@ class BookController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData()){
+                return $this->redirectToRoute('app_book_new', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $bookRepository->save($book, true);
 
             return $this->redirectToRoute('app_book_index', [], Response::HTTP_SEE_OTHER);
@@ -82,6 +89,7 @@ class BookController extends AbstractController
         return $this->renderForm('book/edit.html.twig', [
             'book' => $book,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 

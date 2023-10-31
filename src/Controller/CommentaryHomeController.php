@@ -10,6 +10,7 @@ use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use function PHPUnit\Framework\isEmpty;
 
 #[Route('/commentary/home')]
 class CommentaryHomeController extends AbstractController
@@ -26,14 +27,17 @@ class CommentaryHomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("contentFr")->getData() || !$form->get("contentEs")->getData() || !$form->get("contentEt")->getData()){
+                return $this->redirectToRoute('app_commentary_home_new', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $commentaryHomeRepository->save($commentaryHome, true);
-
             return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('commentary_home/new.html.twig', [
             'commentary_home' => $commentaryHome,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 
@@ -47,6 +51,9 @@ class CommentaryHomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("contentFr")->getData() || !$form->get("contentEs")->getData() || !$form->get("contentEt")->getData()){
+                return $this->redirectToRoute('app_commentary_home_edit', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $commentaryHomeRepository->save($commentaryHome, true);
 
             return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
@@ -55,6 +62,7 @@ class CommentaryHomeController extends AbstractController
         return $this->renderForm('commentary_home/edit.html.twig', [
             'commentary_home' => $commentaryHome,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 

@@ -38,6 +38,9 @@ class CommentaryController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("contentFr")->getData() || !$form->get("contentEs")->getData() || !$form->get("contentEt")->getData()){
+                return $this->redirectToRoute('app_commentary_new', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $commentary->setWorkshop($workshop);
             $commentaryRepository->save($commentary, true);
 
@@ -47,6 +50,7 @@ class CommentaryController extends AbstractController
         return $this->renderForm('commentary/new.html.twig', [
             'commentary' => $commentary,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 
@@ -60,6 +64,9 @@ class CommentaryController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!$form->get("contentFr")->getData() || !$form->get("contentEs")->getData() || !$form->get("contentEt")->getData()){
+                return $this->redirectToRoute('app_commentary_edit', ['error' => 1], Response::HTTP_SEE_OTHER);
+            }
             $commentaryRepository->save($commentary, true);
 
             return $this->redirectToRoute('app_workshop_show', ['id'=>$commentary->getWorkshop()->getId()], Response::HTTP_SEE_OTHER);
@@ -68,6 +75,7 @@ class CommentaryController extends AbstractController
         return $this->renderForm('commentary/edit.html.twig', [
             'commentary' => $commentary,
             'form' => $form,
+            'error' => $request->query->get('error')
         ]);
     }
 
