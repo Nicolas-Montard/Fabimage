@@ -1,0 +1,23 @@
+<div class="card-container mt-5">
+    <img src="{{ asset('uploads/images/pictures/' ~ tariff.picture) }}" alt="">
+    <div class="bg-light text-div ms-auto">
+        <h5 class="fst-italic m-0 my-3 pt-2">
+            {% if app.request.locale == 'fr' %}
+                {{ tariff.titleFr|raw}}
+            {% elseif app.request.locale == 'es' %}
+                {{ tariff.titleEs|raw}}
+            {% elseif app.request.locale == 'et' %}
+                {{ tariff.titleEt|raw}}
+            {% endif %}
+        </h5>
+        <p class="">
+            {% if app.request.locale == 'fr' %}
+                {{ tariff.contentFr|raw}}
+            {% elseif app.request.locale == 'es' %}
+                {{ tariff.contentEs|raw}}
+            {% elseif app.request.locale == 'et' %}
+                {{ tariff.contentEt|raw}}
+            {% endif %}
+        </p>
+    </div>
+</div>

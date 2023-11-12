@@ -19,7 +19,6 @@ class CommentaryType extends AbstractType
             ->add('contentFr', CKEditorType::class, [
                 'required' => true,
                 'config' => [
-                    'removePlugins' => 'resize',
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ],
                 'attr' => [
@@ -29,7 +28,6 @@ class CommentaryType extends AbstractType
             ->add('contentEs', CKEditorType::class, [
                 'required' => true,
                 'config' => [
-                    'removePlugins' => 'resize',
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ],
                 'attr' => [
@@ -39,7 +37,6 @@ class CommentaryType extends AbstractType
             ->add('contentEt', CKEditorType::class, [
                 'required' => true,
                 'config' => [
-                    'removePlugins' => 'resize',
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ],
                 'attr' => [

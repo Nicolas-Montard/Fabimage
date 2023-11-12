@@ -16,6 +16,23 @@
             {{ form_errors(form.titleEt) }}
         </div>
     </div>
+    <div class="d-flex justify-content-around">
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleFr, 'Résumé français') }}
+            {{ form_widget(form.underTitleFr) }}
+            {{ form_errors(form.underTitleFr) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleEs, 'Résumé espagnol') }}
+            {{ form_widget(form.underTitleEs) }}
+            {{ form_errors(form.underTitleEs) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleEt, 'Résumé estonien') }}
+            {{ form_widget(form.underTitleEt) }}
+            {{ form_errors(form.underTitleEt) }}
+        </div>
+    </div>
     <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex flex-column me-5 mt-3">
             {{ form_label(form.pictureFile, 'image de l\'atelier') }}

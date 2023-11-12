@@ -88,6 +88,15 @@ class Workshop
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $optionalDescriptionEt = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $underTitleFr = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $underTitleEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $underTitleEt = null;
+
     public function __construct()
     {
         $this->commentaries = new ArrayCollection();
@@ -359,6 +368,42 @@ class Workshop
     public function setOptionalDescriptionEt(?string $optionalDescriptionEt): static
     {
         $this->optionalDescriptionEt = $optionalDescriptionEt;
+
+        return $this;
+    }
+
+    public function getUnderTitleFr(): ?string
+    {
+        return $this->underTitleFr;
+    }
+
+    public function setUnderTitleFr(string $underTitleFr): static
+    {
+        $this->underTitleFr = $underTitleFr;
+
+        return $this;
+    }
+
+    public function getUnderTitleEs(): ?string
+    {
+        return $this->underTitleEs;
+    }
+
+    public function setUnderTitleEs(string $underTitleEs): static
+    {
+        $this->underTitleEs = $underTitleEs;
+
+        return $this;
+    }
+
+    public function getUnderTitleEt(): ?string
+    {
+        return $this->underTitleEt;
+    }
+
+    public function setUnderTitleEt(string $underTitleEt): static
+    {
+        $this->underTitleEt = $underTitleEt;
 
         return $this;
     }

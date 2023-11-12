@@ -1,12 +1,12 @@
 home.title: "Vous êtes l'artiste de votre image"
-home.underTitle: 'Fabimage - coaching en image'
+home.underTitle: 'Fabienne Chmara Coach et créatrice de bien-être à travers l’image '
 home.video: 'Vidéo de la coach en image Fabienne Shmara'
 home.presentaion.head.title: 'Comment puis-je vous accompagner dans la réalisation de vos rêves ?'
 home.presentation.head.text: "Vous rêvez d'avoir un style authentique, qui vous représente 100%, avec lequel vous êtes  à l’aise en toute circonstance, mais vous ne savez pas par où commencer ?"
 home.presentation.body.text: "Avoir un <strong>style authentique,</strong> « sur-mesure », c’est le rêve de beaucoup  d’entre nous. Et c’est la promesse de ma méthode de coaching d’image.<br><br> Je suis là pour vous guider vers un  <strong>changement positif</strong> qui vous permettra de découvrir et de savoir utiliser <strong>tout votre potentiel</strong>, à travers les trois dimensions de votre image : votre image interne, votre corps et votre apparence. <br><br>Je suis là pour vous accompagner à <strong>être davantage vous même</strong> in & out! <br><br> Jetez un coup d'œil, explorez mon site et n'hésitez pas à me contacter si vous avez des questions."
-home.knowMore: 'En savoir plus'
+home.knowMore: "J'explore"
 home.flowerImage: 'Image de fleur'
-workshop.show.appointment: 'Prendre rendez-vous'
+workshop.show.appointment: 'Je m’inscris'
 navbar.CoachingAndImage: 'Coaching et image'
 navbar.language: Français
 navbar.coachingOfImage: "Coaching d'image"
@@ -18,7 +18,7 @@ navbar.spanishFlag: 'Drapeau espagnol'
 coachingImage.h1.p1: "À mes yeux, s’habiller est un véritable art de vivre.<br>J'ai créé FABIMAGE pour partager cet état d'esprit avec vous."
 coachingImage.h1.p2: 'Mettez votre style en valeur pour refléter qui vous êtes!'
 coachingImage.leftColumn.p.1: "<strong>A QUI S'ADRESSE MON COACHING EN IMAGE?</strong><br><br> <u>Le coaching appliqué à l’image est fait pour vous si :</u><br><br> -vous désirez <strong>mieux vous connaitre</strong><br> -vous aimeriez accepter et aimer tout ce que vous savez de vous : autant <strong>vos ombres que vos lumières </strong> -vous êtes prêt à <strong>vous investir pendant quelques semaines</strong> dans un travail sur vous et sur votre garde-robe si cela s’avère nécessaire.<br> -vous vous sentez appelé à aller plus loin dans la <strong>perception esthétique</strong> de votre image<br> -vous souhaitez <strong>développer un style authentique,</strong> 100% en accord avec qui vous êtes.<br><br> <u>Le coaching appliqué à l’image n’est pas pour vous si :</u><br><br> -vous voulez des résultats rapides<br> -vous cherchez des conseils de style et du relooking<br> -vous n'êtes pas intéressé par un travail de connaissance de vous-même<br> -la dimension corporelle de votre image ne vous intéresse pas."
-coachingImage.rightColumn.p.1: 'Je suis convaincue que chaque personne enferme en elle <strong>un trésor de bonté :</strong> un potentiel capable de la mener vers ce qui peut le mieux l’épanouir et la rendre heureuse.<br> Fabimage est né pour vous accompagner à trouver ce <strong>potentiel intérieur</strong> et le mettre au service de vos objectifs.<br><br>Cette découverte se fait à travers un processus de coaching basé sur les trois dimensions de l’image : l’image interne, le corps et l’apparence.<br><br>Le coaching en image - <a href="https://www.domingodelgado.com/">méthode Domingo Delgado©</a> que je vous propose est une méthode de connaissance de soi où nous travaillons avec <strong>la personne</strong> (son identité, son intériorité, son corps) et <strong>la représentation de la personne</strong> (son apparence physique et visuelle).<br>Nous mettons en connexion toutes ces dimensions pour apprendre à:<br><strong>-s’accepter</strong> physiquement et intérieurement<br><strong>-bien s’occuper de soi</strong> physiquement et intérieurement <br><strong>-s’aimer</strong>tel que l’on est'
+coachingImage.rightColumn.p.1: 'Je suis convaincue que chaque personne enferme en elle <strong>un trésor de bonté :</strong> un potentiel capable de la mener vers ce qui peut le mieux l’épanouir et la rendre heureuse.<br> Fabimage est né pour vous accompagner à trouver ce <strong>potentiel intérieur</strong> et le mettre au service de vos objectifs.<br><br>Cette découverte se fait à travers un processus de coaching basé sur les trois dimensions de l’image : l’image interne, le corps et l’apparence.<br><br>Le coaching en image - <a href="https://www.domingodelgado.com/">méthode Domingo Delgado©</a> que je vous propose est une méthode de connaissance de soi où nous travaillons avec <strong>la personne</strong> (son identité, son intériorité, son corps) et <strong>la représentation de la personne</strong> (son apparence physique et visuelle).<br>Nous mettons en connexion toutes ces dimensions pour apprendre à:<br><strong>-s’accepter</strong> physiquement et intérieurement<br><strong>-bien s’occuper de soi</strong> physiquement et intérieurement <br><strong>-s’aimer</strong> tel que l’on est'
 coachingImage.leftColumn.button: Prestations
 coachingImage.rightColumn.h2: "Comment fonctionne le coaching appliqué à l'image ?"
 coachingImage.rightColumn.img.alt: __coachingImage.rightColumn.img.alt
@@ -42,33 +42,6 @@ fabienne.title.p: "Créatrice de bien-être par l'image<br><br>Je suis <strong>l
 service.index.p.1: "Apprenez à <strong>mieux vous connaître</strong> et mettez votre style en valeur pour refléter qui vous êtes !<br><br>Grâce à une méthode <strong>éprouvée, innovante et unique</strong> sur le marché estonien, je travaille avec vous dans une démarche de coaching <strong>tridimensionnelle :</strong> votre image intérieure, votre image physique et votre image extérieure.<br><br>Une prestation de coaching en image, quelle qu’elle soit, est toujours une <strong>démarche profondément humanisante</strong> et qui ne consiste pas en un programme linéaire. Elle dépendra de votre objectif, de vos attentes et de vos besoins du moment. C’est pourquoi le nombre de séances peut légèrement varier selon vos avancées.<br><br>La méthodologie que j'applique est une méthode de <strong>soutien</strong> et <u>non de conseil</u>, ce qui signifie que vous devez vous <strong>impliquer</strong> dans votre processus : objectifs, tâches et plans que nous développerons ensemble."
 service.index.p.2: 'Tous les accompagnements sont possibles autant en <strong>visioconférence</strong> qu’en présentiel* et vous pouvez aussi <strong>combiner</strong> les deux !<br><br>Les formules de coaching se déroulent sous forme de <strong>séances individuelles 1 :1</strong> entièrement <strong>personnalisées.</strong> Après certaines séances, vous recevez un dossier personnel reprenant les points sur lesquels nous avons travaillé.<br><br>Les séances de coaching durent entre 60 et 90 minutes.<br><br>Les formules prévoient <strong> un premier contact gratuit</strong> de 30 minutes où vous pourrez obtenir les éclaircissements dont avez besoin et poser vos questions et après laquelle vous pourrez confirmer votre choix de poursuivre sur le chemin engagé.'
 service.show.appointment: "je m'inscrit"
-home.commentary.title.1: 'Forfait Argent'
-home.commentary.text.1: "Ça faisait longtemps que j'avais envie de faire ça ! Le service était très instructif et Fabienne a vraiment pris le temps de parcourir et d'expliquer le processus. <strong>J'ai fait un grand bond en avant pour moi-même.</strong><br><br>Je ne suis pas à la mode dans le sens où je n'aime pas suivre les tendances. Mais je veux avoir une bonne apparence et me sentir à l'aise. J'étais à la recherche d'informations sur le style plutôt que sur la mode, et c'est comme ça que j'ai trouvé Fabimage.<br><br><strong>Je suis venue à un moment qui était difficile pour moi.</strong> Je n'ai jamais vraiment pensé ou fait attention à ce que les gens autour de moi voient. Je me suis rendue compte que mon entourage me voit comme une personne attentionnée et chaleureuse. Et c'est bien. De ce fait, j'ai été un peu plus audacieuse dans mes rapports avec les gens, un peu plus extravertie qu'avant.<br><br><strong>Au niveau vestimentaire,</strong> je suis devenue plus sélective sur ce que je porte et plus rationnelle dans mon approche. Ma garde-robe se renouvelle progressivement.<br><strong>La colorimetrie</strong> m'a surprise, bon nombre de mes vêtements n'y correspondaient pas. J'ai également mieux compris pourquoi certaines de mes affaires ont toujours échappé au vide de placard! J'ai un manteau gris foncé que je n'ai jamais pensé à jeter. Il s'avère que le gris est ma couleur.<br><br>Je recommande les services de Fabimage à toute personne <strong>curieuse et désireuse d'être plus consciente de qui elle est et de comment elle est.</strong>"
-home.commentary.author.1: '— Marge, 36 ans'
-home.commentary.title.2: 'Analyse des couleurs'
-home.commentary.text.2: "Merci beaucoup pour cette matinée et vous êtes une femme vraiment incroyablement gentille et aimable et je suis heureuse d'avoir décidé de venir chez vous. Maintenant, la prochaine étape est de trouver une chemise bleu clair :D<br><br>L'analyse des couleurs a réfuté toutes mes opinions précédentes sur moi-même - c'est-à-dire que j'évitais les tons chauds car j'avais peur qu'ils me rendent le visage rouge, en fait c'était tout le contraire :D ! En outre <strong>j'ai appris quoi et comment regarder</strong> quand j'essaie de choisir les couleurs des vêtements. J'ai également appris <strong>quelques bonnes pratiques à essayer</strong> lorsque l'on combine des couleurs.<br><br>Vous êtes une personne vraiment fascinante et chaleureuse, je suis arrivée et repartie avec un très bon feeling. Vous êtes également un très bon guide, en essayant les couleurs, il était difficile au début de comprendre quoi regarder et comment regarder :) <strong>Le matériel et les exemples de l'introduction étaient très utiles, clairement compréhensibles et j'ai trouvé beaucoup de nouvelles informations.</strong> Le fait que toutes les informations préalables + les informations discutées lors de la séance arrivent finalement dans un seul document par e-mail est un gros bonus car on ne peut vraiment pas se souvenir de tout. En outre, <strong>le nuancier</strong> deviendra probablement une aide indispensable dans les magasins."
-home.commentary.author.2: '— Kersti, 27 ans'
-home.commentary.title.3: Colorimétrie
-home.commentary.text.3: "Merci pour votre super service! Je suis très contente d'avoir choisi Fabimage :)<br><br>Avant, je ne savais pas choisir les couleurs, je me contentais d'options sûres. Mais je voulais apprendre à me démarquer davantage et être plus confiante dans mes vêtements.<br>J'ai acquis beaucoup de nouvelles connaissances et le processus était très intéressant. Le temps a passé vite et c'était très intéressant ! J'ai acheté de nouveaux vêtements dans les couleurs de ma palette et je me sens déjà si bien dedans! C'était également passionnant de découvrir les couleurs dont j'ai besoin!<br><br> Je suis très heureuse et satisfaite d'avoir choisi la colorimétrie. Je le recommande à toute personne ayant les mêmes préoccupations ou souhaitant rafraîchir son apparence."
-home.commentary.author.3: '—  Roberta, 23 ans'
-home.commentary.title.4: 'Ce que disent les clients...'
-home.commentary.text.4: "Je suis devenue beaucoup plus consciente grâce aux ateliers Fabimage et à l'analyse personnelle - même mon mari a récemment remarqué mon regard légèrement renouvelé et a dit \"ces formations t'ont été vraiment utiles\".<br><br>Je signerai ça des deux mains. Je ne sais pas comment mettre toutes ces connaissances en pratique immédiatement, mais petit à petit, j'ai commencé à utiliser ce que j'ai appris et je me suis rapprochée de \"moi-même\".<br><br>L'atelier sur les accessoires m'a inspiré car je n'utilise pas beaucoup d'accessoires. Plus Fabienne me montrait de photos, plus j'avais envie d'expérimenter. La nouveauté pour moi, c'est le caractère lourd/léger du look. Je me suis rendu compte que je préfère davantage les tenues légères et lumineuses.<br><br> Je profite encore plus des ateliers sur Zoom, je peux regarder et réfléchir à ma guise. Peut-être que en présentiel, j'aurais tendance à me laisser distraire. C'est confortable et calme à la maison.<br><br>À propos, vous dépensez moins d'argent en vêtements et accessoires après une formation Fabimage, car vous pouvez choisir ce qui vous convient, et non ce qui traîne dans votre armoire!!"
-home.commentary.author.4: '—  Külli, 47 ans'
-home.commentary.title.5: 'Atelier couleurs'
-home.commentary.text.5: 'Un atelier magistral!<br><br>Pour moi, cela a représenté un changement dans mon image et une plus grande assurance pour conserver ma personnalité et en tirer le meilleur parti.<br><br>Je le recommande vivement à tous ceux qui veulent réussir dans leurs relations sociales, professionnelles et familiales.<br><br> Merci!'
-home.commentary.author.5: '— Puig, 42 ans'
-home.commentary.title.6: Forfait
-home.commentary.text.6: "Merci, Fabienne!<br><br>L'ensemble du processus était très intéressant, il m'a fait réfléchir davantage à mon apparence (vêtements, coiffure, accessoires) pour me sentir plus confiante et heureuse. Les analyses réalisées, qui peuvent également être imprimées, sont très utiles pour l'avenir.<br><br>Beaucoup de choses ont changé dans ma vie:<br><br>1. je n'achète pas tous les vêtements qui me plaisent - j'économise :-)<br>2. je fais plus attention à l'harmonie de mes vêtements - je reçois plus de compliments :-)<br>3. j'ai fait l'inventaire de mes vêtements - plus de place dans le placard :-)<br>4. je suis devenue plus confiante en ce qui concerne mes vêtements."
-home.commentary.author.6: '—  Tiina, 52 ans'
-home.commentary.title.7: 'Master Classe Accessoires'
-home.commentary.text.7: "Je viens de finir de regarder la vidéo - merci !<br><br>C'est un sujet très vaste, et cette approche globale était vraiment nécessaire. C'est ce que je recherchais: entendre parler d'un sujet dont je n'avais pas entendu parlé auparavant. De nombreuses choses ont été expliquées en profondeur - par exemple, beaucoup d'entre nous ont fait l'expérience de ces choses dans leur vie par le biais de l'expérimentation, mais nous ne savons pas toujours comment l'expliquer avec des mots.<br><br>J'ai aimé le thème des proportions (grand sac/petit sac). L'exemple d'une robe à fleurs sur fond blanc avec un sac et des boucles d'oreilles violets, une ceinture noire (du moins, elle me semblait noire!!!) et des chaussures blanches était également intéressant. Cette \"combinaison\" s'accordait parfaitement et était légère ! Personnellement, jusqu'à présent j'ai surtout opté pour un choix \"sur\", c'est-à-dire un sac et des chaussures de la même couleur. Mais oui, parfois on peut jouer et briser cette règle et le résultat est amusant :)<br><br>Je pense que les femmes estoniennes peuvent parfois sembler conservatrices en raison de leur budget limité et j'ai moi-même été dans ce cas - elles veulent une chose qui s'adapte à chaque situation, par exemple les mêmes chaussures, les mêmes lunettes, le même sac, etc. C'est bien de parler des accessoires au moment du printemps car les gens se réveillent et la nature aide!"
-home.commentary.author.7: '—  Aili, 53 ans'
-home.commentary.title.8: 'Au sujet du visage...'
-home.commentary.text.8: "Notre conversation d'aujourd'hui m'a beaucoup apporté. Tout d'abord, juste pour parler de moi et partager mes préoccupations concernant mes cheveux.<br><br>Deuxièmement, le fait de vous parler et d'analyser m'a redonné le sentiment que tout va vraiment bien. Je peux simplement faire de petites améliorations ici et là.<br><br>J'étais toute la journée de bonne humeur et j'avais le moral pour aller de l'avant.<br>Je me disais la même chose que ce que vous m'avez dit - ayez le courage d'expérimenter et vos cheveux repousseront quand il faudra !"
-home.commentary.author.8: '—  Karin, 48 ans'
-home.commentary.title.9: 'Master Classe Optimiser sa garde robe'
-home.commentary.text.9: "Merci pour cet atelier intéressant !<br><br>J'ai eu beaucoup d'inspiration et ce matin j'ai apporté de vieux vêtements (...) à la banque de collecte.  J'ai également commencé à moins porter ma robe de chambre (elle est si confortable, douce et chaude à la maison) et j'essaie de porter davantage de pulls et de pantalons.<br><br>Les exemples concrets que vous avez donnés m'ont beaucoup aidé, car je ne vois pas les autres participants lorsque je suis sur l'ordinateur et je me sens alors \"seule\" et j'ai besoin de trouver des références."
-home.commentary.author.9: '—  Liina, 52 ans'
 contact.contactMe: 'Contactez moi'
 contact.service.form.type: 'Ma demande concerne :'
 contact.service.form.client: 'Je suis un.e :'
@@ -111,7 +84,7 @@ company.top-section-list.list.style: "<strong>Style et communication non verbale
 company.top-section-list.list.image: '<strong>L’image & les réseaux sociaux :</strong> Reconnaître la différence entre la réalité et le monde “construit” proposé sur les réseaux sociaux.'
 company.top-section-list.list.modeEthic: '<strong>La mode éthique et durable :</strong> Entamer une réflexion sur nos modes de consommation, dans quelles conditions sont produits nos vêtements.'
 company.top-section.text.contactMe: "Vous êtes intéressé ? N'hésitez pas à me contacter !"
-company.button.contact: contact
+company.button.contact: 'Je prends contact!'
 company.bottom-section.title: Entreprises
 company.bottom-section.text: "Les ateliers de formation à l'image de Fabimage s'adressent au personnel de votre entreprise. <strong>L'équipe humaine est le bien le plus précieux d'une entreprise,</strong> car c'est elle qui transmet son image et ses valeurs. Il est donc indispensable pour tout employé de l’entreprise d’avoir conscience de son image, de la gérer et de l’optimiser.<br><br>Sensibilisez vos collaborateurs au <strong>rôle de l’image dans la communication !</strong><br><br>Je peux vous aider de deux façons :"
 company.bottom-section.ol.accompaniedMember: '<strong>J’accompagne un membre de votre équipe</strong> pour un bilan d’image ou un processus de coaching plus complet. L’image est notre première carte de visite.'
@@ -123,7 +96,7 @@ company.bottom-section.list.accessories: 'comment utiliser les accessoires'
 company.bottom-section.list.image: "le rôle de l'image dans la communication"
 company.bottom-section.list.sevenStyle: 'les sept styles universels'
 company.bottom-section.list.treeOfLife: 'l’arbre de vie de l’image (travail sur la formation de l’image personnelle)'
-company.bottom-section.endText: "Demandez les tarifs sans engagement.<br><br><i>*Les participants à ces ateliers bénéficient d'une réduction de 10% sur tous les autres services de Fabimage.</i>"
+company.bottom-section.endText: "<small><i>*Les participants à ces ateliers bénéficient d'une réduction de 10% sur tous les autres services de Fabimage.</i></small><br><br>Demandez les tarifs sans engagement."
 navbar.fabienne: Fabienne
 navbar.services: Prestations
 service.index.body.title: 'Pour vous, que signifie être authentique ?'
@@ -132,16 +105,15 @@ service.index.admin.newService: 'Créer une nouvelle prestation'
 workshop.index.body.title: Ateliers
 home.quote: "<< Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! >>"
 workshop.index.admin.newWorkshop: 'Créer un nouvel atelier'
-navbar.book: 'Mes guides'
-navbar.user: __navbar.user
+navbar.book: Ebooks
 book.buy: "J'achète"
 book.update: 'Mettre à jour'
 book.createNewBook: 'Créer un nouveau livre'
 contact.send: Envoyer
-Service.readMore: 'En lire plus'
+Service.readMore: "J'explore"
 workshop.update: 'Mettre à jour'
-workshop.createCommentary: 'Créer un commentaire'
-workshop.updateCommentary: 'Mettre à jour un commentaire'
+workshop.createCommentary: 'Créer un temoignage'
+workshop.updateCommentary: 'Mettre à jour un temoignage'
 giftCard.index.h1: 'Carte cadeau Fabimage'
 giftCard.index.p: "Pour commander une carte-cadeau, veuillez remplir le formulaire de commande ci-dessous. <br><br>1) Je vous enverrai une facture à votre adresse électronique au plus tard le premier jour ouvrable suivant l'envoi de la commande.<br>2) après paiement, j'enverrai la carte-cadeau à l'adresse que vous aurez indiquée ou, si vous préférez venir à mon studio nous pouvons convenir d'un rendez-vous pour la retirer (Süda tn 13, centre-ville).<br><br>Si vous avez des questions, n'hésitez pas à me contacter : fabimage.coach@gmail.com"
 giftCard.index.form.service: Prestation
@@ -181,5 +153,16 @@ workshop.head.metaDescription: 'Apprenez à valoriser votre image de manière lu
 workshop.head.title: 'Ateliers et master classes en ligne sur l’image'
 home.head.metaDescription: 'Avoir un style authentique, « sur-mesure », c’est le rêve de beaucoup d’entre nous. Et c’est la promesse de ma méthode de coaching d’image.'
 book.index.error: "Votre paiement n'a pas pu étre effectué"
-commentaryHome.new: 'Créer un nouveau commmentaire'
-commentaryHome.edit: "Editer le commentaire"
+commentaryHome.new: 'Créer un nouveau temoignage'
+commentaryHome.edit: 'Editer le temoignage'
+home.textVideo: "« Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! »<br><br>Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
+home.CommmentaryIntroduction: 'Mes clients partagent leur expérience'
+company.button.quote: Devis
+footer.home: Accueil
+footer.contact: Contact
+footer.service: Prestations
+footer.tarifs: tarifs
+workshop.index.body.title.masterClass: 'Master Classes en ligne'
+workshop.index.p.2: "Les master classes en ligne se déroulent sur la plateforme Zoom et durent 60 minutes (45 min + 15 min pour les questions).<br><br><strong>Les master classes sont pratiques.</strong> Je vous présente le monde des couleurs, je partage des astuces de style et vous aide à créer la garde-robe de vos rêves ! Je parle plus en détail des différents styles vestimentaires et de l'élégance, de l'importance de l'apparence dans la création de l'image et de l'utilisation responsable de la mode.<br>Chaque femme est belle et unique, il est important de s’accepter telle que l’on est !<br><br>Les master classes ont lieu lorsqu'il y a au moins 5 participants : vous avez 4 copines? <strong>J'organise une master class pour vous !</strong> Contactez moi!"
+workshop.interested: "Ca m'interesse"
+book.index.h1: "Découvrez l’univers de l’image personnelle sous le prisme du développement personnel !"

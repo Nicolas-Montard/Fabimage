@@ -1,9 +1,50 @@
 .company{
-  .title{
-    width: 35%;
+  .head-text-container{
+    @include media-breakpoint-up(md){
+      position: relative;
+      top: 150px;
+      left: 125px;
+      width: 800px;
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 80px;
+      margin-left: auto;
+      margin-right: 200px;
+    }
     @include media-breakpoint-down(md){
+      margin-top: 50px;
       width: 90%;
-      font-size: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+  .title-image-container{
+    @include media-breakpoint-up(md){
+      position: absolute;
+      z-index: -1;
+      margin-left: 100px;
+      height: 400px;
+      width: 60%;
+      img{
+        object-fit: cover;
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      width: 70%;
+      height: 310px;
+    }
+    @include media-breakpoint-down(md){
+      width: 100%;
+      height: initial;
+    }
+  }
+  .top-container{
+    @include media-breakpoint-up(md){
+      margin-bottom: 250px;
     }
   }
   .top-section{
@@ -11,12 +52,13 @@
       width: 90%;
     }
     @include media-breakpoint-up(md){
-      position: relative;
-      right: 200px;
-      width: 55%;
+      width: 1150px;
+    }
+    @include media-breakpoint-up(xxl){
+      width: 1352px;
     }
     .col-right{
-      width: 65%;
+      width: 70%;
       @include media-breakpoint-down(md){
         width: 100%;
       }
@@ -26,7 +68,7 @@
         display: none;
       }
       width: 35%;
-      margin-right: 100px;
+      margin-left: 150px;
       img{
         height: 400px;
       }
@@ -44,16 +86,17 @@
   .bottom-section{
     @include media-breakpoint-up(md){
       margin-top: 150px;
-      width: 55%;
-      position: relative;
-      left: 50px;
+      width: 1150px;
+    }
+    @include media-breakpoint-up(xxl){
+      width: 1352px;
     }
     @include media-breakpoint-down(md){
       width: 90%;
       margin-top: 75px;
     }
     .col-right{
-      width: 65%;
+      width: 70%;
       @include media-breakpoint-down(md){
         width: 100%;
       }
@@ -62,19 +105,20 @@
       @include media-breakpoint-down(md){
         display: none;
       }
-      width: 35%;
-      margin-right: 200px;
+      width: 30%;
+      margin-right: 100px;
+      margin-left: 200px;
       img{
         height: 400px;
       }
       .decoration{
-        width: 425px;
+        width: 375px;
         height: 375px;
         background-color: #FFEEE2;
         z-index: -1;
         position: relative;
         bottom: 300px;
-        right: 135px;
+        right: 83.04px;
       }
     }
   }

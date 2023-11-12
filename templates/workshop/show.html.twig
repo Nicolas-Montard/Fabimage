@@ -12,17 +12,6 @@
             {% elseif app.request.locale == 'et' %}
                 {{ workshop.titleEt|raw}}
             {% endif %}</h1>
-        <div class="description mx-auto mt-5">
-            <p class="">
-                {% if app.request.locale == 'fr' %}
-                    {{ workshop.descriptionFr|raw}}
-                {% elseif app.request.locale == 'es' %}
-                    {{ workshop.descriptionEs|raw}}
-                {% elseif app.request.locale == 'et' %}
-                    {{ workshop.descriptionEt|raw}}
-                {% endif %}
-            </p>
-        </div>
         <div class="picture-container mx-auto mt-5">
             <img class="w-100 h-100 picture" src="{{ asset('uploads/images/pictures/' ~ workshop.picture) }}" alt="">
         </div>
@@ -45,6 +34,17 @@
                 <img src="{{ asset("build/images/icons8-location-50.png") }}" alt="icon of an arrow" class="logo">
                 <p class="ms-2">{{ workshop.location }}</p>
             </div>
+        </div>
+        <div class="description mx-auto mt-5">
+            <p class="">
+                {% if app.request.locale == 'fr' %}
+                    {{ workshop.descriptionFr|raw}}
+                {% elseif app.request.locale == 'es' %}
+                    {{ workshop.descriptionEs|raw}}
+                {% elseif app.request.locale == 'et' %}
+                    {{ workshop.descriptionEt|raw}}
+                {% endif %}
+            </p>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">

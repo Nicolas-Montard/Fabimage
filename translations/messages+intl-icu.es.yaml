@@ -1,17 +1,17 @@
 home.title: 'Eres tú el artista de tu  imagen.'
-home.underTitle: 'Fabimage - coaching de imagen'
+home.underTitle: 'Fabienne Chmara Coach y creadora de bienestar a través de la imagen'
 home.video: __home.video
 home.presentaion.head.title: '¿Cómo puedo apoyarte en la realización de tus sueños?'
 home.presentation.head.text: '¿Quieres tener un <strong>estilo auténtico</strong> que te represente al 100%, con el que te sientas cómodo en cualquier circunstancia, pero no sabes por dónde empezar?'
 home.presentation.body.text: 'Tener un <strong>estilo auténtico</strong> y "a mi medida" es el sueño de muchos de nosotros. Y esa es la oferta de mi método de coaching de imagen.<br><br>Estoy aquí para ayudarte a descubrir la parte oculta de tu iceberg y guiarte hacia un <strong>cambio positivo</strong> que te permita descubrir y utilizar <strong>todo tu potencial,</strong> a través de las tres dimensiones de tu imagen: tu imagen interna, tu cuerpo y tu apariencia.<br><br>Estoy aquí para ayudarte a <strong>ser más “tú mismo”.</strong><br><br>Echa un vistazo, explora mi página web y no dudes en ponerte en contacto conmigo si tienes alguna pregunta!'
 home.knowMore: 'seguir leyendo'
 home.flowerImage: __home.flowerImage
-workshop.show.appointment: 'pedir hora'
+workshop.show.appointment: Registreerin
 navbar.CoachingAndImage: 'Coaching de imagen'
 navbar.language: Español
 navbar.coachingOfImage: 'Coaching de imagen'
 navbar.workshop: Talleres
-navbar.contact: contacto
+navbar.contact: Contacto
 contact.contactMe: 'Contáctame :'
 contact.service.form.type: 'Mi solicitud se refiere a :'
 contact.service.form.client: 'Yo soy :'
@@ -31,48 +31,12 @@ contact.workshop.agreements.info: 'Hemos creado una lista de personas que desean
 home.commentary.title.1: 'Programa "plata"'
 home.commentary.text.1: 'Llevaba mucho tiempo queriendo hacer esto. El servicio fue muy informativo y Fabienne se tomó el tiempo necesario para llevar y explicar bien el proceso. <strong>He dado un gran paso adelante para mí.</strong><br><br>No estoy a la moda en el sentido de que no me gusta seguir las tendencias. Pero quiero verme bien y sentirme cómoda. Buscaba información sobre estilo más que sobre moda, y así fue como encontré Fabimage.<br><br><strong>Llegué en un momento difícil para mí.</strong> Nunca pensé ni presté atención a lo que veía la gente a mi alrededor. Me di cuenta de que los que me rodean me ven como una persona cariñosa y cálida. Y eso es bueno. Como resultado, he sido un poco más audaz en mi trato con la gente, un poco más extrovertida que antes.<br><br><strong>En cuanto a la ropa,</strong> me he vuelto más selectiva con lo que me pongo y más racional en mi enfoque. Mi guardarropa se renueva poco a poco.<br>Me sorprendió el <strong>analisis de colores,</strong> ya que muchas de mis prendas no coincidían con el. ¡También he entendido mejor por qué algunas de mis prendas siempre han escapado al vacío del armario! Tengo un abrigo gris oscuro que nunca pensé en tirar. Resulta que el gris es mi color.<br><br>Recomiendo los servicios de Fabimage a cualquier persona <strong>que tenga curiosidad y quiera ser más consciente de quién es y cómo es.</strong>'
 home.commentary.author.1: 'Marge, 36 años'
-home.commentary.title.2: __home.commentary.title.2
-home.commentary.text.2: __home.commentary.text.2
-home.commentary.author.2: __home.commentary.author.2
-home.commentary.title.3: __home.commentary.title.3
-home.commentary.text.3: __home.commentary.text.3
-home.commentary.author.3: __home.commentary.author.3
-home.commentary.title.4: __home.commentary.title.4
-home.commentary.text.4: __home.commentary.text.4
-home.commentary.author.4: __home.commentary.author.4
-home.commentary.title.5: __home.commentary.title.5
-home.commentary.text.5: __home.commentary.text.5
-home.commentary.author.5: __home.commentary.author.5
-home.commentary.title.6: __home.commentary.title.6
-home.commentary.text.6: __home.commentary.text.6
-home.commentary.author.6: __home.commentary.author.6
-home.commentary.title.7: __home.commentary.title.7
-home.commentary.text.7: __home.commentary.text.7
-home.commentary.author.7: __home.commentary.author.7
-home.commentary.title.8: __home.commentary.title.8
-home.commentary.text.8: __home.commentary.text.8
-home.commentary.author.8: __home.commentary.author.8
-home.commentary.title.9: __home.commentary.title.9
-home.commentary.text.9: __home.commentary.text.9
-home.commentary.author.9: __home.commentary.author.9
 coachingImage.h1: 'Coaching de imagen'
 coachingImage.h1.p1: 'Para mí vestir es un verdadero arte de vivir.<br>Créé Fabimage para compartir ese espiritu contigo.'
 coachingImage.h1.p2: '¡Pon tu estilo en valor para reflejar tu verdadero yo!'
 coachingImage.rightColumn.h2: '¿Cómo funciona el coaching de imagen?'
 coachingImage.rightColumn.p.1: 'Estoy convencida de que cada persona tiene un <strong>tesoro de bondad</strong> en su interior: un <strong>potencial</strong> capaz de conducirle hacia lo que mejor puede colmarle y hacerle feliz.<br>Fabimage ha nacido para ayudarte a encontrar ese potencial interior y ponerlo al servicio de tus objetivos.<br><br>Este descubrimiento se realiza a través de un proceso de coaching basado en <strong>las tres dimensiones de la imagen:</strong> imagen interna, cuerpo y apariencia.<br><br>El coaching de imagen - <a href="https://www.domingodelgado.com">método Domingo Delgado©</a> que te propongo es un <strong>método de autoconocimiento</strong> donde se trabaja con <strong>la persona</strong> (su identidad, su interioridad, su cuerpo) y <strong>la representación de la persona</strong> (su aspecto físico y visual).<br>Conectamos todas estas dimensiones para aprender a:<br><strong>-Aceptarte</strong> a tí mismo física e internamente<br><strong>-Cuidarte</strong> bien física e internamente<br><strong>-Amarte</strong> a tí mismo tal y como eres'
-coachingImage.rightColumn.img.alt: __coachingImage.rightColumn.img.alt
-coachingImage.leftColumn.img.alt: __coachingImage.leftColumn.img.alt
 coachingImage.leftColumn.p.1: '<strong>¿A QUIÉN VA DIRIGIDO EL COACHING DE IMAGEN?</strong><br><u>El coaching de imagen es para ti si:</u><br><br>-quieres <strong>conocerte mejor</strong> a ti mismo<br>-te gustaría <strong>aceptar y amar</strong> todo lo que conoces de ti: tanto <strong>tus sombras</strong> como <strong>tus luces</strong><br>-está dispuesto a <strong>invertir unas semanas</strong> en un trabajo sobre ti mismo y también sobre tu vestuario (si es necesario).<br>-te sientes llamado a ir más allá en la <strong>percepción estética</strong> de tu imagen<br>-buscas desarrollar un <strong>estilo auténtico,</strong> 100% acorde con lo que eres.<br><br><u>El coaching de imagen <strong>no</strong> es para ti si:</u><br><br>-quieres resultados rápidos<br>-buscas consejos / asesoramiento de estilo<br>-piensas que ya te conoces lo suficiente y/o no estas dispuesto a examinarte a ti mismo<br>-la dimensión corporal de tu imagen te da igual.'
-coachingImage.button.services: __coachingImage.button.services
-coachingImage.valueOfFabimage: __coachingImage.valueOfFabimage
-coachingImage.kindness: __coachingImage.kindness
-coachingImage.respectOfWhoYouAre: __coachingImage.respectOfWhoYouAre
-coachingImage.listen: __coachingImage.listen
-coachingImage.optimism: __coachingImage.optimism
-coachingImage.authenticity: __coachingImage.authenticity
-coachingImage.professionalism: __coachingImage.professionalism
-coachingImage.rightColumn.h2.2: __coachingImage.rightColumn.h2.2
-coachingImage.rightColumn.p.2: __coachingImage.rightColumn.p.2
 coachingImage.button.requestQuote: Servicios
 fabienne.title.p: 'Coach de imagen<br><br>Creadora de bienestar a través de la imagen'
 fabienne.leftColumn.p.1: 'Siempre he pensado que la imagen es la clave de la comunicación. Después de trabajar en diferentes sectores, me di cuenta de que me encantaba ayudar a las personas a sentirse más seguras y radiantes. En 2019 lancé FABIMAGE con el objetivo de ayudarte <strong>a sentirte lo mejor posible</strong>.<br><br>Mi papel es proporcionarte herramientas experimentadas para ayudarte a construir un <strong>estilo personal coherente con quién eres</strong> y un vestuario que <strong>cuente la historia de tu belleza interior.</strong><br><br>Soy francesa y vivo en Estonia desde hace muchos años.<br><br>¿Qué imagen tengo de mí misma? <br><br>Aunque a veces fluctuante, es colorida, sólida, sensible y profunda.<br><br>Soy reflexiva, idealista, un poco tímida pero apasionada por las relaciones humanas y, sobre todo, muy joven de corazón 😊 Me gusta mucho salir con amigos. Tengo un oído atento que escucha a las personas que quieren confiar en mí. Me gusta pensar y llegar al fondo de las cosas. La gente dice que tengo un corazón grande.<br><br>Puedo maquillarme o no, pero rara vez voy sin pintarme los labios. Soy de estatura media, ojos color avellana, piel bastante clara y pelo castaño liso. A pesar de mis incursiones en otros estilos, el bob asimétrico vuelve a mí como el estribillo de una canción favorita.<br><br>Me gusta reír, tengo un sentido del humor que no siempre se entiende 😊 Lloro si me emociona mucho una historia, puede ser viendo una película. O me pongo de buen humor con Jean Jacques Goldman, El Arrebato, Zaz, Curly Strings y muchos otros. Me encanta hablar y contar historias. Si tengo confianza, ¡puedo no parar!<br><br>La confianza es uno de los temas que trabajé durante mi formación en coaching de imagen, durante la cual pasé por un proceso de <strong>transformación total in & out</strong> que me llevó hasta donde estoy hoy. Así que yo misma pasé por este maravilloso viaje que hoy te ofrezco. Y te lo garantizo: <strong>si te gusta la idea de trabajar toda tu imagen, ¡merece mucho la pena!</strong> ¡Hoy disfruto de un estilo más auténtico y libre!<br><br>¡Descubre lo que puedo hacer por tu bienestar y tu estilo!'
@@ -97,10 +61,8 @@ contact.workshop.form.AssociationSchool: 'Asociación, colegio'
 home.video.link: 'https://www.youtube.com/embed/wlj7LmCt-w8'
 navbar.deconnect: Desconectarse
 Fabienne.title: 'Minust | Fabienne, Fabimage Eesti'
-Company.title: __Company.title
 contact.workshop.form.agreements.info: 'Me kogume neid andmeid selleks, et saata teile e-posti teel teie poolt soovitud teavet/ pakkumist. Kasutame teie e-posti aadressi ka selleks, et saata teile teavet meie teenuste kohta.<br><br>Kui te ei soovi selliseid kirju saada, märgistage palun allpool olev kast:'
 contact.workshop.form.agreements: 'Olen vastu sellele, et minu e-posti aadressi kasutatakse Fabimage OÜ uudiste ja/või pakkumiste saamiseks.'
-company.title: __company.title
 company.content.title: 'Empresas, asociaciones, centros de enseñanza'
 company.top-section.title: 'Centros de enseñanza'
 company.top-section.text: 'Fabimage ofrece sus servicios a escuelas, centros culturales y otras organizaciones juveniles en forma de talleres y seminarios.<br>Ofrezco talleres de <strong>desarrollo individual</strong> a través del <strong>trabajo sobre la imagen personal,</strong> utilizando una metodología que estimula los jóvenes a reflexionar sobre sus puntos fuertes y sus valores.<br><br>Con mis colegas del AFIPP, hemos desarrollado un programa basado en <strong>cinco temas,</strong> cada uno de los cuales puede dividirse en varios módulos de 90-120 minutos. Cada módulo se centra en competencias diferentes.'
@@ -123,7 +85,7 @@ company.bottom-section.list.image: 'cómo utilizar los accesorios'
 company.bottom-section.list.sevenStyle: 'el papel de la imagen en la comunicación'
 company.bottom-section.list.treeOfLife: 'el árbol de vida de la imagen (trabajo sobre la formación de la imagen personal)'
 company.bottom-section.endText: 'Consulte las tarifas sin compromiso.<br><br>*Los participantes en estos talleres reciben un 10% de descuento en el resto de los servicios de Fabimage.'
-navbar.company: compañía
+navbar.company: Compañía
 home.quote: '<< En mi concepción del coaching de imagen no existe un estándar de belleza, la verdadera y única belleza es la tuya. ¡Hay una luz dentro de ti, esperando brillar! >>'
 service.index.body.title: '¿Qué significa para ti ser auténtico?'
 service.index.myOffer: 'Mis ofertas'
@@ -132,8 +94,7 @@ workshop.index.body.title: Talleres
 workshop.index.admin.newWorkshop: 'crear un nuevo taller'
 navbar.fabienne: 'Sobre mi'
 navbar.services: Servicios
-navbar.book: 'guia digital'
-navbar.user: __navbar.user
+navbar.book: 'Guia digital'
 book.buy: Compro
 book.update: 'Poner al día'
 book.createNewBook: 'Crear un nuevo libro'
@@ -182,4 +143,17 @@ workshop.head.title: 'Aprende a valorar tu imagen de forma lúdica y enriquecedo
 home.head.metaDescription: 'Tener un estilo auténtico y "a mi medida" es el sueño de muchos de nosotros. Y esa es la promesa de mi método de coaching de imagen.'
 book.index.error: 'Su pago no se pudo realizar'
 commentaryHome.new: 'Créer un nouveau commmentaire'
-commentaryHome.edit: "Editar comentario"
+commentaryHome.edit: 'Editar comentario'
+home.textVideo: '«En mi concepción del coaching de imagen no existe un estándar de belleza, la verdadera y única belleza es la tuya. ¡Hay una luz dentro de ti, esperando brillar!»<br><br>¡Conozcámonos! Mira mi vídeo, te cuento cómo un coaching de imagen te puede ayudar y cómo funciona.'
+home.CommmentaryIntroduction: 'Lo que dicen mis clientes'
+coachingImage.rightColumn.img.alt: __coachingImage.rightColumn.img.alt
+coachingImage.button.services: Servicios
+company.button.quote: estimar
+workshop.index.body.title.masterClass: 'Masterclass en línea'
+workshop.index.p.2: 'Las clases magistrales online se desarrollan en el entorno Zoom y tienen una duración de 60 minutos (45 min + 15 min para preguntas).<br><br><strong>Las clases magistrales son prácticas..</strong> ¡Te presento el mundo de los colores, comparto consejos de estilo y ayudo a crear el guardarropa de tus sueños! Hablo con más detalle sobre los diferentes estilos, la elegancia, la importancia de la apariencia en la creación de una imagen y el uso responsable de la moda.<br><br>Cada mujer es hermosa y única, ¡es importante aceptarnos tal como somos!<br><br>Las clases magistrales se llevan a cabo con al menos 5 participantes:<br>¿Tienes 4 amigas? <strong>¡Organizo una clase para vosotras!</strong> ¡Escribeme para concertar la fecha!'
+workshop.interested: 'Esto me interesa'
+footer.home: Home
+footer.contact: Contacto
+footer.service: Servicios
+footer.tarifs: Tarifas
+book.index.h1: "¡Descubre el mundo de la imagen personal mediante el prisma del desarrollo personal!"

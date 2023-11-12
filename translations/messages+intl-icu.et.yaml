@@ -1,12 +1,12 @@
 home.title: 'Sa oled ise oma imago looja'
-home.underTitle: 'Fabimage - imago coaching'
+home.underTitle: 'Fabienne Chmara Olen ainus coach Eestis, kelle eriala on imago'
 home.video: 'Video pilditreener Fabienne Shmara'
 home.presentaion.head.title: 'Kuidas saan toetada sind oma unistuste elluviimisel?'
 home.presentation.head.text: 'Kas soovid omada autentset stiili, mis esindab sind 100%, millega tunned end  igas olukorras mugavalt, kuid sa ei tea, kust alustada?'
 home.presentation.body.text: 'Autentne ja "kohandatud" stiil on paljudele meist unistuseks. Ja see ongi minu imago coachingu meetodi lubadus!<br><br> Olen siin selleks, et juhatada sind <strong>positiivse muutuse</strong> suunas, mis võimaldab sul avastada ja kasutada  oma <strong>täielikku potentsiaali</strong>, kasutades selleks oma imago kolme mõõdet: sinu minapilti, kehapilti ja kuvandit.<br><br> Ma olen siin, et toetada sind oma jäämäe varjatud osa avastamisel ning <strong>rohkem iseendaks saamisel!</strong><br><br> Uudista, uuri minu kodulehte ja kui tekib huvi ja/või küsimusi, siis võta ühendust !<br><br>'
 home.knowMore: 'rohkem teada'
 home.flowerImage: 'Lille kujutis'
-workshop.show.appointment: 'Kohtumist kokku leppima'
+workshop.show.appointment: Registreerin
 navbar.CoachingAndImage: 'Imago coaching'
 navbar.language: Eesti
 navbar.coachingOfImage: 'Imago coaching'
@@ -27,33 +27,6 @@ contact.workshop.form.informed: 'Sõbranna nimi, perekonnanimi ja emaili aadress
 contact.workshop.form.message: Märkused
 contact.workshop.commentary.info: 'Nt kui sa soovid saada arvet firma nimele, või kui sul on sooduskood sisesta see siia lahtrisse'
 contact.workshop.agreements.info: 'Oleme moodustanud listi inimestest, kes soovivad olla kursis Fabimage õpitubadega. Neile saadame jooksvat infot meilile vaid kord või paar korda kuus.'
-home.commentary.title.1: 'Hõbe pakett'
-home.commentary.text.1: 'Ma olen seda tahtnud ammu teha! Teenus oli väga informatiivne ja Fabienne tõesti võtis aega, et protsessi läbi viia ja selgitada. <strong>Tegin enda jaoks suure hüppe edasi.</strong><br><br>Ma ei ole moekas selles mõttes, et ma tahaksin trendidega kursis olla. <strong>Küll aga tahaksin ma hea välja näha ja end mugavalt tunda.</strong> Olen otsinud teavet peamiselt stiili, mitte moe kohta, selle kaudu jõudsin Fabimage’i juurde.<br><br><strong>Ma tulin ajal, mis oli minu jaoks keeruline.</strong> Ma pole kunagi mõelnud või tähele pannud, mida inimesed mu ümber näevad. Sain aru, et minu inimesed näevad mind tähelepaneliku ja soojana. Ja see on hea. Sellest kantuna olen ma pisut julgem olnud inimestega suhtlemisel, pisut rohkem väljapoole pööratud kui enne.<br><strong>Rõivaste osas</strong> olen hakanud rohkem valima, mida selga panna ja ratsionaalsemalt lähenema. Eks garderoob uueneb aeglaselt.<br><strong>Värvianalüüs</strong> oli üllatav ning üsna suur osa mu rõivastest ei vastanud sellele. Samuti olen ma paremini aru saanud, miks on mul mõned asjad, mis on alati kapitühjendustest pääsenud. Mul on üks tumehall mantel ja ma ei mõelnud ka, et seda ära visata. Selgus, et hall on minu värv.<br><br>Ma soovitan Fabimage teenuseid sellisele inimesele, <strong>kes on uudishimulik ja tahab olla teadlikum sellest, kes ja kuidas ta on.</strong>'
-home.commentary.author.1: '—  Marge, 36'
-home.commentary.title.2: Värvianalüüs
-home.commentary.text.2: '„Väga tänan sind tänase hommiku eest ja sa oled tõesti vapustavalt tore ja lahke naine ja mul on hea meel, et just sinu juurde otsustasin tulla. Nüüd on järgmine samm endale helesinine särk leida :D<br><br>Värvianalüüs lükkas ümber kõik minu senised arvamused enda kohta - st ma vältisin soojasid toone kuna kartsin et need teevad mu näost punaseks, tegelikult oli ju hoopis vastupidi :D! Lisaks <strong>õppisin mida ja kuidas peaks vaatama</strong> kui proovin endale värvilisi riideid valida. Õppisin ka värvide kombineerimise kohta <strong>häid tavasid mida katsetada.</strong><br><br>Oled tõsiselt põnev ja soe inimene, ma saabusin ja lahkusin väga hea tundega. Oled ka väga hea juhendaja, värvide proovimise ajal oli esialgu keeruline aru saada mida vaadata, kuidas vaadata :) <strong>Materjalid ja näited tutvustuses olid väga kasulikud, selgesti mõistetavad ja leidsin palju uut infot.</strong> See, et kõik eelinfo + kohtumisel arutatud info lõpuks ühe dokumendiga meilile jõuab on suur boonus kuna tõesti ei suuda kõike meelde jätta. Lisaks <strong>värvikaardist</strong> saab ilmselt asendamatu abimees poes.“'
-home.commentary.author.2: '—  Kersti, 27'
-home.commentary.title.3: __home.commentary.title.3
-home.commentary.text.3: __home.commentary.text.3
-home.commentary.author.3: __home.commentary.author.3
-home.commentary.title.4: __home.commentary.title.4
-home.commentary.text.4: __home.commentary.text.4
-home.commentary.author.4: __home.commentary.author.4
-home.commentary.title.5: __home.commentary.title.5
-home.commentary.text.5: __home.commentary.text.5
-home.commentary.author.5: __home.commentary.author.5
-home.commentary.title.6: __home.commentary.title.6
-home.commentary.text.6: __home.commentary.text.6
-home.commentary.author.6: __home.commentary.author.6
-home.commentary.title.7: __home.commentary.title.7
-home.commentary.text.7: __home.commentary.text.7
-home.commentary.author.7: __home.commentary.author.7
-home.commentary.title.8: __home.commentary.title.8
-home.commentary.text.8: __home.commentary.text.8
-home.commentary.author.8: __home.commentary.author.8
-home.commentary.title.9: __home.commentary.title.9
-home.commentary.text.9: __home.commentary.text.9
-home.commentary.author.9: __home.commentary.author.9
 coachingImage.h1: 'Imago coaching'
 coachingImage.h1.p1: 'Minu jaoks on riietumine tõeline elamise kunst.<br>Asutasin Fabimage jagamaks selle vaimsust sinuga.'
 coachingImage.h1.p2: 'Paranda oma riietumistiili peegeldamaks oma tõelist mina!'
@@ -171,4 +144,15 @@ workshop.head.title: 'Õpitoad ja Online meistriklassid'
 home.head.metaDescription: 'Autentne stiil on paljudele meist unistuseks. Ja see ongi Fabimage imago coachingu meetodi lubadus!'
 book.index.error: 'Teie makset ei saanud sooritada'
 commentaryHome.new: 'Loo uus kommentaar'
-commentaryHome.edit: "Muuda kommentaari"
+commentaryHome.edit: 'Muuda kommentaari'
+home.textVideo: '« Minu arusaamises imago coachingust ei ole ilu standardit, tõeline ja ainus ilu on sinu. Sinu sees on valgus, mis lihtsalt ootab, et särada ! »<br><br>Saame tuttavaks! Vaata minu videot ja saad teada kuidas imago coaching võib sind aidata ja kuidas see käib.'
+home.CommmentaryIntroduction: 'Minu kliendid jagavad oma kogemusi'
+company.button.quote: Hinnang
+workshop.index.body.title.masterClass: Meistriklassid
+workshop.index.p.2: 'Online meistriklassid toimuvad Zoomi keskkonnas ning kestavad 60 minutit (45 min + 15 min küsimustele).<br><br><strong>Meistriklassid on praktilised.</strong> Tutvustan värvimaailma, jagan stiilinippe ning aitan luua unistuste garderoobi! Räägin lähemalt erinevatest riietumisstiilidest ja elegantsist, välimuse olulisusest imago kujundamisel, vastutustundlikust moe kasutamisest. Iga naine on ilus ja ainulaadne, tähtis on aktsepteerida end sellistena nagu me oleme!<br><br>Meistriklassid toimuvad kui osalejaid on vähemalt 5: Sul on 4 sõbrannat? <strong>Korraldan meistriklassi teie jaoks!</strong> Võta minuga ühendust!'
+workshop.interested: 'Olen huvitatud'
+footer.home: Home
+footer.contact: Kontakt
+footer.service: Tennused
+footer.tarifs: hinnad
+book.index.h1: "Avasta imago maailm läbi isikliku arengu prisma!"

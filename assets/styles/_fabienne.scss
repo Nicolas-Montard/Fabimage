@@ -1,7 +1,56 @@
 .fabienne{
-  width: 60%;
-  @include media-breakpoint-down(md){
-    width: 90%;
+  .head-text-container{
+    @include media-breakpoint-up(md){
+      position: relative;
+      top: 150px;
+      left: 125px;
+      width: 666px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 80px;
+      margin-left: auto;
+      margin-right: 200px;
+    }
+    @include media-breakpoint-down(md){
+      margin-top: 50px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+  .title-image-container{
+    @include media-breakpoint-up(md){
+      position: absolute;
+      z-index: -1;
+      margin-left: 100px;
+      height: 400px;
+      width: 60%;
+      img{
+        object-fit: cover;
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      width: 70%;
+      height: 310px;
+    }
+    @include media-breakpoint-down(md){
+      width: 100%;
+      height: initial;
+    }
+  }
+  .top-container{
+    @include media-breakpoint-up(md){
+      margin-bottom: 250px;
+    }
+  }
+  .container-content{
+    width: 100%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
   }
   .title{
     width: 60%;
@@ -15,12 +64,15 @@
   .container-column{
     margin-top: 100px;
     .column{
-      width: 40%;
+      width: 700px;
+      margin-left: 50px;
+      margin-right: 50px;
       @include media-breakpoint-down(md){
         width: 100%;
+        margin-right: 0;
+        margin-left: 0;
       }
     }
-
   }
   .decoration{
     background-color: #FFEEE2;
@@ -33,6 +85,18 @@
   .image-2{
     @include media-breakpoint-down(md){
       display: none;
+    }
+  }
+  .container-row{
+    .column{
+      width: 700px;
+      margin-left: 50px;
+      margin-right: 50px;
+      @include media-breakpoint-down(md){
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
   }
 }

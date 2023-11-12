@@ -19,13 +19,13 @@
             <p class="mt-4">{{ 'service.index.p.2'|trans|raw }}</p>
         </div>
         {% if app.user %}
-        <div class="d-flex justify-content-center">
-            <a href="{{ path('app_service_new') }}">
-                <button class="btn btn-secondary text-white">{{'service.index.admin.newService'|trans}}</button>
-            </a>
-        </div>
+            <div class="d-flex justify-content-center">
+                <a href="{{ path('app_service_new') }}">
+                    <button class="btn btn-secondary text-white">{{'service.index.admin.newService'|trans}}</button>
+                </a>
+            </div>
         {% endif %}
-        <div class="row row-cols-1 row-cols-md-5 service-card-container mx-auto">
+        <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
             {% for service in services %}
                 <div class="service-card mt-5 d-flex flex-column">
                     {% include '_include/_card_service.html.twig' %}

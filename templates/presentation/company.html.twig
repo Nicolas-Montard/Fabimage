@@ -5,13 +5,20 @@
 
 {% block body %}
     <div class="company">
-        <h1 class="text-primary text-center title mx-auto">{{ 'company.content.title'|trans }}</h1>
-        <div class="top-section mx-auto d-flex mt-5 flex-column flex-md-row">
-            <div class="col-left">
+        <div class="top-container">
+            <div class="title-image-container">
+                <img src="{{ asset('build/images/Fabienne-COACHING-D\'IMAGE.jpg') }}" alt="" class="w-100 h-100">
+            </div>
+            <div class="head-text-container mx-auto bg-light">
+                <h1 class="text-primary text-center title mx-auto">{{ 'company.content.title'|trans }}</h1>
+            </div>
+        </div>
+        <div class="top-section mx-auto d-flex mt-5 flex-column flex-md-row-reverse">
+            <div class="col-left me-md-5">
                 <img src="{{ asset('build/images/company-image-1.png') }}" alt="">
                 <div class="decoration"></div>
             </div>
-            <div class="col-right ms-md-5">
+            <div class="col-right mx-md-5">
                 <h2 class="text-primary fs-1">{{ 'company.top-section.title'|trans}}</h2>
                 <p class="mt-4">{{ 'company.top-section.text'|trans|raw }}</p>
                 <ul>
@@ -32,9 +39,9 @@
                     </li>
                 </ul>
                 <p>{{ 'company.top-section.text.contactMe'|trans }}</p>
-                <div class="d-flex justify-content-center mt-3">
+                <div class="d-flex justify-content-center mt-4">
                     <a href="{{ path('contact_service') }}">
-                        <button class="btn btn-secondary rounded text-white text-center px-3 fs-4">{{ 'company.button.contact'|trans }}</button>
+                        <button class="btn btn-secondary rounded text-white text-center px-3">{{ 'company.button.contact'|trans }}</button>
                     </a>
                 </div>
             </div>
@@ -61,9 +68,9 @@
                     <li>{{ 'company.bottom-section.list.treeOfLife'|trans }}</li>
                 </ul>
                 <p>{{ 'company.bottom-section.endText'|trans|raw }}</p>
-                <div class="d-flex justify-content-center mt-3">
+                <div class="d-flex justify-content-center mt-4">
                     <a href="{{ path('contact_service') }}">
-                        <button class="btn btn-secondary rounded text-white text-center px-3 fs-4">{{ 'company.button.contact'|trans }}</button>
+                        <button class="btn btn-secondary rounded text-white text-center px-3">{{ 'company.button.quote'|trans }}</button>
                     </a>
                 </div>
             </div>

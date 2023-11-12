@@ -173,6 +173,33 @@ class WorkshopType extends AbstractType
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ]
             ])
+            ->add('underTitleFr', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('underTitleEs', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('underTitleEt', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
         ;
     }
 

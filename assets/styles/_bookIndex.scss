@@ -1,4 +1,52 @@
 .book-index{
+  .head-text-container{
+    @include media-breakpoint-up(md){
+      position: relative;
+      top: 150px;
+      left: 125px;
+      width: 666px;
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 80px;
+      margin-left: auto;
+      margin-right: 200px;
+    }
+    @include media-breakpoint-down(md){
+      margin-top: 50px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+  .title-image-container{
+    @include media-breakpoint-up(md){
+      position: absolute;
+      z-index: -1;
+      margin-left: 100px;
+      height: 400px;
+      width: 60%;
+      img{
+        object-fit: cover;
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      width: 70%;
+      height: 310px;
+    }
+    @include media-breakpoint-down(md){
+      width: 100%;
+      height: initial;
+    }
+  }
+  .top-container{
+    @include media-breakpoint-up(md){
+      margin-bottom: 250px;
+    }
+  }
   .buyed-text{
     width: 50%;
     @include media-breakpoint-down(md){
@@ -6,7 +54,10 @@
     }
   }
   .column-container{
-    width: 70%;
+    width: 80%;
+    @include media-breakpoint-down(xxl){
+      width: 95%;
+    }
     @include media-breakpoint-down(md){
       width: 90%;
     }
@@ -28,10 +79,19 @@
       }
     }
     .right-column{
+      width: 550px;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
       .promotionalCode{
         position: relative;
         bottom: 10px;
       }
+    }
+  }
+  .form-field{
+    input{
+      width: 250px;
     }
   }
 }
