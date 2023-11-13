@@ -251,6 +251,13 @@ class BookController extends AbstractController
             ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language]))
         ;
         $mailer->send($email);
+        $email = (new Email())
+            ->from($this->getParameter('mailer_from'))
+            ->to($this->getParameter('mailer_to'))
+            ->subject($request->query->get('firstName') . " " . $request->query->get('name') .' a telechargé ' . $subject)
+            ->html($this->renderView('book/downloadBookEmail.html.twig', ['nom' => $request->query->get('name'), 'firstName' => $request->query->get('firstName'), 'email' => $request->query->get('email'), 'book' => $subject]))
+        ;
+        $mailer->send($email);
         return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
 
