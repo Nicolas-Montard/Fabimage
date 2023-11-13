@@ -7,9 +7,12 @@
 <body>
 <h3>{{ form.name }} Souhaite acheter une carte cadeau</h3>
 <p>Nom: {{ form.name }}</p>
+<p>prestation : {{ form.type }}</p>
 <p>Email : {{ form.email }}</p>
 <p>Numéro de téléphone : {{ form.phoneNumber }}</p>
-<p>prestation : {{ form.service.titleFr }}</p>
+{% if form.postalCode %}
+    <p>adresse : {{ form.postalCode }}</p>
+{% endif %}
 {% if form.isComing %}
     <p>{{ form.name }} viendra chercher la carte cadeau</p>
 {% endif %}

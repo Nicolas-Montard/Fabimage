@@ -166,6 +166,10 @@ workshop.index.body.title.masterClass: 'Master Classes en ligne'
 workshop.index.p.2: "Les master classes en ligne se déroulent sur la plateforme Zoom et durent 60 minutes (45 min + 15 min pour les questions).<br><br><strong>Les master classes sont pratiques.</strong> Je vous présente le monde des couleurs, je partage des astuces de style et vous aide à créer la garde-robe de vos rêves ! Je parle plus en détail des différents styles vestimentaires et de l'élégance, de l'importance de l'apparence dans la création de l'image et de l'utilisation responsable de la mode.<br>Chaque femme est belle et unique, il est important de s’accepter telle que l’on est !<br><br>Les master classes ont lieu lorsqu'il y a au moins 5 participants : vous avez 4 copines? <strong>J'organise une master class pour vous !</strong> Contactez moi!"
 workshop.interested: "Ca m'interesse"
 book.index.h1: 'Découvrez l’univers de l’image personnelle sous le prisme du développement personnel !'
-book.index.email: "Email:"
-book.index.lastName: "Nom:"
-book.index.firstName: "Prénom:"
+book.index.email: 'Email:'
+book.index.lastName: 'Nom:'
+book.index.firstName: 'Prénom:'
+giftCard.index.form.type: 'Quel prestation voulez vous offrir ?'
+contact.form.ComingWithFriend: 'Je viens avec une amie '
+contact.workshop.form.send: "Envoyé"
+contact.form.phoneNumber.afterComingWithFriend: "(Indiquez le nom complet de votre amie)"

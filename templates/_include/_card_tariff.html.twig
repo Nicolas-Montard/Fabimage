@@ -1,7 +1,7 @@
 <div class="card-container mt-5">
     <img src="{{ asset('uploads/images/pictures/' ~ tariff.picture) }}" alt="">
     <div class="bg-light text-div ms-auto">
-        <h5 class="fst-italic m-0 my-3 pt-2">
+        <h5 class="fst-italic m-0 my-3 pt-2 mx-3">
             {% if app.request.locale == 'fr' %}
                 {{ tariff.titleFr|raw}}
             {% elseif app.request.locale == 'es' %}
@@ -10,7 +10,7 @@
                 {{ tariff.titleEt|raw}}
             {% endif %}
         </h5>
-        <p class="">
+        <p class="mx-3">
             {% if app.request.locale == 'fr' %}
                 {{ tariff.contentFr|raw}}
             {% elseif app.request.locale == 'es' %}
@@ -19,5 +19,11 @@
                 {{ tariff.contentEt|raw}}
             {% endif %}
         </p>
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-2 tariff-update-button">
+                <a href="{{ path('app_tariff_edit', {id: tariff.id}) }}"><button class="btn btn-secondary text-white fs-6">
+                        {{ 'book.update'|trans }}</button></a>
+            </div>
+        {% endif %}
     </div>
 </div>

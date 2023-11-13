@@ -35,12 +35,17 @@ class GiftCardType extends AbstractType
         }
 
         $builder
-            ->add('service', EntityType::class, [
-                'class' => Service::class,
-                'choice_label' => $choiceLabel,
-                'multiple'=> false,
-                'expanded'=> false,
+            ->add('type', TextType::class, [
                 'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('postalCode', TextType::class, [
+                'required' => false,
                 'attr' => [
                     'class' => 'widget rounded'
                 ],

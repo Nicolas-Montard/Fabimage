@@ -157,6 +157,10 @@ footer.contact: Contacto
 footer.service: Servicios
 footer.tarifs: Tarifas
 book.index.h1: '¡Descubre el mundo de la imagen personal mediante el prisma del desarrollo personal!'
-book.index.email: "Correo electrónico"
-book.index.lastName: "Apellidos"
-book.index.firstName: "Nombre"
+book.index.email: 'Correo electrónico'
+book.index.lastName: Apellidos
+book.index.firstName: Nombre
+giftCard.index.form.type: '¿Qué servicio quieres ofrecer?'
+contact.form.ComingWithFriend: "Vengo con una amiga"
+contact.workshop.form.send: "Enviar"
+contact.form.phoneNumber.afterComingWithFriend: "(Indica el nombre completo de tu amiga)"

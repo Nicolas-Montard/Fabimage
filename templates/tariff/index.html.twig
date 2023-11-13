@@ -5,12 +5,14 @@
 {% block body %}
     <div class="tariff-index">
         <h1 class="text-primary text-center mb-5">Tarifs des prestations</h1>
-        <div class="row row-cols-1 row-cols-md-4 tariff-card-container mx-auto">
-            {% for tariff in tariffs %}
-                <div class="mx-auto">
-                    {% include '_include/_card_tariff.html.twig' %}
-                </div>
-            {% endfor %}
+        <div class="card-deco-container">
+            <div class="d-flex flex-wrap justify-content-center tariff-card-container mx-auto">
+                {% for tariff in tariffs %}
+                    <div class="mx-auto">
+                        {% include '_include/_card_tariff.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         {% if app.user %}
             <div class="d-flex justify-content-center mt-4">

@@ -21,9 +21,9 @@
         <div class="form-container mx-auto">
             {{ form_start(form) }}
                 <div class="d-flex flex-column mt-3">
-                    {{ form_label(form.service, 'giftCard.index.form.service'|trans) }}
-                    {{ form_widget(form.service) }}
-                    {{ form_errors(form.service) }}
+                    {{ form_label(form.type, 'giftCard.index.form.type'|trans) }}
+                    {{ form_widget(form.type) }}
+                    {{ form_errors(form.type) }}
                 </div>
                 <div class="d-flex flex-column mt-3">
                     {{ form_label(form.name, 'giftCard.index.form.name'|trans) }}
@@ -46,6 +46,11 @@
                     {{ form_errors(form.beneficiaryName) }}
                 </div>
                 <p class="mt-2"> {{ 'giftCard.index.form.p'|trans }}</p>
+                <div class="d-flex flex-column mt-3">
+                    {{ form_label(form.postalCode, 'giftCard.index.form.p'|trans) }}
+                    {{ form_widget(form.postalCode) }}
+                    {{ form_errors(form.postalCode) }}
+                </div>
                 <div class="d-flex flex-column mt-3">
                     <div class="d-flex">
                         {{ form_label(form.isComing, 'giftCard.index.form.isComing'|trans) }}

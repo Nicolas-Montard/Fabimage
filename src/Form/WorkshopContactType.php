@@ -14,14 +14,17 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class WorkshopContactType extends AbstractType
 {
     private $requestStack;
+    private $translator;
 
-    public function __construct(RequestStack $requestStack)
+    public function __construct(RequestStack $requestStack, TranslatorInterface $translator)
     {
         $this->requestStack = $requestStack;
+        $this->translator = $translator;
     }
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -119,7 +122,18 @@ class WorkshopContactType extends AbstractType
                 'label_attr' => [
                     'class' => 'label ms-3'
                 ]
-            ]);
+            ])
+            ->add('comingWithFriend', TextType::class, [
+                'required' => false,
+                'label' => $this->translator->trans('contact.form.ComingWithFriend'),
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

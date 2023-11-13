@@ -60,7 +60,7 @@ contact.workshop.form.AssociationSchool: 'Ühing, kool'
 home.video.link: 'https://www.youtube.com/embed/ef5VBpHztIU'
 navbar.deconnect: 'Logi välja'
 Fabienne.title: 'Ainukene Coach Eestis, kelle eriala on imago'
-contact.workshop.form.agreements.info: 'Recogemos estos datos para enviarle la información/presupuesto que ha solicitado por correo electrónico. También utilizamos su dirección de correo electrónico para enviarle información sobre nuestros servicios.<br><br>Si no desea recibir este tipo de correos, marque la casilla siguiente:'
+contact.workshop.form.agreements.info: 'Me kogume neid andmeid selleks, et saata teile e-posti teel teie poolt soovitud teavet/ pakkumist. Kasutame teie e-posti aadressi ka selleks, et saata teile teavet meie teenuste kohta.<br><br>Kui te ei soovi selliseid kirju saada, märgistage palun allpool olev kast:'
 contact.workshop.form.agreements: 'Me opongo a que mi dirección de correo electrónico sea utilizada para recibir noticias y/u ofertas de Fabimage OÜ.'
 company.title: __company.title
 company.content.title: 'Ettevõtted, ühingud, haridusasutused, huvikoolid'
@@ -156,6 +156,10 @@ footer.contact: Kontakt
 footer.service: Tennused
 footer.tarifs: hinnad
 book.index.h1: 'Avasta imago maailm läbi isikliku arengu prisma!'
-book.index.email: "e-post"
-book.index.lastName: "Perekonnanimi"
-book.index.firstName: "Eesnimi"
+book.index.email: e-post
+book.index.lastName: Perekonnanimi
+book.index.firstName: Eesnimi
+giftCard.index.form.type: 'Millist teenust soovite pakkuda?'
+contact.form.ComingWithFriend: "Ma tulen koos sõbraga"
+contact.workshop.form.send: "Saada"
+contact.form.phoneNumber.afterComingWithFriend: "(Kirjuta oma sõbranna nimi ja perekonnanimi)"

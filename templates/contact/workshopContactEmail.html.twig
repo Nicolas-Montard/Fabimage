@@ -11,6 +11,9 @@
         {% endfor %}</p>
     <p>Email : {{ form.email }}</p>
     <p>Numéro de téléphone : {{ form.phoneNumber }}</p>
+    {% if form.comingWithFriend %}
+        {{ form.firstName }} {{ form.lastName }} viendra avec {{ form.comingWithFriend }}
+    {% endif %}
     <p>{{ form.firstName }} {{ form.lastName }} a découvert les ateliers et les masterclasses par {{ form.informed }}</p>
     {% if form.agreements %}
         <p>{{ form.firstName }} {{ form.lastName }} ne souhaite pas recevoir des nouvelles ou offres.</p>

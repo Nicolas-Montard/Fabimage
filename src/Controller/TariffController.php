@@ -48,17 +48,6 @@ class TariffController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_tariff_show', methods: ['GET'])]
-    public function show(Tariff $tariff, Security $security): Response
-    {
-        if (!$security->isGranted('IS_AUTHENTICATED')){
-            return $this->redirectToRoute('app_home');
-        }
-        return $this->render('tariff/show.html.twig', [
-            'tariff' => $tariff,
-        ]);
-    }
-
     #[Route('/{id}/edit', name: 'app_tariff_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Tariff $tariff, TariffRepository $tariffRepository, Security $security): Response
     {
@@ -81,5 +70,18 @@ class TariffController extends AbstractController
             'form' => $form,
             'error' => $request->query->get('error')
         ]);
+    }
+
+    #[Route('/{id}', name: 'app_tariff_delete', methods: ['POST'])]
+    public function delete(Request $request, Tariff $tariff, TariffRepository $tariffRepository, Security $security): Response
+    {
+        if (!$security->isGranted('IS_AUTHENTICATED')){
+            return $this->redirectToRoute('app_home');
+        }
+        if ($this->isCsrfTokenValid('delete'.$tariff->getId(), $request->request->get('_token'))) {
+            $tariffRepository->remove($tariff, true);
+        }
+
+        return $this->redirectToRoute('app_tariff_index', [], Response::HTTP_SEE_OTHER);
     }
 }
