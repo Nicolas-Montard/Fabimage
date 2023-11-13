@@ -155,4 +155,7 @@ footer.home: Home
 footer.contact: Kontakt
 footer.service: Tennused
 footer.tarifs: hinnad
-book.index.h1: "Avasta imago maailm läbi isikliku arengu prisma!"
+book.index.h1: 'Avasta imago maailm läbi isikliku arengu prisma!'
+book.index.email: "e-post"
+book.index.lastName: "Perekonnanimi"
+book.index.firstName: "Eesnimi"

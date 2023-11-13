@@ -156,4 +156,7 @@ footer.home: Home
 footer.contact: Contacto
 footer.service: Servicios
 footer.tarifs: Tarifas
-book.index.h1: "¡Descubre el mundo de la imagen personal mediante el prisma del desarrollo personal!"
+book.index.h1: '¡Descubre el mundo de la imagen personal mediante el prisma del desarrollo personal!'
+book.index.email: "Correo electrónico"
+book.index.lastName: "Apellidos"
+book.index.firstName: "Nombre"

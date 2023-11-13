@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Book;
+use App\Entity\PromotionalCode;
 use App\Entity\Token;
 use App\Form\BookType;
 use App\Repository\BookRepository;
+use App\Repository\PromotionalCodeRepository;
 use App\Repository\TokenRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Stripe\StripeClient;
@@ -14,6 +16,7 @@ use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
@@ -38,7 +41,8 @@ class BookController extends AbstractController
         return $this->render('book/index.html.twig', [
             'books' => $bookRepository->findAll(),
             'buyed' => $request->query->get('buyed'),
-            'error' => $request->query->get('error')
+            'error' => $request->query->get('error'),
+            'emailError' => $request->query->get('email')
         ]);
     }
 
@@ -117,6 +121,9 @@ class BookController extends AbstractController
                 if ($code->getName() == $request->query->get('promotionalCode')){
                     $promotionalCode = $code;
                     $price = $promotionalCode->getPrice();
+                    if ($price == 0){
+                        return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
+                    }
                 }
             }
             if ($promotionalCode == ""){
@@ -174,11 +181,11 @@ class BookController extends AbstractController
        $paymentStatus = $customer["payment_status"];
        $local = $request->getLocale();
        if ($local == 'fr'){
-           $subject = 'Ebook – Guide « Les 7 styles universels »';
+           $subject = $book->getNameFr();
        }elseif ($local == 'es'){
-           $subject = 'Ebook - Guía "Los 7 estilos universales”';
+           $subject = $book->getNameEs();
        }else{
-           $subject = 'Ebook - juhend "7 universaalset stiili"';
+           $subject = $book->getNameEt();
        }
        $email = (new Email())
            ->from($this->getParameter('mailer_from'))
@@ -199,21 +206,52 @@ class BookController extends AbstractController
     }
 
     #[Route('/downloadFree/{id}', name: 'app_download_free')]
-    public function downloadFree(Request $request, TokenRepository $tokenRepository, Book $book): Response
+    public function downloadFree(Request $request, TokenRepository $tokenRepository, Book $book, PromotionalCodeRepository $promotionalCodeRepository, MailerInterface $mailer): Response
     {
+        if ($request->query->get('promoCode')){
+            $promotionalCode = $promotionalCodeRepository->findOneBy(['name' => $request->query->get('promoCode'), 'Book' => $book]);
+            $promoMatch = false;
+            foreach ($book->getPromotionalCodes() as $promo){
+                if ($promo == $promotionalCode){
+                    return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
+                }
+            }
+            if (!$promoMatch){
+                $this->redirectToRoute('app_home');
+            }
+        }
         if ($book->getPrice() != 0){
             $this->redirectToRoute('app_home');
         }
-        $language = $request->getLocale();
-        if ($language = 'fr'){
-            $book = $book->getBookFr();
-        } elseif($language = 'es'){
-            $book = $book->getBookEs();
-        } else{
-            $book = $book->getBookEt();
+        if (!filter_var($request->query->get('email', FILTER_VALIDATE_EMAIL))){
+            return $this->redirectToRoute('app_book_index', ['wrongEmail' => true]);
         }
-        $response = new BinaryFileResponse('../private/uploads/books/' . $book);
-        return $response;
+        $language = $request->getLocale();
+
+        $tokenContent = bin2hex(random_bytes(15));
+        $token = new Token();
+        $token->setContent($tokenContent);
+        $token->setCreatedAt(now());
+        $token->setIsValid(true);
+        $token->setBook($book);
+        $token->setLanguage($language);
+        $tokenRepository->save($token, true);
+        if ($language == 'fr'){
+            $subject = $book->getNameFr();
+        }elseif ($language == 'es'){
+            $subject = $book->getNameES();
+        }else{
+            $subject = $book->getNameEt();
+        }
+
+        $email = (new Email())
+            ->from($this->getParameter('mailer_from'))
+            ->to($request->query->get('email'))
+            ->subject($subject)
+            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language]))
+        ;
+        $mailer->send($email);
+        return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
 
     #[Route('/download', name: 'app_download', methods: ['GET'])]
@@ -225,9 +263,9 @@ class BookController extends AbstractController
             $this->redirectToRoute('app_home');
         }
         $language = $token->getLanguage();
-        if ($language = 'fr'){
+        if ($language == 'fr'){
             $book = $token->getBook()->getBookFr();
-        } elseif($language = 'es'){
+        } elseif($language == 'es'){
             $book = $token->getBook()->getBookEs();
         } else{
             $book = $token->getBook()->getBookEt();
