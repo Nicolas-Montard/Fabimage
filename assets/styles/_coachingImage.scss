@@ -64,12 +64,17 @@
       width: 90%;
     }
   }
-  .top-column{
-    margin-top: 100px;
+  .top-column-container{
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .top-column{
+      margin-top: 100px;
+    }
   }
   .column-bottom{
     .container-img{
-      width: 30%;
+      width: 40%;
     }
     .text-column{
       margin-left: 75px;

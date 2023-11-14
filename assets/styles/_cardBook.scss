@@ -1,12 +1,13 @@
-.service-card{
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 265px;
+.book-card{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  width: 225px;
   @include media-breakpoint-down(md){
     width: 100%;
   }
   .image-container{
-    height: 280px;
+    height: 315px;
     width: 225px;
     @include media-breakpoint-down(md){
       width: 100%;
@@ -23,26 +24,22 @@
     }
   }
   .content-container{
-    min-height: 200px;
   }
   .text-container{
     position: relative;
-    bottom: 40px;
-    z-index: 2;
-    background-color: white;
-    width: 210px;
-    @include media-breakpoint-down(md){
-      width: 90%;
-    }
-    a:link {
-      text-decoration: none;
-    }
-    a:hover {
-      color: black;
-    }
+    width: 100%;
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+    color: black;
     p{
       font-size: 14px;
       line-height: normal;
     }
+  }
+  a:link {
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
   }
 }

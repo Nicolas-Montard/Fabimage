@@ -116,8 +116,12 @@
       }
     }
   }
-  .service-card-container{
-    width: 85%;
+  .container-service-card-container{
+    width: 100%;
+    background-color: white;
+    .service-card-container{
+      width: 85%;
+    }
   }
   .quote-container{
     height: 500px;

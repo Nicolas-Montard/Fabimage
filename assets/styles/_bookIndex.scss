@@ -44,7 +44,7 @@
   }
   .top-container{
     @include media-breakpoint-up(md){
-      margin-bottom: 250px;
+      margin-bottom: 125px;
     }
   }
   .buyed-text{
@@ -93,5 +93,14 @@
     input{
       width: 250px;
     }
+  }
+  .book-card-container{
+    width: 85%;
+    @include media-breakpoint-down(md){
+      display: none!important;
+    }
+  }
+  .space-between-book{
+    margin-top: 175px;
   }
 }

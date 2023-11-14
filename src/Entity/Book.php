@@ -112,6 +112,15 @@ class Book
     #[ORM\OneToMany(mappedBy: 'Book', targetEntity: PromotionalCode::class, orphanRemoval: true)]
     private Collection $promotionalCodes;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $smallDescriptionFr = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $smallDescriptionEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $smallDescriptionEt = null;
+
     public function __construct()
     {
         $this->tokens = new ArrayCollection();
@@ -435,6 +444,42 @@ class Book
                 $promotionalCode->setBook(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSmallDescriptionFr(): ?string
+    {
+        return $this->smallDescriptionFr;
+    }
+
+    public function setSmallDescriptionFr(string $smallDescriptionFr): static
+    {
+        $this->smallDescriptionFr = $smallDescriptionFr;
+
+        return $this;
+    }
+
+    public function getSmallDescriptionEs(): ?string
+    {
+        return $this->smallDescriptionEs;
+    }
+
+    public function setSmallDescriptionEs(string $smallDescriptionEs): static
+    {
+        $this->smallDescriptionEs = $smallDescriptionEs;
+
+        return $this;
+    }
+
+    public function getSmallDescriptionEt(): ?string
+    {
+        return $this->smallDescriptionEt;
+    }
+
+    public function setSmallDescriptionEt(string $smallDescriptionEt): static
+    {
+        $this->smallDescriptionEt = $smallDescriptionEt;
 
         return $this;
     }

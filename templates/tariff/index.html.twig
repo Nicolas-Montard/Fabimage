@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="tariff-index">
-        <h1 class="text-primary text-center mb-5">Tarifs des prestations</h1>
+        <h1 class="text-primary text-center mb-5">{{ 'Tariff.index.h1'|trans }}</h1>
         <div class="card-deco-container">
             <div class="d-flex flex-wrap justify-content-center tariff-card-container mx-auto">
                 {% for tariff in tariffs %}

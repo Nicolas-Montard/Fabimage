@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Book;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
@@ -39,6 +40,33 @@ class BookType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('smallDescriptionFr', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('smallDescriptionEs', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('smallDescriptionEt', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded under-title'
                 ],
                 'label_attr' => [
                     'class' => 'label'

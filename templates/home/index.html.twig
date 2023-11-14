@@ -8,7 +8,7 @@
         <img src="{{ asset('build/images/Fabienne-HOME.jpg') }}" alt="" class="w-100 img-start">
         <div class="d-flex flex-column justify-content-center align-items-center text-primary title-container mt-5 mx-auto">
             <h1 class="text-center mx-4 mx-md-0">{{ 'home.title'|trans }}</h1>
-            <p class="fs-4 text-center mx-4 mx-md-0">{{ 'home.underTitle'|trans }}</p>
+            <p class="fs-4 text-center mx-4 mx-md-0">{{ 'home.underTitle'|trans|raw }}</p>
         </div>
         <div class="d-flex justify-content-around flex-column flex-md-row align-items-center mt-4">
             <div class="container-video ms-xxl-5 d-flex">
@@ -38,24 +38,26 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
-            {% for service in services %}
+        <div class="container-service-card-container">
+            <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
+                {% for service in services %}
+                    <div class="service-card mt-5 d-flex flex-column">
+                        {% include '_include/_card_service.html.twig' %}
+                    </div>
+                {% endfor %}
                 <div class="service-card mt-5 d-flex flex-column">
-                    {% include '_include/_card_service.html.twig' %}
-                </div>
-            {% endfor %}
-            <div class="service-card mt-5 d-flex flex-column">
-                <div class="image-container mx-auto">
-                    <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
-                </div>
-                <div>
-                    <div class="d-flex flex-column text-container mx-auto rounded-1">
-                        <div class="content-container">
-                            <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white">
-                                    {{ 'Service.readMore'|trans }}</button></a>
+                    <div class="image-container mx-auto">
+                        <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column text-container mx-auto rounded-1">
+                            <div class="content-container">
+                                <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white">
+                                        {{ 'Service.readMore'|trans }}</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>

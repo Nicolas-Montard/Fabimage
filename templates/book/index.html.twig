@@ -20,10 +20,20 @@
             <p class="buyed-text mx-auto">{{ 'book.index.error'|trans|raw }}</p>
         {% endif %}
         {% if emailError %}
-            
+            <p class="buyed-text mx-auto">{{ 'book.index.emailError'|trans|raw }}</p>
         {% endif %}
+        <div class="d-flex flex-wrap justify-content-center book-card-container mx-auto">
+            {% for book in books %}
+                <div class="book-card mt-5 d-flex flex-column">
+                    {% include '_include/_card_book.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>
         {% for book in books %}
-            <div class="column-container d-flex justify-content-around mx-auto mt-5 flex-column flex-md-row">
+{#            {% if not loop.first %}#}
+{#                <div class="space-between-book"></div>#}
+{#            {% endif %}#}
+            <div class="column-container d-flex justify-content-around mx-auto mt-5 flex-column flex-md-row" id="book{{ loop.index }}">
                 <div class="left-column column d-flex justify-content-center">
                     {% if app.request.locale == 'fr' %}
                         <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="">

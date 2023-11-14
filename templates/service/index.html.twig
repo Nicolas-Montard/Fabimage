@@ -14,9 +14,11 @@
                 <p class="mt-5">{{ 'service.index.p.1'|trans|raw }}</p>
             </div>
         </div>
-        <div class="mx-auto w-50 mt-5 mb-5 offer">
-            <h2 class="fs-h1 mt-3 text-center text-primary">{{ 'service.index.myOffer'|trans }}</h2>
-            <p class="mt-4">{{ 'service.index.p.2'|trans|raw }}</p>
+        <div class="offer-container">
+            <div class="mx-auto w-50 mt-5 mb-5 offer">
+                <h2 class="fs-h1 mt-3 text-center text-primary">{{ 'service.index.myOffer'|trans }}</h2>
+                <p class="mt-4">{{ 'service.index.p.2'|trans|raw }}</p>
+            </div>
         </div>
         {% if app.user %}
             <div class="d-flex justify-content-center">

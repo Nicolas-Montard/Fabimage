@@ -31,10 +31,22 @@
         object-fit: cover;
       }
     }
-  }
-  .offer{
+    @include media-breakpoint-down(xxl){
+      width: 70%;
+      height: 310px;
+    }
     @include media-breakpoint-down(md){
-      width: 90%!important;
+      width: 100%;
+      height: initial;
+    }
+  }
+  .offer-container{
+    background-color: white;
+    padding-top: 15px;
+    .offer{
+      @include media-breakpoint-down(md){
+        width: 90%!important;
+      }
     }
   }
   .service-card-container{
