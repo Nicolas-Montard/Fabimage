@@ -12,7 +12,7 @@ navbar.language: Español
 navbar.coachingOfImage: 'Coaching de imagen'
 navbar.workshop: Talleres
 navbar.contact: Contacto
-contact.contactMe: 'Contáctame'
+contact.contactMe: Contáctame
 contact.service.form.type: 'Mi solicitud se refiere a :'
 contact.service.form.client: 'soy :'
 contact.form.firstName: Nombre
@@ -85,7 +85,7 @@ company.bottom-section.list.image: 'cómo utilizar los accesorios'
 company.bottom-section.list.sevenStyle: 'el papel de la imagen en la comunicación'
 company.bottom-section.list.treeOfLife: 'el árbol de vida de la imagen (trabajo sobre la formación de la imagen personal)'
 company.bottom-section.endText: 'Consulte las tarifas sin compromiso.<br><br>*Los participantes en estos talleres reciben un 10% de descuento en el resto de los servicios de Fabimage.'
-navbar.company: "Empresas"
+navbar.company: Empresas
 home.quote: '<< En mi concepción del coaching de imagen no existe un estándar de belleza, la verdadera y única belleza es la tuya. ¡Hay una luz dentro de ti, esperando brillar! >>'
 service.index.body.title: '¿Qué significa para ti ser auténtico?'
 service.index.myOffer: 'Mis ofertas'
@@ -94,11 +94,11 @@ workshop.index.body.title: Talleres
 workshop.index.admin.newWorkshop: 'crear un nuevo taller'
 navbar.fabienne: 'Sobre mi'
 navbar.services: Servicios
-navbar.book: 'Ebooks'
+navbar.book: Ebooks
 book.buy: Compro
 book.update: 'Poner al día'
 book.createNewBook: 'Crear un nuevo libro'
-contact.send: 'enviar'
+contact.send: enviar
 Service.readMore: 'Saber más'
 workshop.update: Actualizar
 workshop.createCommentary: 'Crear comentario'
@@ -148,7 +148,7 @@ home.textVideo: '«En mi concepción del coaching de imagen no existe un estánd
 home.CommmentaryIntroduction: 'Lo que dicen mis clientes'
 coachingImage.rightColumn.img.alt: __coachingImage.rightColumn.img.alt
 coachingImage.button.services: Servicios
-company.button.quote: "Contactar"
+company.button.quote: Contactar
 workshop.index.body.title.masterClass: 'Masterclass en línea'
 workshop.index.p.2: 'Las clases magistrales online se desarrollan en el entorno Zoom y tienen una duración de 60 minutos (45 min + 15 min para preguntas).<br><br><strong>Las clases magistrales son prácticas..</strong> ¡Te presento el mundo de los colores, comparto consejos de estilo y ayudo a crear el guardarropa de tus sueños! Hablo con más detalle sobre los diferentes estilos, la elegancia, la importancia de la apariencia en la creación de una imagen y el uso responsable de la moda.<br><br>Cada mujer es hermosa y única, ¡es importante aceptarnos tal como somos!<br><br>Las clases magistrales se llevan a cabo con al menos 5 participantes:<br>¿Tienes 4 amigas? <strong>¡Organizo una clase para vosotras!</strong> ¡Escribeme para concertar la fecha!'
 workshop.interested: 'Esto me interesa'
@@ -161,6 +161,8 @@ book.index.email: 'Correo electrónico'
 book.index.lastName: Apellidos
 book.index.firstName: Nombre
 giftCard.index.form.type: '¿Qué servicio quieres ofrecer?'
-contact.form.ComingWithFriend: "Vengo con una amiga"
-contact.workshop.form.send: "Enviar"
-contact.form.phoneNumber.afterComingWithFriend: "(Indica el nombre completo de tu amiga)"
+contact.form.ComingWithFriend: 'Vengo con una amiga'
+contact.workshop.form.send: Enviar
+contact.form.phoneNumber.afterComingWithFriend: '(Indica el nombre completo de tu amiga)'
+book.index.emailError: "Este email es invalido"
+Tariff.index.h1: "Precio de los servicios"

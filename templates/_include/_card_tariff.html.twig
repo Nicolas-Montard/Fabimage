@@ -1,6 +1,6 @@
 <div class="card-container mt-5">
     <img src="{{ asset('uploads/images/pictures/' ~ tariff.picture) }}" alt="">
-    <div class="bg-light text-div ms-auto">
+    <div class="bg-white text-div ms-auto">
         <h5 class="fst-italic m-0 my-3 pt-2 mx-3">
             {% if app.request.locale == 'fr' %}
                 {{ tariff.titleFr|raw}}
