@@ -76,7 +76,7 @@ contact.workshop.form.agreements: 'Je m’oppose à ce que mon mail soit utilis�
 company.title: __company.title
 navbar.company: Entreprises
 company.content.title: "Entreprises, associations, prestataires d'éducation"
-company.top-section.title: "Préstataires d'éducation"
+company.top-section.title: "Prestataires d'éducation"
 company.top-section.text: 'Fabimage offre ses services à des écoles, centres culturels et autres organismes dédiés à la jeunesse sous la forme d’ateliers et de séminaires.<br><br>J’offre des ateliers <strong>d’épanouissement individuel</strong> par le <strong>travail sur l’image de soi</strong> selon une méthodologie qui invite les jeunes à une réflexion sur leurs forces et leurs valeurs.<br><br>Avec mes collègues de l’AFIPP nous avons développé un parcours en <strong>cinq thématiques,</strong> chacune pouvant être divisée en plusieurs modules de 90-120 minutes. Chaque module vise des compétences différentes.'
 company.top-section-list.list.personalRessources: '<strong>Mes ressources personnelles :</strong> Acquérir une meilleure connaissance de soi, se recentrer grâce à une réflexion sur ses qualités, ses valeurs, ses désirs. '
 company.top-section-list.list.myBody: '<strong>Mon corps :</strong>  Développer une meilleure conscience de son corps, améliorer sa relation à son corps, valeur et beauté du corps dans les différences.'
@@ -127,7 +127,7 @@ giftCard.index.form.commentary: 'Commentaires (ex. code promotionnel...)'
 giftCard.button: 'Je commande'
 giftCard.index.sent: 'Votre commande a été envoyé'
 home.giftCard.title: 'Carte cadeau Fabimage'
-book.download: télécharger
+book.download: "Je télécharge mon ebook"
 book.index.promotionalCode: 'Code promotionel'
 book.index.wrongCode: 'Ce code promotionel est invalide'
 book.buyed.hello: Bonjour
@@ -157,14 +157,14 @@ commentaryHome.new: 'Créer un nouveau temoignage'
 commentaryHome.edit: 'Editer le temoignage'
 home.textVideo: "« Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! »<br><br>Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
 home.CommmentaryIntroduction: 'Mes clients partagent leur expérience'
-company.button.quote: Devis
+company.button.quote: "Je prends contact"
 footer.home: Accueil
 footer.contact: Contact
 footer.service: Prestations
 footer.tarifs: tarifs
 workshop.index.body.title.masterClass: 'Master Classes en ligne'
 workshop.index.p.2: "Les master classes en ligne se déroulent sur la plateforme Zoom et durent 60 minutes (45 min + 15 min pour les questions).<br><br><strong>Les master classes sont pratiques.</strong> Je vous présente le monde des couleurs, je partage des astuces de style et vous aide à créer la garde-robe de vos rêves ! Je parle plus en détail des différents styles vestimentaires et de l'élégance, de l'importance de l'apparence dans la création de l'image et de l'utilisation responsable de la mode.<br>Chaque femme est belle et unique, il est important de s’accepter telle que l’on est !<br><br>Les master classes ont lieu lorsqu'il y a au moins 5 participants : vous avez 4 copines? <strong>J'organise une master class pour vous !</strong> Contactez moi!"
-workshop.interested: "Ca m'interesse"
+workshop.interested: "Ça m'intéresse"
 book.index.h1: 'Découvrez l’univers de l’image de soi sous le prisme du développement personnel !'
 book.index.email: 'Email:'
 book.index.lastName: 'Nom:'

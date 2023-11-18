@@ -99,7 +99,7 @@ book.buy: Ostan
 book.update: Uuendama
 book.createNewBook: 'Looge uus raamat'
 contact.send: Saada
-Service.readMore: 'Loen edasi'
+Service.readMore: 'Vaatan lähemalt'
 workshop.update: värskendada
 workshop.createCommentary: 'Loo kommentaar'
 workshop.updateCommentary: 'Uuenda kommentaariumit'
@@ -116,7 +116,7 @@ giftCard.index.form.commentary: 'Märkused (nt sooduskood...)'
 giftCard.button: 'Tellin kinkekaardi'
 giftCard.index.sent: 'Teie tellimus on saadetud'
 home.giftCard.title: 'Fabimage kinkekaart'
-book.download: 'lae alla'
+book.download: 'laen alla'
 book.index.promotionalCode: Sooduskood
 book.index.wrongCode: 'See sooduskood on kehtetu'
 book.buyed.hello: Tere
@@ -146,7 +146,7 @@ commentaryHome.new: 'Loo uus kommentaar'
 commentaryHome.edit: 'Muuda kommentaari'
 home.textVideo: '« Minu arusaamises imago coachingust ei ole ilu standardit, tõeline ja ainus ilu on sinu. Sinu sees on valgus, mis lihtsalt ootab, et särada ! »<br><br>Saame tuttavaks! Vaata minu videot ja saad teada kuidas imago coaching käib ja kuidas see võib sind aidata.'
 home.CommmentaryIntroduction: 'Minu kliendid jagavad oma kogemusi'
-company.button.quote: Hinnang
+company.button.quote: 'Kontakt'
 workshop.index.body.title.masterClass: Meistriklassid
 workshop.index.p.2: 'Online meistriklassid toimuvad Zoomi keskkonnas ning kestavad 60 minutit (45 min + 15 min küsimustele).<br><br><strong>Meistriklassid on praktilised.</strong> Tutvustan värvimaailma, jagan stiilinippe ning aitan luua unistuste garderoobi! Räägin lähemalt erinevatest riietumisstiilidest ja elegantsist, välimuse olulisusest imago kujundamisel, vastutustundlikust moe kasutamisest. Iga naine on ilus ja ainulaadne, tähtis on aktsepteerida end sellistena nagu me oleme!<br><br>Meistriklassid toimuvad kui osalejaid on vähemalt 5: Sul on 4 sõbrannat? <strong>Korraldan meistriklassi teie jaoks!</strong> Võta minuga ühendust!'
 workshop.interested: 'Olen huvitatud'
@@ -158,7 +158,7 @@ book.index.h1: 'Avasta imago maailm läbi isikliku arengu prisma!'
 book.index.email: e-post
 book.index.lastName: Perekonnanimi
 book.index.firstName: Eesnimi
-giftCard.index.form.type: 'Millist teenust soovite pakkuda?'
+giftCard.index.form.type: 'Millist teenust soovite kinkida?'
 contact.form.ComingWithFriend: 'Ma tulen koos sõbraga'
 contact.workshop.form.send: Saada
 contact.form.phoneNumber.afterComingWithFriend: '(Kirjuta oma sõbranna nimi ja perekonnanimi)'

@@ -7,7 +7,7 @@
 <body>
     <p>{{ 'book.buyed.hello'|trans }}</p>
     <p>{{ 'book.buyed.email.p'|trans|raw }}</p>
-    <a href="{{'http://localhost:8000' ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
+    <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
     <p>{{ 'book.buyed.email.p.end'|trans|raw }}</p>
 </body>
 </html>

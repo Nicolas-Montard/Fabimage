@@ -1,4 +1,7 @@
 .book-index{
+  .optional-message{
+    padding-top: 65px;
+  }
   .head-text-container{
     @include media-breakpoint-up(md){
       position: relative;

@@ -116,7 +116,7 @@ giftCard.index.form.commentary: 'Comentarios (ej. código promocional...)'
 giftCard.button: 'Encargar una tarjeta'
 giftCard.index.sent: 'Tu pedido ha sido enviado'
 home.giftCard.title: 'Tarjeta de regalo Fabimage'
-book.download: descargar
+book.download: "Descargo mi ebook"
 book.index.promotionalCode: 'Codigo promocional'
 book.index.wrongCode: 'Este código promocional no es válido.'
 book.buyed.hello: Tere

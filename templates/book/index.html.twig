@@ -14,13 +14,13 @@
             </div>
         </div>
         {% if buyed %}
-            <p class="buyed-text mx-auto">{{ 'book.index.buyedBook'|trans|raw }}</p>
+            <p class="buyed-text mx-auto optional-message">{{ 'book.index.buyedBook'|trans|raw }}</p>
         {% endif %}
         {% if error %}
-            <p class="buyed-text mx-auto">{{ 'book.index.error'|trans|raw }}</p>
+            <p class="buyed-text mx-auto optional-message">{{ 'book.index.error'|trans|raw }}</p>
         {% endif %}
         {% if emailError %}
-            <p class="buyed-text mx-auto">{{ 'book.index.emailError'|trans|raw }}</p>
+            <p class="buyed-text mx-auto optional-message">{{ 'book.index.emailError'|trans|raw }}</p>
         {% endif %}
         <div class="d-flex flex-wrap justify-content-center book-card-container mx-auto">
             {% for book in books %}

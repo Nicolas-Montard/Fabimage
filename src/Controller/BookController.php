@@ -243,7 +243,6 @@ class BookController extends AbstractController
         }else{
             $subject = $book->getNameEt();
         }
-
         $email = (new Email())
             ->from($this->getParameter('mailer_from'))
             ->to($request->query->get('email'))

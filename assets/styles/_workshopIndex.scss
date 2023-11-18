@@ -10,6 +10,12 @@
       padding-top: 80px;
       margin-left: auto;
       margin-right: 200px;
+      @include media-breakpoint-down(xxl){
+        left: 200px;
+        width: 750px;
+        padding-left: 75px;
+        padding-right: 75px;
+      }
     }
     @include media-breakpoint-down(md){
       margin-top: 50px;
