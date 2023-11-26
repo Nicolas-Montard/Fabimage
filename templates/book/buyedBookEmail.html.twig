@@ -7,7 +7,11 @@
 <body>
     <p>{{ 'book.buyed.hello'|trans }}</p>
     <p>{{ 'book.buyed.email.p'|trans|raw }}</p>
-    <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
+    {% if free %}
+        <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token, 'free': 1}) }}">{{ 'downloadBook'|trans }}</a>
+    {% else %}
+        <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
+    {% endif %}
     <p>{{ 'book.buyed.email.p.end'|trans|raw }}</p>
 </body>
 </html>

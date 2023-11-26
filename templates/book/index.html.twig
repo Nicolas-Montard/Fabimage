@@ -30,9 +30,6 @@
             {% endfor %}
         </div>
         {% for book in books %}
-{#            {% if not loop.first %}#}
-{#                <div class="space-between-book"></div>#}
-{#            {% endif %}#}
             <div class="column-container d-flex justify-content-around mx-auto mt-5 flex-column flex-md-row" id="book{{ loop.index }}">
                 <div class="left-column column d-flex justify-content-center">
                     {% if app.request.locale == 'fr' %}
@@ -53,7 +50,7 @@
                     {% endif %}
                     <div class="d-flex justify-content-center mt-4">
                         {% if book.price == 0 %}
-                            <button type="button" class="btn btn-secondary text-white px-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn btn-secondary text-white px-3" data-bs-toggle="modal" data-bs-target="{{"#exampleModal" ~ book.id}}">
                                 {{ 'book.download'|trans }}
                             </button>
                         {% else %}
@@ -73,7 +70,7 @@
                             </form>
                         {% endif %}
                         {% set promoCode = app.request.get('promoCode') %}
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="{{"exampleModal" ~ book.id }}" tabindex="-1" aria-labelledby="{{ "exampleModalLabel" ~ book.id }}" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">

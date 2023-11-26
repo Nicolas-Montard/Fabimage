@@ -247,7 +247,7 @@ class BookController extends AbstractController
             ->from($this->getParameter('mailer_from'))
             ->to($request->query->get('email'))
             ->subject($subject)
-            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language]))
+            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1]))
         ;
         $mailer->send($email);
         $email = (new Email())
@@ -276,7 +276,11 @@ class BookController extends AbstractController
         } else{
             $book = $token->getBook()->getBookEt();
         }
-        $response = new BinaryFileResponse('../private/uploads/books/' . $book);
+        if ($request->query->get('free')){
+            $response = new BinaryFileResponse('../public/uploads/books/' . $book);
+        } else{
+            $response = new BinaryFileResponse('../private/uploads/books/' . $book);
+        }
         return $response;
     }
 

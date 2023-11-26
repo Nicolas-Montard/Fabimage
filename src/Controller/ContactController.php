@@ -10,6 +10,8 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use function Symfony\Component\Clock\now;
+
 #[Route('/contact', name: 'contact_')]
 class ContactController extends AbstractController
 {
