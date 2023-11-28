@@ -16,11 +16,11 @@ use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
-use function PHPUnit\Framework\isEmpty;
 use function Symfony\Component\Clock\now;
 
 #[Route('/book')]
@@ -114,7 +114,7 @@ class BookController extends AbstractController
     public function checkout(Request $request, Book $book): Response
     {
         $sentCode = false;
-        if ($request->query->get('promotionalCode')){
+        if (strlen($request->query->get('promotionalCode') > 0)){
             $sentCode = true;
             $promotionalCode = "";
             foreach ($book->getPromotionalCodes() as $code){
@@ -122,7 +122,7 @@ class BookController extends AbstractController
                     $promotionalCode = $code;
                     $price = $promotionalCode->getPrice();
                     if ($price == 0){
-                        return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
+                        return $this->redirectToRoute('app_book_index', ['book' => $book->getId(), 'promoCode' => $promotionalCode->getName()]);
                     }
                 }
             }
@@ -191,11 +191,20 @@ class BookController extends AbstractController
            ->from($this->getParameter('mailer_from'))
            ->to($customerEmail)
            ->subject($subject)
-           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local]))
+           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local, 'free' => 0]))
        ;
-
-       $mailer->send($email);
-
+        $maxAttempts = 3;
+        $attempts = 0;
+        while ($attempts < $maxAttempts) {
+            $emailNotSent = true;
+            try {
+                $mailer->send($email);
+                $emailNotSent = false;
+                break;
+            } catch (TransportExceptionInterface $e) {
+                $attempts++;
+            }
+        }
        return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
 
@@ -210,14 +219,12 @@ class BookController extends AbstractController
     {
         if ($request->query->get('promoCode')){
             $promotionalCode = $promotionalCodeRepository->findOneBy(['name' => $request->query->get('promoCode'), 'Book' => $book]);
-            $promoMatch = false;
-            foreach ($book->getPromotionalCodes() as $promo){
-                if ($promo == $promotionalCode){
-                    return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
-                }
-            }
-            if (!$promoMatch){
-                $this->redirectToRoute('app_home');
+//            $promoMatch = false;
+//            if ($promotionalCode){
+//                return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
+//            }
+            if (!$promotionalCode){
+                return $this->redirectToRoute('app_home');
             }
         }
         if ($book->getPrice() != 0){
@@ -243,20 +250,43 @@ class BookController extends AbstractController
         }else{
             $subject = $book->getNameEt();
         }
-        $email = (new Email())
-            ->from($this->getParameter('mailer_from'))
-            ->to($request->query->get('email'))
-            ->subject($subject)
-            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1]))
-        ;
-        $mailer->send($email);
-        $email = (new Email())
-            ->from($this->getParameter('mailer_from'))
-            ->to($this->getParameter('mailer_to'))
-            ->subject($request->query->get('firstName') . " " . $request->query->get('name') .' a telechargé ' . $subject)
-            ->html($this->renderView('book/downloadBookEmail.html.twig', ['nom' => $request->query->get('name'), 'firstName' => $request->query->get('firstName'), 'email' => $request->query->get('email'), 'book' => $subject]))
-        ;
-        $mailer->send($email);
+        if (!$request->query->get('promoCode')){
+            $email = (new Email())
+                ->from($this->getParameter('mailer_from'))
+                ->to($request->query->get('email'))
+                ->subject($subject)
+                ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1]))
+            ;
+            $maxAttempts = 3;
+            $attempts = 0;
+            while ($attempts < $maxAttempts) {
+                $emailNotSent = true;
+                try {
+                    $mailer->send($email);
+                    $emailNotSent = false;
+                    break;
+                } catch (TransportExceptionInterface $e) {
+                    $attempts++;
+                }
+            }
+        }
+            $email = (new Email())
+                ->from($this->getParameter('mailer_from'))
+                ->to($this->getParameter('mailer_to'))
+                ->subject($request->query->get('firstName') . " " . $request->query->get('name') . ' a telechargé ' . $subject)
+                ->html($this->renderView('book/downloadBookEmail.html.twig', ['nom' => $request->query->get('name'), 'firstName' => $request->query->get('firstName'), 'email' => $request->query->get('email'), 'book' => $subject]));
+            $maxAttempts = 3;
+            $attempts = 0;
+            while ($attempts < $maxAttempts) {
+                $emailNotSent = true;
+                try {
+                    $mailer->send($email);
+                    $emailNotSent = false;
+                    break;
+                } catch (TransportExceptionInterface $e) {
+                    $attempts++;
+                }
+            }
         return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
 
@@ -276,11 +306,11 @@ class BookController extends AbstractController
         } else{
             $book = $token->getBook()->getBookEt();
         }
-        if ($request->query->get('free')){
-            $response = new BinaryFileResponse('../public/uploads/books/' . $book);
-        } else{
-            $response = new BinaryFileResponse('../private/uploads/books/' . $book);
-        }
+//        if ($request->query->get('free')){
+//            $response = new BinaryFileResponse('../public/uploads/books/' . $book);
+//        } else{
+        $response = new BinaryFileResponse('../private/uploads/books/' . $book);
+//        }
         return $response;
     }
 

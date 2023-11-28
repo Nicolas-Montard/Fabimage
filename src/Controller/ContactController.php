@@ -6,6 +6,7 @@ use App\Form\ServiceContactType;
 use App\Form\WorkshopContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,7 +29,18 @@ class ContactController extends AbstractController
                 ->subject($form->get('firstName')->getData() . ' ' . $form->get('lastName')->getData() .
                     ' Vous a envoyé une ' . $form->get('type')->getData())
                 ->html($this->renderView('contact/serviceContactEmail.html.twig', ['form' => $formData]));
-            $mailer->send($email);
+            $maxAttempts = 5;
+            $attempts = 0;
+            while ($attempts < $maxAttempts) {
+                $emailNotSent = true;
+                try {
+                    $mailer->send($email);
+                    $emailNotSent = false;
+                    break;
+                } catch (TransportExceptionInterface $e) {
+                    $attempts++;
+                }
+            }
             $form = $this->createForm(ServiceContactType::class);
             return $this->redirectToRoute('contact_service', ['formSent' => true], Response::HTTP_SEE_OTHER);
         }
@@ -50,7 +62,18 @@ class ContactController extends AbstractController
                 ->subject($form->get('firstName')->getData() . ' ' . $form->get('lastName')->getData() .
                     ' vous contacte pour un atelier')
                 ->html($this->renderView('contact/workshopContactEmail.html.twig', ['form' => $formData]));
-            $mailer->send($email);
+            $maxAttempts = 5;
+            $attempts = 0;
+            while ($attempts < $maxAttempts) {
+                $emailNotSent = true;
+                try {
+                    $mailer->send($email);
+                    $emailNotSent = false;
+                    break;
+                } catch (TransportExceptionInterface $e) {
+                    $attempts++;
+                }
+            }
             $form = $this->createForm(ServiceContactType::class);
             return $this->redirectToRoute('contact_workshop', ['formSent' => true], Response::HTTP_SEE_OTHER);
         }

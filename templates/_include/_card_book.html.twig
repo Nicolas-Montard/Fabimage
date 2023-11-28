@@ -1,6 +1,12 @@
 <a href="#book{{ loop.index }}">
     <div class="image-container mx-auto">
-        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="" class="w-100 h-100">
+        {% if app.request.locale == 'fr' %}
+            <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="" class="w-100 h-100">
+        {% elseif app.request.locale == 'es' %}
+            <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEs) }}" alt="" class="w-100 h-100">
+        {% else %}
+            <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEt) }}" alt="" class="w-100 h-100">
+        {% endif %}
     </div>
     <div>
         <div class="d-flex flex-column text-container mx-auto rounded-1">
