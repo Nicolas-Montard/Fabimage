@@ -121,6 +121,15 @@ class Book
     #[ORM\Column(type: Types::TEXT)]
     private ?string $smallDescriptionEt = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $emailFr = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $emailEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $emailEt = null;
+
     public function __construct()
     {
         $this->tokens = new ArrayCollection();
@@ -480,6 +489,42 @@ class Book
     public function setSmallDescriptionEt(string $smallDescriptionEt): static
     {
         $this->smallDescriptionEt = $smallDescriptionEt;
+
+        return $this;
+    }
+
+    public function getEmailFr(): ?string
+    {
+        return $this->emailFr;
+    }
+
+    public function setEmailFr(string $emailFr): static
+    {
+        $this->emailFr = $emailFr;
+
+        return $this;
+    }
+
+    public function getEmailEs(): ?string
+    {
+        return $this->emailEs;
+    }
+
+    public function setEmailEs(string $emailEs): static
+    {
+        $this->emailEs = $emailEs;
+
+        return $this;
+    }
+
+    public function getEmailEt(): ?string
+    {
+        return $this->emailEt;
+    }
+
+    public function setEmailEt(string $emailEt): static
+    {
+        $this->emailEt = $emailEt;
 
         return $this;
     }

@@ -172,6 +172,33 @@ class BookType extends AbstractType
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ],
             ])
+            ->add('emailFr', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded email'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('emailEs', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded email'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('emailEt', TextareaType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => 'widget rounded email'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
         ;
     }
 

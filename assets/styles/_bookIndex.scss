@@ -1,6 +1,15 @@
 .book-index{
   .optional-message{
-    padding-top: 65px;
+    z-index: 100;
+    position: relative;
+    background-color: rgba(24,114,101,0.07)!important;
+    @include media-breakpoint-down(xxl){
+      bottom: 50px;
+    }
+    @include media-breakpoint-down(md){
+      bottom: 0;
+      background-color: $light!important;
+    }
   }
   .head-text-container{
     @include media-breakpoint-up(md){

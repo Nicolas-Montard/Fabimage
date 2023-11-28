@@ -191,7 +191,7 @@ class BookController extends AbstractController
            ->from($this->getParameter('mailer_from'))
            ->to($customerEmail)
            ->subject($subject)
-           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local, 'free' => 0]))
+           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local, 'free' => 0, 'book' => $book]))
        ;
         $maxAttempts = 3;
         $attempts = 0;
@@ -250,24 +250,22 @@ class BookController extends AbstractController
         }else{
             $subject = $book->getNameEt();
         }
-        if (!$request->query->get('promoCode')){
-            $email = (new Email())
-                ->from($this->getParameter('mailer_from'))
-                ->to($request->query->get('email'))
-                ->subject($subject)
-                ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1]))
-            ;
-            $maxAttempts = 3;
-            $attempts = 0;
-            while ($attempts < $maxAttempts) {
-                $emailNotSent = true;
-                try {
-                    $mailer->send($email);
-                    $emailNotSent = false;
-                    break;
-                } catch (TransportExceptionInterface $e) {
-                    $attempts++;
-                }
+        $email = (new Email())
+            ->from($this->getParameter('mailer_from'))
+            ->to($request->query->get('email'))
+            ->subject($subject)
+            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1, 'book' => $book]))
+        ;
+        $maxAttempts = 3;
+        $attempts = 0;
+        while ($attempts < $maxAttempts) {
+            $emailNotSent = true;
+            try {
+                $mailer->send($email);
+                $emailNotSent = false;
+                break;
+            } catch (TransportExceptionInterface $e) {
+                $attempts++;
             }
         }
             $email = (new Email())
