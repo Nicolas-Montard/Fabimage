@@ -9,7 +9,7 @@
     <p>ateliers: {% for workshope in form.workshop %}
             {{ workshope.titleFr }},
         {% endfor %}</p>
-    <p>emailFr : {{ form.email }}</p>
+    <p>email: {{ form.email }}</p>
     <p>Numéro de téléphone : {{ form.phoneNumber }}</p>
     {% if form.comingWithFriend %}
         {{ form.firstName }} {{ form.lastName }} viendra avec {{ form.comingWithFriend }}
