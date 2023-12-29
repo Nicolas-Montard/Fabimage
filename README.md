@@ -15,7 +15,7 @@ Site accessible <a href="https://www.fabimage.coach/fr/" target="_blank">ici</a>
 La vente de livres se fait en utilisant l'api stripe. La sécurité est assurée en rendant les livres innaccessibles en public, avec comme seule possibilité pour télécharger le livre de se rendre sur une page envoyée par mail après l'achat et validée par un token.
 
 ## Responsif
-Le site est pleinement responsif avec tous ses pages adaptés aux différents formats:
+Le site est pleinement responsif avec tous ses pages adaptés aux différents formats:<br>
 ![fabimage-responsive](https://github.com/Nicolas-Montard/Fabimage/assets/58862995/a042a715-7c82-474d-9a72-637bc309cd91)
 
 ## Administration
