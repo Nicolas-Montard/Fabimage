@@ -16,12 +16,6 @@
         {% if buyed %}
             <p class="buyed-text mx-auto optional-message">{{ 'book.index.buyedBook'|trans|raw }}</p>
         {% endif %}
-        {% if error %}
-            <p class="buyed-text mx-auto optional-message">{{ 'book.index.error'|trans|raw }}</p>
-        {% endif %}
-        {% if emailError %}
-            <p class="buyed-text mx-auto optional-message">{{ 'book.index.emailError'|trans|raw }}</p>
-        {% endif %}
         <div class="d-flex flex-wrap justify-content-center book-card-container mx-auto">
             {% for book in books %}
                 <div class="book-card mt-5 d-flex flex-column">
@@ -29,89 +23,6 @@
                 </div>
             {% endfor %}
         </div>
-        {% for book in books %}
-            <div class="column-container d-flex justify-content-around mx-auto mt-5 flex-column flex-md-row" id="book{{ loop.index }}">
-                <div class="left-column column d-flex justify-content-center">
-                    {% if app.request.locale == 'fr' %}
-                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="">
-                    {% elseif app.request.locale == 'es' %}
-                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEs) }}" alt="">
-                    {% elseif app.request.locale == 'et' %}
-                        <img src="{{ asset('uploads/images/pictures/' ~ book.pictureEt) }}" alt="">
-                    {% endif %}
-                </div>
-                <div class="right-column column">
-                    {% if app.request.locale == 'fr' %}
-                        <p class="mt-5">{{ book.descriptionFr|raw }}</p>
-                    {% elseif app.request.locale == 'es' %}
-                        <p class="mt-5">{{ book.descriptionEs|raw }}</p>
-                    {% elseif app.request.locale == 'et' %}
-                        <p class="mt-5">{{ book.descriptionEt|raw }}</p>
-                    {% endif %}
-                    <div class="d-flex justify-content-center mt-4">
-                        {% if book.price == 0 %}
-                            <button type="button" class="btn btn-secondary text-white px-3" data-bs-toggle="modal" data-bs-target="{{"#exampleModal" ~ book.id}}">
-                                {{ 'book.download'|trans }}
-                            </button>
-                        {% else %}
-                            <form action="{{ path('app_checkout', {'id': book.id}) }}" method="get">
-                                <div class="d-flex">
-                                    <button class="btn btn-secondary text-white px-3 my-2">{{ 'book.buy'|trans }}</button>
-                                    <div class="d-flex flex-column ms-2 promotionalCode">
-                                        <label for="promotionalCode">{{ 'book.index.promotionalCode'|trans }}</label>
-                                        <input type="text" name="promotionalCode" id="promotionalCode">
-                                    </div>
-                                </div>
-                                {% if app.request.get('wrongCode') and app.request.get('id') == book.id %}
-                                    <p class="">
-                                        {{ 'book.index.wrongCode'|trans }}
-                                    </p>
-                                {% endif %}
-                            </form>
-                        {% endif %}
-                        <div class="modal fade" id="{{"exampleModal" ~ book.id }}" tabindex="-1" aria-labelledby="{{ "exampleModalLabel" ~ book.id }}" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <form action="{{ path('app_download_free', {'id': book.id,}) }}">
-                                        <div class="modal-body">
-                                            <div class="d-flex flex-column align-items-center">
-                                                <div class="mt-3 form-field d-flex flex-column">
-                                                    <label for="email">{{ 'book.index.email'|trans }}</label>
-                                                    <input type="text" name="email" id="email" class="rounded" required>
-                                                </div>
-                                                <div class="mt-3 form-field d-flex flex-column">
-                                                    <label for="firstName">{{'book.index.firstName'|trans}}</label>
-                                                    <input type="text" name="firstName" id="firstName" class="rounded" required>
-                                                </div>
-                                                <div class="mt-3 form-field d-flex flex-column">
-                                                    <label for="name">{{ 'book.index.lastName'|trans }}</label>
-                                                    <input type="text" name="name" id="name" class="rounded" required>
-                                                </div>
-                                                <input type="hidden" name="promoCode" value="{{ app.request.get(('promoCode'))}}">
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <div class="d-flex justify-content-center mt-3">
-                                                <button class="btn btn-secondary text-white px-3">{{ 'book.download'|trans }}</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        {% if app.user %}
-                            <a href="{{ path('app_book_edit', {'id': book.id}) }}" class="ms-5 my-auto">
-                                <button class="btn btn-secondary text-white px-3">{{ 'book.update'|trans }}</button>
-                            </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
         {% if app.user %}
             <div class="d-flex justify-content-center mt-5">
                 <a href="{{ path('app_book_new') }}">
@@ -120,15 +31,4 @@
             </div>
         {% endif %}
     </div>
-{% endblock %}
-{% block script %}
-    {% if app.request.get('book') %}
-        <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#exampleModal' + {{ app.request.get('book') }}).modal('show');
-            });
-        </script>
-    {% endif %}
 {% endblock %}

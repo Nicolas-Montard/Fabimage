@@ -130,6 +130,18 @@ class Book
     #[ORM\Column(type: Types::TEXT)]
     private ?string $emailEt = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $videoLinkFr = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $videoPassword = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $videoLinkEt = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $VideoLinkEs = null;
+
     public function __construct()
     {
         $this->tokens = new ArrayCollection();
@@ -525,6 +537,54 @@ class Book
     public function setEmailEt(string $emailEt): static
     {
         $this->emailEt = $emailEt;
+
+        return $this;
+    }
+
+    public function getVideoLinkFr(): ?string
+    {
+        return $this->videoLinkFr;
+    }
+
+    public function setVideoLinkFr(?string $videoLinkFr): static
+    {
+        $this->videoLinkFr = $videoLinkFr;
+
+        return $this;
+    }
+
+    public function getVideoPassword(): ?string
+    {
+        return $this->videoPassword;
+    }
+
+    public function setVideoPassword(?string $videoPassword): static
+    {
+        $this->videoPassword = $videoPassword;
+
+        return $this;
+    }
+
+    public function getVideoLinkEt(): ?string
+    {
+        return $this->videoLinkEt;
+    }
+
+    public function setVideoLinkEt(?string $videoLinkEt): static
+    {
+        $this->videoLinkEt = $videoLinkEt;
+
+        return $this;
+    }
+
+    public function getVideoLinkEs(): ?string
+    {
+        return $this->VideoLinkEs;
+    }
+
+    public function setVideoLinkEs(?string $VideoLinkEs): static
+    {
+        $this->VideoLinkEs = $VideoLinkEs;
 
         return $this;
     }

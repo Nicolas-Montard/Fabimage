@@ -41,7 +41,7 @@ fabienne.AFIPP: 'AFIPP - <a href="https://www.afipp.org/" target="_blank">Associ
 fabienne.title.p: "Créatrice de bien-être par l'image<br><br>Je suis <strong>la première coach</strong> en France à avoir suivi une <strong>formation spécifique</strong> de coaching appliqué à l’image !"
 service.index.p.1: "Apprenez à <strong>mieux vous connaître</strong> et mettez votre style en valeur pour refléter qui vous êtes !<br><br>Grâce à une méthode <strong>éprouvée, innovante et unique</strong> sur le marché estonien, je travaille avec vous dans une démarche de coaching <strong>tridimensionnelle :</strong> votre image intérieure, votre image physique et votre image extérieure.<br><br>Une prestation de coaching en image, quelle qu’elle soit, est toujours une <strong>démarche profondément humanisante</strong> et qui ne consiste pas en un programme linéaire. Elle dépendra de votre objectif, de vos attentes et de vos besoins du moment. C’est pourquoi le nombre de séances peut légèrement varier selon vos avancées.<br><br>La méthodologie que j'applique est une méthode de <strong>soutien</strong> et <u>non de conseil</u>, ce qui signifie que vous devez vous <strong>impliquer</strong> dans votre processus : objectifs, tâches et plans que nous développerons ensemble."
 service.index.p.2: 'Tous les accompagnements sont possibles autant en <strong>visioconférence</strong> qu’en présentiel* et vous pouvez aussi <strong>combiner</strong> les deux !<br><br>Les formules de coaching se déroulent sous forme de <strong>séances individuelles 1 :1</strong> entièrement <strong>personnalisées.</strong> Après certaines séances, vous recevez un dossier personnel reprenant les points sur lesquels nous avons travaillé.<br><br>Les séances de coaching durent entre 60 et 90 minutes.<br><br>Les formules prévoient <strong> un premier contact gratuit</strong> de 30 minutes où vous pourrez obtenir les éclaircissements dont avez besoin et poser vos questions et après laquelle vous pourrez confirmer votre choix de poursuivre sur le chemin engagé.'
-service.show.appointment: "Je réserve"
+service.show.appointment: 'Je réserve'
 contact.contactMe: 'Contactez moi'
 contact.service.form.type: 'Ma demande concerne :'
 contact.service.form.client: 'Je suis un.e :'
@@ -127,7 +127,7 @@ giftCard.index.form.commentary: 'Commentaires (ex. code promotionnel...)'
 giftCard.button: 'Je commande'
 giftCard.index.sent: 'Votre commande a été envoyé'
 home.giftCard.title: 'Carte cadeau Fabimage'
-book.download: "Je télécharge mon ebook"
+book.download: 'Je télécharge mon ebook'
 book.index.promotionalCode: 'Code promotionel'
 book.index.wrongCode: 'Ce code promotionel est invalide'
 book.buyed.hello: Bonjour
@@ -157,7 +157,7 @@ commentaryHome.new: 'Créer un nouveau temoignage'
 commentaryHome.edit: 'Editer le temoignage'
 home.textVideo: "« Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! »<br><br>Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
 home.CommmentaryIntroduction: 'Mes clients partagent leur expérience'
-company.button.quote: "Je prends contact"
+company.button.quote: 'Je prends contact'
 footer.home: Accueil
 footer.contact: Contact
 footer.service: Prestations
@@ -173,5 +173,9 @@ giftCard.index.form.type: 'Quel prestation voulez vous offrir ?'
 contact.form.ComingWithFriend: 'Je viens avec une amie '
 contact.workshop.form.send: Envoyé
 contact.form.phoneNumber.afterComingWithFriend: '(Indiquez le nom complet de votre amie)'
-book.index.emailError: "Cette Email est invalide"
-Tariff.index.h1: "Tarifs des prestations"
+book.index.emailError: 'Cette Email est invalide'
+Tariff.index.h1: 'Tarifs des prestations'
+book.email.password: 'Le mot de passe de la vidéo est: '
+contact.form.email: Email
+book.card.price: GRATUIT
+login.title: 'Se connecter'

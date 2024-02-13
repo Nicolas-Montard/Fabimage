@@ -33,6 +33,30 @@
         {{ form_errors(form.smallDescriptionEt) }}
     </div>
 </div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkFr, 'Lien de la vidéo française') }}
+        {{ form_widget(form.videoLinkFr) }}
+        {{ form_errors(form.videoLinkFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkEs, 'Lien de la vidéo espagnol') }}
+        {{ form_widget(form.videoLinkEs) }}
+        {{ form_errors(form.videoLinkEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkEt, 'Lien de la vidéo estonien') }}
+        {{ form_widget(form.videoLinkEt) }}
+        {{ form_errors(form.videoLinkEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoPassword, 'mot de passe de la vidéo') }}
+        {{ form_widget(form.videoPassword) }}
+        {{ form_errors(form.videoPassword) }}
+    </div>
+</div>
 <div class="mx-auto price-container mt-3">
     {{ form_label(form.price, 'Prix') }}
     <div class="price-widget">
