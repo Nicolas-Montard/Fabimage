@@ -146,7 +146,7 @@ commentaryHome.new: 'Loo uus kommentaar'
 commentaryHome.edit: 'Muuda kommentaari'
 home.textVideo: '« Minu arusaamises imago coachingust ei ole ilu standardit, tõeline ja ainus ilu on sinu. Sinu sees on valgus, mis lihtsalt ootab, et särada ! »<br><br>Saame tuttavaks! Vaata minu videot ja saad teada kuidas imago coaching käib ja kuidas see võib sind aidata.'
 home.CommmentaryIntroduction: 'Minu kliendid jagavad oma kogemusi'
-company.button.quote: 'Kontakt'
+company.button.quote: Kontakt
 workshop.index.body.title.masterClass: Meistriklassid
 workshop.index.p.2: 'Online meistriklassid toimuvad Zoomi keskkonnas ning kestavad 60 minutit (45 min + 15 min küsimustele).<br><br><strong>Meistriklassid on praktilised.</strong> Tutvustan värvimaailma, jagan stiilinippe ning aitan luua unistuste garderoobi! Räägin lähemalt erinevatest riietumisstiilidest ja elegantsist, välimuse olulisusest imago kujundamisel, vastutustundlikust moe kasutamisest. Iga naine on ilus ja ainulaadne, tähtis on aktsepteerida end sellistena nagu me oleme!<br><br>Meistriklassid toimuvad kui osalejaid on vähemalt 5: Sul on 4 sõbrannat? <strong>Korraldan meistriklassi teie jaoks!</strong> Võta minuga ühendust!'
 workshop.interested: 'Olen huvitatud'
@@ -162,5 +162,9 @@ giftCard.index.form.type: 'Millist teenust soovite kinkida?'
 contact.form.ComingWithFriend: 'Ma tulen koos sõbraga'
 contact.workshop.form.send: Saada
 contact.form.phoneNumber.afterComingWithFriend: '(Kirjuta oma sõbranna nimi ja perekonnanimi)'
-book.index.emailError: "See meil on kehtetu"
-Tariff.index.h1: "Teenuste hinnad"
+book.index.emailError: 'See meil on kehtetu'
+Tariff.index.h1: 'Teenuste hinnad'
+book.email.password: 'Video parool on: '
+contact.form.email: E-post
+book.card.price: TASUTA
+login.title: 'Sisselogimiseks'

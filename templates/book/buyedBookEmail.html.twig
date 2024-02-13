@@ -5,18 +5,29 @@
     <title></title>
 </head>
 <body>
-{% if lang == 'fr' %}
-    <p class="">{{ book.emailFr|nl2br }}</p>
-    {% elseif lang == 'es' %}
-    <p class="">{{ book.emailEs|nl2br }}</p>
-    {% else %}
-    <p class="">{{ book.emailEt|nl2br }}</p>
-{% endif %}
-
-{#    <p>{{ 'book.buyed.hello'|trans }}</p>#}
-{#    <p>{{ 'book.buyed.email.p'|trans|raw }}</p>#}
+    {% if lang == 'Fr' %}
+        <p class="">{{ book.emailFr|nl2br }}</p>
+        {% elseif lang == 'Es' %}
+        <p class="">{{ book.emailEs|nl2br }}</p>
+        {% else %}
+        <p class="">{{ book.emailEt|nl2br }}</p>
+    {% endif %}
+    {% if book.videoLinkFr or book.videoLinkEs or book.videoLinkEt %}
+        {% if lang == 'Fr' %}
+            <p>Vous pouvez regarder la vidéo  <a href="{{ book.videoLinkFr }}">ici</a></p>
+        {% elseif lang == 'Es' %}
+            <p>Puedes ver el vídeo <a href="{{ book.videoLinkEs }}">aquí</a></p>
+        {% else %}
+            <p>Videot näed <a href="{{ book.videoLinkEt }}">siit</a></p>
+        {% endif %}
+        {% if book.videoPassword %}
+            <p>{{'book.email.password'|trans}} {{ book.videoPassword }}</p>
+        {% endif %}
+    {% endif %}
     {% if free is defined %}
-        <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token, 'free': 1}) }}">{{ 'downloadBook'|trans }}</a>
+        {% if book.bookFr or book.bookEs or book.bookEt %}
+            <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token, 'free': 1}) }}">{{ 'downloadBook'|trans }}</a>
+        {% endif %}
     {% else %}
         <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
     {% endif %}

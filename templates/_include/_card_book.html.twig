@@ -1,4 +1,4 @@
-<a href="#book{{ loop.index }}">
+<a href="{{path('app_book_show', {id: book.id})}}">
     <div class="image-container mx-auto">
         {% if app.request.locale == 'fr' %}
             <img src="{{ asset('uploads/images/pictures/' ~ book.pictureFr) }}" alt="" class="w-100 h-100">
@@ -10,26 +10,35 @@
     </div>
     <div>
         <div class="d-flex flex-column text-container mx-auto rounded-1">
-            <div class="content-container">
-                <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-0">
-                    {% if app.request.locale == 'fr' %}
-                        {{ book.nameFr }}
-                    {% elseif app.request.locale == 'es' %}
-                        {{ book.nameEs }}
-                    {% else %}
-                        {{ book.nameEt }}
-                    {% endif %}</h3>
-                <p class="mt-2 mx-3">
-                    {% if book.smallDescriptionFr %}
+            <div class="content-container d-flex flex-column justify-content-between">
+                <div class="top-container">
+                    <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-0">
                         {% if app.request.locale == 'fr' %}
-                            {{ book.smallDescriptionFr|nl2br }}
+                            {{ book.nameFr }}
                         {% elseif app.request.locale == 'es' %}
-                            {{ book.smallDescriptionEs|nl2br }}
+                            {{ book.nameEs }}
                         {% else %}
-                            {{ book.smallDescriptionEt|nl2br }}
+                            {{ book.nameEt }}
+                        {% endif %}</h3>
+                    <p class="mt-2 mx-3">
+                        {% if book.smallDescriptionFr %}
+                            {% if app.request.locale == 'fr' %}
+                                {{ book.smallDescriptionFr|nl2br }}
+                            {% elseif app.request.locale == 'es' %}
+                                {{ book.smallDescriptionEs|nl2br }}
+                            {% else %}
+                                {{ book.smallDescriptionEt|nl2br }}
+                            {% endif %}
                         {% endif %}
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center price">
+                    {% if book.price == 0 %}
+                        <p class="m-0 fw-semi-bold">{{ 'book.card.price'|trans }}</p>
+                    {% else %}
+                        <p class="m-0 fw-semi-bold">{{ book.price / 100 }} €</p>
                     {% endif %}
-                </p>
+                </div>
             </div>
         </div>
     </div>

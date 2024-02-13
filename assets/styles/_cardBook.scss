@@ -23,8 +23,6 @@
       object-fit: cover;
     }
   }
-  .content-container{
-  }
   .text-container{
     position: relative;
     width: 100%;
@@ -41,5 +39,14 @@
   }
   a:hover {
     color: black;
+  }
+  .price{
+    p{
+      font-size: 18px;
+    }
+  }
+  .top-container{
+    margin-bottom: 30px;
+    min-height: 130px;
   }
 }

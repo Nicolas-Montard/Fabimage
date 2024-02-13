@@ -97,7 +97,7 @@ class BookController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_book_delete', methods: ['POST'])]
+    #[Route('/delete/{id}', name: 'app_book_delete', methods: ['POST'])]
     public function delete(Request $request, Book $book, BookRepository $bookRepository, Security $security): Response
     {
         if (!$security->isGranted('IS_AUTHENTICATED')){
@@ -122,12 +122,12 @@ class BookController extends AbstractController
                     $promotionalCode = $code;
                     $price = $promotionalCode->getPrice();
                     if ($price == 0){
-                        return $this->redirectToRoute('app_book_index', ['book' => $book->getId(), 'promoCode' => $promotionalCode->getName()]);
+                        return $this->redirectToRoute('app_book_show', ['id' => $book->getId(), 'promoCode' => $promotionalCode->getName(), 'free' => true]);
                     }
                 }
             }
             if ($promotionalCode == ""){
-                return $this->redirectToRoute('app_book_index', ['wrongCode' => true, 'id' => $book->getId()]);
+                return $this->redirectToRoute('app_book_show', ['wrongCode' => true, 'id' => $book->getId()]);
             }
         }
         if ($sentCode == false){
@@ -144,6 +144,7 @@ class BookController extends AbstractController
         $checkout=$this->gateway->checkout->sessions->create(
             [
                 'payment_method_types' => ['card'],
+                'locale' => $local,
                 'line_items'=>[[
                     'price_data'=>[
                         'currency'=> 'EUR',
@@ -191,7 +192,7 @@ class BookController extends AbstractController
            ->from($this->getParameter('mailer_from'))
            ->to($customerEmail)
            ->subject($subject)
-           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local, 'free' => 0, 'book' => $book]))
+           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => ucfirst($local), 'free' => 0, 'book' => $book]))
        ;
         $maxAttempts = 3;
         $attempts = 0;
@@ -219,10 +220,6 @@ class BookController extends AbstractController
     {
         if ($request->query->get('promoCode')){
             $promotionalCode = $promotionalCodeRepository->findOneBy(['name' => $request->query->get('promoCode'), 'Book' => $book]);
-//            $promoMatch = false;
-//            if ($promotionalCode){
-//                return $this->redirectToRoute('app_book_index', ['promoCode' => true]);
-//            }
             if (!$promotionalCode){
                 return $this->redirectToRoute('app_home');
             }
@@ -234,7 +231,6 @@ class BookController extends AbstractController
             return $this->redirectToRoute('app_book_index', ['wrongEmail' => true]);
         }
         $language = $request->getLocale();
-
         $tokenContent = bin2hex(random_bytes(15));
         $token = new Token();
         $token->setContent($tokenContent);
@@ -254,7 +250,7 @@ class BookController extends AbstractController
             ->from($this->getParameter('mailer_from'))
             ->to($request->query->get('email'))
             ->subject($subject)
-            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1, 'book' => $book]))
+            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => ucfirst($language), 'free' => 1, 'book' => $book]))
         ;
         $maxAttempts = 3;
         $attempts = 0;
@@ -304,12 +300,19 @@ class BookController extends AbstractController
         } else{
             $book = $token->getBook()->getBookEt();
         }
-//        if ($request->query->get('free')){
-//            $response = new BinaryFileResponse('../public/uploads/books/' . $book);
-//        } else{
         $response = new BinaryFileResponse('../private/uploads/books/' . $book);
-//        }
         return $response;
     }
 
+    #[Route('/{id}', name: 'app_book_show')]
+    public function show(Request $request, Book $book): Response
+    {
+
+        return $this->render('book/show.html.twig', [
+            'book' => $book,
+            'buyed' => $request->query->get('buyed'),
+            'error' => $request->query->get('error'),
+            'emailError' => $request->query->get('email')
+        ]);
+    }
 }

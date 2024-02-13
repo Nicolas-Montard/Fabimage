@@ -110,7 +110,7 @@ class BookType extends AbstractType
                 ],
             ])
             ->add('bookFrFile', VichFileType::class,[
-                'required' => $options['image_required'],
+                'required' => false,
                 'attr' => [
                     'class' => ''
                 ],
@@ -119,7 +119,7 @@ class BookType extends AbstractType
                 ],
             ])
             ->add('bookEsFile', VichFileType::class,[
-                'required' => $options['image_required'],
+                'required' => false,
                 'attr' => [
                     'class' => ''
                 ],
@@ -128,7 +128,7 @@ class BookType extends AbstractType
                 ],
             ])
             ->add('bookEtFile', VichFileType::class,[
-                'required' => $options['image_required'],
+                'required' => false,
                 'attr' => [
                     'class' => ''
                 ],
@@ -194,6 +194,42 @@ class BookType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'class' => 'widget rounded email'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('videoLinkFr', TextType::class,[
+                'required' => false,
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('videoLinkEt', TextType::class,[
+                'required' => false,
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('videoLinkEs', TextType::class,[
+                'required' => false,
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ]
+            ])
+            ->add('videoPassword', TextType::class,[
+                'required' => false,
+                'attr' => [
+                    'class' => 'widget rounded'
                 ],
                 'label_attr' => [
                     'class' => 'label'

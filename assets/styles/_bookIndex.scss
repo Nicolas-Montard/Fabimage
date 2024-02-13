@@ -108,9 +108,6 @@
   }
   .book-card-container{
     width: 85%;
-    @include media-breakpoint-down(md){
-      display: none!important;
-    }
   }
   .space-between-book{
     margin-top: 175px;
