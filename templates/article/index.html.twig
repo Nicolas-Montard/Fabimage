@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'article.index.title'|trans }}{% endblock %}
+
+{% block body %}
+<div class="article-index">
+    <div class="article-container mx-auto row">
+        <div class="col-md-9 col-12">
+            {% for article in articles %}
+                {% if article.isActive == true or app.user %}
+                    <div class="article-card mt-3">
+                        {% include '_include/_card_article.html.twig' %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-md-3 d-flex flex-column col-12">
+            <h2 class="fs-4 text-primary mt-5 mt-md-3">{{"article.index.lastArticle"|trans}}</h2>
+            {% for article in newArticles %}
+                {% if article.isActive == true or app.user %}
+                    <div>
+                        {% if app.request.locale == 'fr' %}
+                        <a href="{{path('app_article_show', {id: article.id})}}" class="text-decoration-none"><p class="border-bottom mb-1">{{article.titleFr}}</p></a>
+                        {% elseif app.request.locale == 'es' %}
+                        <a href="{{path('app_article_show', {id: article.id})}}" class="text-decoration-none"><p class="border-bottom mb-1">{{article.titleEs}}</p></a>
+                        {% else %}
+                        <a href="{{path('app_article_show', {id: article.id})}}" class="text-decoration-none"><p class="border-bottom mb-1">{{article.titleEt}}</p></a>
+                        {% endif %}
+                        <p>{{article.createdAt|date("d/m/Y")}}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% if app.user %}
+        <div class="d-flex justify-content-center mt-5">
+            <a href="{{ path('app_article_new') }}">
+                <button class="btn btn-secondary rounded px-3 text-white">{{'book.createNewArticle'|trans}}</button>
+            </a>
+        </div>
+    {% endif %}
+    <p class="text-center text-black mt-5">
+        {% if nbPages > 1 %}
+            {% for i in 1..nbPages %}
+                {% if app.request.attributes.get('page') == i %}
+                    <a href="{{ path('app_article_index', {page: i}) }}" class="text-decoration-none text-black">{{i}}</a>{% if not loop.last %}, {% endif %}
+                {% else %}
+                    <a href="{{ path('app_article_index', {page: i}) }}" class="text-decoration-none text-primary">{{i}}</a>{% if not loop.last %}, {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </p>
+</div>
+{% endblock %}

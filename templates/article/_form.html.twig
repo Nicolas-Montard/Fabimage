@@ -1,0 +1,85 @@
+{{ form_start(form) }}
+<div class="d-flex justify-content-around">
+    <div class="d-flex flex-column">
+        {{ form_label(form.titleFr, 'Titre français') }}
+        {{ form_widget(form.titleFr) }}
+        {{ form_errors(form.titleFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.titleEs, 'Titre espagnol') }}
+        {{ form_widget(form.titleEs) }}
+        {{ form_errors(form.titleEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.titleEt, 'Titre estonien') }}
+        {{ form_widget(form.titleEt) }}
+        {{ form_errors(form.titleEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.summaryFr, 'Résumé français') }}
+        {{ form_widget(form.summaryFr) }}
+        {{ form_errors(form.summaryFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.summaryEs, 'Résumé espagnol') }}
+        {{ form_widget(form.summaryEs) }}
+        {{ form_errors(form.summaryEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.summaryEt, 'Résumé estonien') }}
+        {{ form_widget(form.summaryEt) }}
+        {{ form_errors(form.summaryEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.pictureFile, 'Image de l\'article') }}
+        {{ form_widget(form.pictureFile) }}
+        {{ form_errors(form.pictureFile) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.createdAt, 'Date') }}
+        {{ form_widget(form.createdAt) }}
+        {{ form_errors(form.createdAt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.isActive, 'Visible') }}
+        {{ form_widget(form.isActive) }}
+        {{ form_errors(form.isActive) }}
+    </div>
+</div>
+<div class="errors w-50 mt-3">
+    {{ form_errors(form) }}
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.contentFr, 'Article français') }}
+        {{ form_widget(form.contentFr) }}
+        {{ form_errors(form.contentFr) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.contentEs, 'Article espagnol') }}
+        {{ form_widget(form.contentEs) }}
+        {{ form_errors(form.contentEs) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.contentEt, 'Article estonien') }}
+        {{ form_widget(form.contentEt) }}
+        {{ form_errors(form.contentEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <button class="btn btn-secondary text-white mt-5 px-3">{{ button_label|default('Sauvegarder') }}</button>
+</div>
+{{ form_end(form) }}

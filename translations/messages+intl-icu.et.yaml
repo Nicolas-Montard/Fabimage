@@ -167,4 +167,9 @@ Tariff.index.h1: 'Teenuste hinnad'
 book.email.password: 'Video parool on: '
 contact.form.email: E-post
 book.card.price: TASUTA
-login.title: 'Sisselogimiseks'
+login.title: Sisselogimiseks
+article.index.lastArticle: 'VIIMASED ARTIKLID'
+book.createNewArticle: 'Loo uus artikkel'
+navbar.blog: Blogi
+article.index.title: "Blogi"
+article.show.title: 'Blogi'

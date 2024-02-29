@@ -1,0 +1,20 @@
+<div class="d-flex flex-md-row flex-column align-items-center">
+    <div class="image-container">
+        <img src="{{ asset('uploads/images/pictures/' ~ article.picture) }}" alt="" class="h-100">
+    </div>
+    <div class="text-container">
+        {% if app.request.locale == 'fr' %}
+            <h2 class="fs-4 text-primary mx-md-5 mx-0">{{article.titleFr}}</h2>
+            <p class="mx-md-5 mx-0 text-break">{{article.summaryFr}}</p>
+            <a href="{{path('app_article_show', {id: article.id})}}" class="text-decoration-none"><p class="mx-md-5 mx-0">Lire la suite</p></a>
+        {% elseif app.request.locale == 'es' %}
+            <h2 class="fs-4 text-primary mx-md-5 mx-0">{{article.titleEs}}</h2>
+            <p class="mx-md-5 mx-0 text-break">{{article.summaryEs}}</p>
+            <a href="{{path('app_article_show', {id: article.id})}}"><p class="mx-md-5 mx-0">Leer más</p></a>
+        {% else %}
+            <h2 class="fs-4 text-primary mx-md-5 mx-0">{{article.titleEt}}</h2>
+            <p class="mx-md-5 mx-0 text-break">{{article.summaryEt}}</p>
+            <a href="{{path('app_article_show', {id: article.id})}}"><p class="mx-md-5 mx-0">Loe rohkem</p></a>
+        {% endif %}
+    </div>
+</div>
