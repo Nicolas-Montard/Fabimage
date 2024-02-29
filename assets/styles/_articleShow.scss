@@ -1,0 +1,14 @@
+.article-show{
+    .description{
+      width: 45%;
+      @include media-breakpoint-down(md){
+        width: 90%;
+      }
+    }
+    .title{
+      @include media-breakpoint-up(md){
+        margin-left: 100px;
+        max-width: 450px;
+      }
+    }
+  }

@@ -169,4 +169,9 @@ Tariff.index.h1: 'Precio de los servicios'
 book.email.password: 'La contraseña del vídeo es:'
 contact.form.email: 'Correo electrónico'
 book.card.price: GRATIS
-login.title: 'Conectarse'
+login.title: Conectarse
+article.index.lastArticle: 'ÚLTIMOS ARTÍCULOS'
+book.createNewArticle: 'Crear un nuevo artículo'
+navbar.blog: Blog
+article.index.title: 'Blog'
+article.show.title: 'Blog'

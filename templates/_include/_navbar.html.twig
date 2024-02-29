@@ -55,6 +55,7 @@
                     <a href="{{ path('app_company') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.company'|trans }}</a>
                     <a href="{{ path('contact_service') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.contact'|trans }}</a>
                     <a href="{{ path('app_book_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.book'|trans }}</a>
+                    <a href="{{ path('app_article_index', {page: 1}) }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.blog'|trans}}</a>
                     {% if app.user %}
                         <a href="{{ path('app_logout') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.deconnect'|trans }}</a>
                     {% endif %}
