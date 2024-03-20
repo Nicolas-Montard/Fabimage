@@ -307,7 +307,6 @@ class BookController extends AbstractController
     #[Route('/{id}', name: 'app_book_show')]
     public function show(Request $request, Book $book): Response
     {
-
         return $this->render('book/show.html.twig', [
             'book' => $book,
             'buyed' => $request->query->get('buyed'),

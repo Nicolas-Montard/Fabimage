@@ -173,5 +173,13 @@ login.title: Conectarse
 article.index.lastArticle: 'ÚLTIMOS ARTÍCULOS'
 book.createNewArticle: 'Crear un nuevo artículo'
 navbar.blog: Blog
-article.index.title: 'Blog'
-article.show.title: 'Blog'
+article.index.title: Blog
+article.show.title: Blog
+_include._actuality.h2: "Sígueme en un viaje al corazón de tu imagen"
+_include._actuality.p.1: 'Descubre mis reflexiones y mi actualidad como si estuvieras explorando nuevos destinos.'
+_include._actuality.p.2: 'Participa en mis experiencias y descubrimientos.'
+_include._actuality.firstName: 'Nombre'
+_include._actuality.email: 'Email'
+_include._actuality.button: 'Me apunto!'
+_include._actuality.sent: 'Su solicitud de suscripción ha sido enviada.'
+_include._actuality.subscribe: 'Suscríbete ahora para no perderte nada.'

@@ -182,5 +182,13 @@ login.title: 'Se connecter'
 book.createNewArticle: 'Créer un nouvelle article'
 article.index.lastArticle: 'DERNIERS ARTICLES'
 navbar.blog: Blog
-article.index.title: 'Blog'
-article.show.title: 'Blog'
+article.index.title: Blog
+article.show.title: Blog
+_include._actuality.h2: 'Suivez-moi dans un voyage au cœur de votre image'
+_include._actuality.p.1: 'Retrouvez mes réflexions et mes actualités comme si vous exploriez de nouvelles destinations.'
+_include._actuality.p.2: 'Accompagnez-moi à travers mes activités et mes découvertes.'
+_include._actuality.firstName: 'Prénom'
+_include._actuality.email: 'Email'
+_include._actuality.button: 'Je m’abonne!'
+_include._actuality.sent: "Votre demande d'abonnement à été envoyé."
+_include._actuality.subscribe: 'Abonnez-vous dès maintenant pour ne rien manquer !'

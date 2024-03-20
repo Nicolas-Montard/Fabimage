@@ -1,0 +1,31 @@
+.actuality{
+    width: 900px;
+    margin-top: 150px;
+    @include media-breakpoint-down(md){
+        width: 90%;
+    }
+    .field-container{
+        .widget{
+            width: 100%;
+            height: 45px;
+        }
+        .label{
+            @include media-breakpoint-down(md){
+                text-align: center;
+            }
+        }
+        .flex-column{
+            width: 47.5%;
+            @include media-breakpoint-down(md){
+                width: 100%;
+            }
+        }
+        :nth-child(2){
+            @include media-breakpoint-down(md){
+                .label{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
