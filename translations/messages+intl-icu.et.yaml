@@ -171,5 +171,13 @@ login.title: Sisselogimiseks
 article.index.lastArticle: 'VIIMASED ARTIKLID'
 book.createNewArticle: 'Loo uus artikkel'
 navbar.blog: Blogi
-article.index.title: "Blogi"
-article.show.title: 'Blogi'
+article.index.title: Blogi
+article.show.title: Blogi
+_include._actuality.h2: "Astu minuga teekonnale oma imago südamesse"
+_include._actuality.p.1: "Avasta minu mõtted ja uudised nagu avastaksid uusi sihtkohti! "
+_include._actuality.p.2: 'Läbi koos minuga teekond minu tegemistesse ja avastustesse.'
+_include._actuality.firstName: 'Eesnimi'
+_include._actuality.email: 'Email'
+_include._actuality.button: 'Registreerun!'
+_include._actuality.sent: 'Teie liitumistaotlus on saadetud.'
+_include._actuality.subscribe: 'Registreeru kohe, et mitte midagi maha magada!'
