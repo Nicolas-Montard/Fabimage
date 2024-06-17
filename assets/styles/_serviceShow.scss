@@ -1,0 +1,24 @@
+.service-show{
+  .description{
+    width: 45%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .picture-container{
+    @include media-breakpoint-down(md){
+      width: 275px;
+    }
+  }
+  .picture{
+    width: 275px;
+    height: 345px;
+    object-fit: cover;
+  }
+  .title{
+    @include media-breakpoint-up(md){
+      margin-left: 100px;
+      max-width: 450px;
+    }
+  }
+}

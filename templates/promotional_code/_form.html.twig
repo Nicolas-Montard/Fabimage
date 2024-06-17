@@ -1,0 +1,18 @@
+{{ form_start(form) }}
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.name, 'Nom') }}
+            {{ form_widget(form.name) }}
+        </div>
+    </div>
+    <div class="mx-auto price-container mt-3">
+        {{ form_label(form.price, 'Prix') }}
+        <div class="price-widget">
+            {{ form_widget(form.price) }}
+        </div>
+        {{ form_errors(form.price) }}
+    </div>
+<div class="mt-4 d-flex justify-content-center">
+    <button class="btn btn-secondary text-white">{{ button_label|default('Sauvegarder') }}</button>
+</div>
+{{ form_end(form) }}

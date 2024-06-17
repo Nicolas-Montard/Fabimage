@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New PromotionalCode{% endblock %}
+
+{% block body %}
+    <div class="promotionalCode-form">
+        <h1 class="text-primary text-center mb-4">Créer un nouveau code promotionnel</h1>
+
+        {{ include('promotional_code/_form.html.twig') }}
+    </div>
+{% endblock %}

@@ -1,0 +1,171 @@
+{{ form_start(form) }}
+<div class="d-flex justify-content-around">
+    <div class="d-flex flex-column">
+        {{ form_label(form.nameFr, 'Titre français') }}
+        {{ form_widget(form.nameFr) }}
+        {{ form_errors(form.nameFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.nameEs, 'Titre espagnol') }}
+        {{ form_widget(form.nameEs) }}
+        {{ form_errors(form.nameEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.nameEt, 'Titre estonien') }}
+        {{ form_widget(form.nameEt) }}
+        {{ form_errors(form.nameEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.smallDescriptionFr, 'Résumé français') }}
+        {{ form_widget(form.smallDescriptionFr) }}
+        {{ form_errors(form.smallDescriptionFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.smallDescriptionEs, 'Résumé espagnol') }}
+        {{ form_widget(form.smallDescriptionEs) }}
+        {{ form_errors(form.smallDescriptionEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.smallDescriptionEt, 'Résumé estonien') }}
+        {{ form_widget(form.smallDescriptionEt) }}
+        {{ form_errors(form.smallDescriptionEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkFr, 'Lien de la vidéo française') }}
+        {{ form_widget(form.videoLinkFr) }}
+        {{ form_errors(form.videoLinkFr) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkEs, 'Lien de la vidéo espagnol') }}
+        {{ form_widget(form.videoLinkEs) }}
+        {{ form_errors(form.videoLinkEs) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoLinkEt, 'Lien de la vidéo estonien') }}
+        {{ form_widget(form.videoLinkEt) }}
+        {{ form_errors(form.videoLinkEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.videoPassword, 'mot de passe de la vidéo') }}
+        {{ form_widget(form.videoPassword) }}
+        {{ form_errors(form.videoPassword) }}
+    </div>
+</div>
+<div class="mx-auto price-container mt-3">
+    {{ form_label(form.price, 'Prix') }}
+    <div class="price-widget">
+        {{ form_widget(form.price) }}
+    </div>
+    {{ form_errors(form.price) }}
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.pictureFrFile, 'Couverture française du livre') }}
+        {{ form_widget(form.pictureFrFile) }}
+        {{ form_errors(form.pictureFrFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.pictureEsFile, 'Couverture espagnol du livre') }}
+        {{ form_widget(form.pictureEsFile) }}
+        {{ form_errors(form.pictureEsFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.pictureEtFile, 'Couverture estonienne du livre') }}
+        {{ form_widget(form.pictureEtFile) }}
+        {{ form_errors(form.pictureEtFile) }}
+    </div>
+</div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.bookFrFile, 'Livre français') }}
+        {{ form_widget(form.bookFrFile) }}
+        {{ form_errors(form.bookFrFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.bookEsFile, 'Livre espagnol') }}
+        {{ form_widget(form.bookEsFile) }}
+        {{ form_errors(form.bookEsFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.bookEtFile, 'Livre estonien') }}
+        {{ form_widget(form.bookEtFile) }}
+        {{ form_errors(form.bookEtFile) }}
+    </div>
+</div>
+<div class="errors w-50 mt-3">
+    {{ form_errors(form) }}
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.descriptionFr, 'Description français') }}
+        {{ form_widget(form.descriptionFr) }}
+        {{ form_errors(form.descriptionFr) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.descriptionEs, 'Description espagnol') }}
+        {{ form_widget(form.descriptionEs) }}
+        {{ form_errors(form.descriptionEs) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.descriptionEt, 'Description estonien') }}
+        {{ form_widget(form.descriptionEt) }}
+        {{ form_errors(form.descriptionEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.emailFr, 'Email français') }}
+        {{ form_widget(form.emailFr) }}
+        {{ form_errors(form.emailFr) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.emailEs, 'Email espagnol') }}
+        {{ form_widget(form.emailEs) }}
+        {{ form_errors(form.emailEs) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.emailEt, 'Email estonien') }}
+        {{ form_widget(form.emailEt) }}
+        {{ form_errors(form.emailEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.FollowUpEmailFr, 'Email de suivi français') }}
+        {{ form_widget(form.FollowUpEmailFr) }}
+        {{ form_errors(form.FollowUpEmailFr) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.FollowUpEmailEs, 'Email de suivi espagnol') }}
+        {{ form_widget(form.FollowUpEmailEs) }}
+        {{ form_errors(form.FollowUpEmailEs) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column mt-5">
+        {{ form_label(form.FollowUpEmailEt, 'Email de suivi estonien') }}
+        {{ form_widget(form.FollowUpEmailEt) }}
+        {{ form_errors(form.FollowUpEmailEt) }}
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <button class="btn btn-secondary text-white mt-5 px-3">{{ button_label|default('Sauvegarder') }}</button>
+</div>
+{{ form_end(form) }}

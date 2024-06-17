@@ -1,0 +1,22 @@
+.article-index{
+    .article-container{
+        width: 1145px;
+        @include media-breakpoint-down(md){
+            width: 90%;
+        }
+        .article-card{
+            .image-container{
+                height: 160px;
+                img{
+                    object-fit: cover;
+                    width: 250px;
+                }
+            }
+            .text-container{
+                @include media-breakpoint-down(md){
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

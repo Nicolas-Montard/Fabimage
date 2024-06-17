@@ -1,0 +1,30 @@
+<div class="image-container mx-auto">
+    <img src="{{ asset('uploads/images/pictures/' ~ workshop.smallPicture) }}" alt="" class="w-100 h-100">
+</div>
+<div>
+    <div class="d-flex flex-column text-container mx-auto rounded-1">
+        <div class="content-container">
+            <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-0">
+                {% if app.request.locale == 'fr' %}
+                    {{ workshop.titleFr }}
+                {% elseif app.request.locale == 'es' %}
+                    {{ workshop.titleEs }}
+                {% else %}
+                    {{ workshop.titleEt }}
+                {% endif %}</h3>
+            <p class="mt-2 mx-3">
+                {% if app.request.locale == 'fr' %}
+                    {{ workshop.underTitleFr|nl2br }}
+                {% elseif app.request.locale == 'es' %}
+                    {{ workshop.underTitleEs|nl2br }}
+                {% else %}
+                    {{ workshop.underTitleEt|nl2br }}
+                {% endif %}
+            </p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="{{ path('app_workshop_show', {id: workshop.id}) }}"><button class="btn btn-secondary text-white fs-6">
+                    {{ 'workshop.interested'|trans }}</button></a>
+        </div>
+    </div>
+</div>

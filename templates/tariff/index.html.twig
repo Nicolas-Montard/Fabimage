@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tariff index{% endblock %}
+
+{% block body %}
+    <div class="tariff-index">
+        <h1 class="text-primary text-center mb-5">{{ 'Tariff.index.h1'|trans }}</h1>
+        <div class="card-deco-container">
+            <div class="d-flex flex-wrap justify-content-center tariff-card-container mx-auto">
+                {% for tariff in tariffs %}
+                    <div class="mx-auto">
+                        {% include '_include/_card_tariff.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-4">
+                <a href="{{ path('app_tariff_new') }}"><button class="btn btn-secondary text-white">Créer un nouveau tarif</button></a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

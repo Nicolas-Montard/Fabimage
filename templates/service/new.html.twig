@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Service{% endblock %}
+
+{% block body %}
+    <div class="service-form">
+        <h1 class="text-primary text-center mb-5">Créer une nouvelle prestation</h1>
+            {{ include('service/_form.html.twig') }}
+    </div>
+{% endblock %}

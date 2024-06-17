@@ -1,0 +1,48 @@
+.service-card{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 265px;
+  @include media-breakpoint-down(md){
+    width: 100%;
+  }
+  .image-container{
+    height: 280px;
+    width: 225px;
+    @include media-breakpoint-down(md){
+      width: 100%;
+      height: 362px;
+    }
+    @media screen and (max-width: 375px){
+      height: 367px;
+    }
+    @media screen and (max-width: 325px){
+      height: 312px;
+    }
+    img{
+      object-fit: cover;
+    }
+  }
+  .content-container{
+    min-height: 200px;
+  }
+  .text-container{
+    position: relative;
+    bottom: 40px;
+    z-index: 2;
+    background-color: white;
+    width: 210px;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:hover {
+      color: black;
+    }
+    p{
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+}

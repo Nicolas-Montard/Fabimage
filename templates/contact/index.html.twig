@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'contact.head.title'|trans }}{% endblock %}
+{% block metaDescription %}{{ "contact.head.metaDescription"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="contact-service">
+        <h1 class="text-center text-primary mb-5">{{ 'contact.contactMe'|trans }}</h1>
+        <div class="mx-auto form-container">
+        {{ form_start(form) }}
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.type, 'contact.service.form.type'|trans) }}
+                {{ form_widget(form.type) }}
+                {{ form_errors(form.type) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.client, 'contact.service.form.client'|trans) }}
+                {{ form_widget(form.client) }}
+                {{ form_errors(form.client) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.firstName, 'contact.form.firstName'|trans) }}
+                {{ form_widget(form.firstName) }}
+                {{ form_errors(form.firstName) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.lastName, 'contact.form.lastName'|trans) }}
+                {{ form_widget(form.lastName) }}
+                {{ form_errors(form.lastName) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.email, 'contact.form.email'|trans) }}
+                {{ form_widget(form.email) }}
+                {{ form_errors(form.email) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.phoneNumber, 'contact.form.phoneNumber'|trans) }}
+                {{ form_widget(form.phoneNumber) }}
+                {{ form_errors(form.phoneNumber) }}
+            </div>
+            <div class="d-flex flex-column mt-3">
+                {{ form_label(form.message, 'contact.service.form.message'|trans) }}
+                {{ form_widget(form.message) }}
+                {{ form_errors(form.message) }}
+            </div>
+            <p class="mb-0 mt-4">{{ 'contact.workshop.form.agreements.info'|trans|raw }}</p>
+            <div class="d-flex mt-3">
+                {{ form_widget(form.agreements) }}
+                {{ form_label(form.agreements, 'contact.workshop.form.agreements'|trans) }}
+                {{ form_errors(form.agreements) }}
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-secondary text-white mt-4 fs-5 px-4">{{ 'contact.send'|trans}}</button>
+            </div>
+        {{ form_end(form) }}
+        </div>
+        {% if app.request.get('formSent') %}
+            <p class="form-confirmation mx-auto my-3">
+                {{ 'contact.workshop.validation'|trans|raw }}
+            </p>
+        {% endif %}
+    </div>
+
+{% endblock %}

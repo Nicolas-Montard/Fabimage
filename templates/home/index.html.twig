@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "home.head.title"|trans }}{% endblock %}
+{% block metaDescription %}{{ "home.head.metaDescription"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="home">
+        <img src="{{ asset('build/images/Fabienne-HOME.jpg') }}" alt="" class="w-100 img-start">
+        <div class="d-flex flex-column justify-content-center align-items-center text-primary title-container mt-5 mx-auto">
+            <h1 class="text-center mx-4 mx-md-0">{{ 'home.title'|trans }}</h1>
+            <p class="fs-4 text-center mx-4 mx-md-0">{{ 'home.underTitle'|trans|raw }}</p>
+        </div>
+        <div class="d-flex justify-content-around flex-column flex-md-row align-items-center mt-4">
+            <div class="container-video ms-xxl-5 d-flex">
+                <iframe src="{{ 'home.video.link'|trans }}" title="{{ 'home.video'|trans }}" class="video"></iframe>
+            </div>
+            <div class="text-video p-1 mt-5 mt-md-0">
+                <p class="">{{ 'home.textVideo'|trans|raw }}</p>
+            </div>
+        </div>
+        <div class="presentation d-md-flex justify-content-center flex-column">
+            <div class="top d-flex">
+                <div class="left text-white d-flex flex-column">
+                    <h2 class="mx-4 mt-4 fs-2">{{ 'home.presentaion.head.title'|trans }}</h2>
+                    <h3 class="mx-4 my-4 fs-5 lh-sm">{{ 'home.presentation.head.text'|trans|raw }}</h3>
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+            <div class="bottom d-flex">
+                <div class="left">
+                    <p class="text text-dark mb-5 mx-4 my-4">{{ 'home.presentation.body.text'|trans|raw }}</p>
+                </div>
+                <div class="right">
+                    <img src="{{ asset('build/images/flower.jpg') }}" alt="{{ 'home.flowerImage'|trans }}" class="image">
+                    <div class="decoration"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-service-card-container">
+            <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
+                {% for service in services %}
+                    <div class="service-card mt-5 d-flex flex-column">
+                        {% include '_include/_card_service.html.twig' %}
+                    </div>
+                {% endfor %}
+                <div class="service-card mt-5 d-flex flex-column">
+                    <div class="image-container mx-auto">
+                        <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column text-container mx-auto rounded-1">
+                            <div class="content-container">
+                                <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white">
+                                        {{ 'Service.readMore'|trans }}</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if commentaries is defined and commentaries|length > 0 %}
+            <div id="carouselExampleIndicators" class="carousel slide mt-5">
+                <p class="commentary-introduction mx-auto">{{ 'home.CommmentaryIntroduction'|trans }}</p>
+                <div class="carousel-inner commentaries-carousel d-flex align-items-center">
+                    {% for commentary in commentaries %}
+                        {% if loop.first %}
+                            <div class="carousel-item active h-100">
+                                <div class="h-100 commentary d-flex align-items-center">
+                                    <div class="mx-auto">
+                                        {% if app.request.locale == 'fr' %}
+                                            <h2 class="fs-4">{{ commentary.titleFr|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentFr|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                        {% elseif app.request.locale == 'es' %}
+                                            <h2 class="fs-4">{{ commentary.titleEs|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentEs|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                        {% else %}
+                                            <h2 class="fs-4">{{ commentary.titleEt|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentEt|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                        {% endif %}
+                                        {% if app.user %}
+                                            <div class="d-flex justify-content-center mt-5">
+                                                <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                    <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="carousel-item h-100">
+                                <div class="h-100 commentary d-flex align-items-center">
+                                    <div class="mx-auto">
+                                        {% if app.request.locale == 'fr' %}
+                                            <h2 class="fs-4">{{ commentary.titleFr|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentFr|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                        {% elseif app.request.locale == 'es' %}
+                                            <h2 class="fs-4">{{ commentary.titleEs|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentEs|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                        {% else %}
+                                            <h2 class="fs-4">{{ commentary.titleEt|raw }}</h2>
+                                            <p class="mt-4 text-break">{{ commentary.contentEt|raw }}</p>
+                                            <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                        {% endif %}
+                                        {% if app.user %}
+                                            <div class="d-flex justify-content-center mt-5">
+                                                <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                    <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
+                </button>
+            </div>
+        {% endif %}
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{{ path('app_commentary_home_new') }}">
+                    <button class="btn btn-secondary text-white">{{'commentaryHome.new'|trans}}</button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+    {{ render(controller('App\\Controller\\ContactController::actuality')) }}
+{% endblock %}

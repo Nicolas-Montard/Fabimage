@@ -1,0 +1,25 @@
+body{
+  background-color: $light;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.body{
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: "caudex", sans-serif;
+}
+h1{
+  font-size: 45px;
+}
+.fs-h1{
+  font-size: 45px;
+}
+
+p{
+  font-size: 18px;
+}

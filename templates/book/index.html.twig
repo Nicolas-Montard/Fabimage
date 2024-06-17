@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "book.head.title"|trans }}{% endblock %}
+{% block metaDescription %}{{ "book.head.metaDescription"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="book-index">
+        <div class="top-container">
+            <div class="title-image-container">
+                <img src="{{ asset('build/images/Fabienne-EBOOKS.jpg') }}" alt="" class="w-100 h-100">
+            </div>
+            <div class="head-text-container mx-auto bg-light">
+                <h1 class="text-primary fs-2">{{ 'book.index.h1'|trans }}</h1>
+            </div>
+        </div>
+        {% if buyed %}
+            <p class="buyed-text mx-auto optional-message">{{ 'book.index.buyedBook'|trans|raw }}</p>
+        {% endif %}
+        <div class="d-flex flex-wrap justify-content-center book-card-container mx-auto">
+            {% for book in books %}
+                <div class="book-card mt-5 d-flex flex-column">
+                    {% include '_include/_card_book.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if app.user %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{{ path('app_book_new') }}">
+                    <button class="btn btn-secondary rounded px-3 text-white">{{'book.createNewBook'|trans}}</button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+    {{ render(controller('App\\Controller\\ContactController::actuality')) }}
+{% endblock %}

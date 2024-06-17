@@ -1,0 +1,26 @@
+.contact-service{
+  .form-container{
+    width: 30%;
+    @include media-breakpoint-down(md){
+      width: 85%;
+    }
+  }
+  .widget{
+    height: 40px;
+    @include media-breakpoint-down(md){
+      height: 60px;
+    }
+  }
+  .message{
+    height: 120px;
+    @include media-breakpoint-down(md){
+      height: 180px;
+    }
+  }
+  .form-confirmation{
+    width: 40%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+}

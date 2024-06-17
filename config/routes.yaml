@@ -1,0 +1,16 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: et|fr|es
+    defaults:
+        _locale: et
+app_logout:
+    path: /logout
+index_no_locale:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /et/
+        permanent: true

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Tariff{% endblock %}
+
+{% block body %}
+    <div class="tariff-form">
+        <h1 class="text-center text-primary mb-4">Mettre à jour le tariff</h1>
+        {% if error %}
+            <p class="text-center"> vous devez remplir tous les champs</p>
+        {% endif %}
+
+        {{ include('tariff/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+        <div class="d-flex justify-content-center mt-4">
+            {{ include('tariff/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

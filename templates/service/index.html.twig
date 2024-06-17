@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block metaDescription %}{{ "service.head.metaDescription"|trans }}{% endblock %}
+{% block title %}{{ "service.head.title"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="service-index">
+        <div class="top-container">
+            <div class="title-image-container">
+                <img src="{{ asset('build/images/serviceImage.jpg') }}" alt="" class="w-100 h-100">
+            </div>
+            <div class="head-text-container bg-light">
+                <h1 class="text-center text-primary">{{ 'service.index.body.title'|trans }}</h1>
+                <p class="mt-5">{{ 'service.index.p.1'|trans|raw }}</p>
+            </div>
+        </div>
+        <div class="offer-container">
+            <div class="mx-auto w-50 mt-5 mb-5 offer">
+                <h2 class="fs-h1 mt-3 text-center text-primary">{{ 'service.index.myOffer'|trans }}</h2>
+                <p class="mt-4">{{ 'service.index.p.2'|trans|raw }}</p>
+            </div>
+        </div>
+        {% if app.user %}
+            <div class="d-flex justify-content-center">
+                <a href="{{ path('app_service_new') }}">
+                    <button class="btn btn-secondary text-white">{{'service.index.admin.newService'|trans}}</button>
+                </a>
+            </div>
+        {% endif %}
+        <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
+            {% for service in services %}
+                <div class="service-card mt-5 d-flex flex-column">
+                    {% include '_include/_card_service.html.twig' %}
+                </div>
+            {% endfor %}
+            <div class="service-card mt-5 d-flex flex-column">
+                <div class="image-container mx-auto">
+                    <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
+                </div>
+                <div>
+                    <div class="d-flex flex-column text-container mx-auto rounded-1">
+                        <div class="content-container">
+                            <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white">
+                                    {{ 'Service.readMore'|trans }}</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ render(controller('App\\Controller\\ContactController::actuality')) }}
+{% endblock %}

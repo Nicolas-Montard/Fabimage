@@ -1,0 +1,73 @@
+.workshop-index{
+  .head-text-container{
+    @include media-breakpoint-up(md){
+      position: relative;
+      top: 150px;
+      left: 125px;
+      width: 800px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 80px;
+      margin-left: auto;
+      margin-right: 200px;
+      @include media-breakpoint-down(xxl){
+        left: 200px;
+        width: 750px;
+        padding-left: 75px;
+        padding-right: 75px;
+      }
+    }
+    @include media-breakpoint-down(md){
+      margin-top: 50px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .title-image-container{
+    @include media-breakpoint-up(md){
+      position: absolute;
+      z-index: -1;
+      margin-left: 100px;
+      height: 400px;
+      width: 60%;
+      img{
+        object-fit: cover;
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      width: 70%;
+      height: 310px;
+    }
+    @include media-breakpoint-down(md){
+      width: 100%;
+      height: initial;
+    }
+  }
+  .top-container{
+    @include media-breakpoint-up(md){
+      margin-bottom: 250px;
+    }
+  }
+  .bottom-text-container{
+    width: 800px;
+    @include media-breakpoint-down(md){
+      margin-top: 50px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .container-text{
+    width: 35%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+  .workshop-card-container{
+    width: 60%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
+}

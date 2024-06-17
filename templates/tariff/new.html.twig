@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Tariff{% endblock %}
+
+{% block body %}
+    <div class="tariff-form">
+        <h1 class="text-primary text-center mb-4">Créer un nouveau tarif</h1>
+        {% if error %}
+            <p class="text-center"> vous devez remplir tous les champs</p>
+        {% endif %}
+        {{ include('tariff/_form.html.twig') }}
+    </div>
+{% endblock %}

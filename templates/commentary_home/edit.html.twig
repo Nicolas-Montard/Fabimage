@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CommentaryHome{% endblock %}
+
+{% block body %}
+<div class="commentary-form">
+    <h1 class="text-center text-primary mb-5">Editer le commentaire</h1>
+    {% if error %}
+        <p class="text-center"> vous devez remplir tous les champs</p>
+    {% endif %}
+    {{ include('commentary_home/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+
+    {{ include('commentary_home/_delete_form.html.twig') }}
+</div>
+{% endblock %}

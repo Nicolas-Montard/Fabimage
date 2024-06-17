@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+</head>
+<body>
+    {% if lang == 'Fr' %}
+        <p class="">{{ book.emailFr|nl2br }}</p>
+        {% elseif lang == 'Es' %}
+        <p class="">{{ book.emailEs|nl2br }}</p>
+        {% else %}
+        <p class="">{{ book.emailEt|nl2br }}</p>
+    {% endif %}
+    {% if book.videoLinkFr or book.videoLinkEs or book.videoLinkEt %}
+        {% if lang == 'Fr' %}
+            <p>Vous pouvez regarder la vidéo  <a href="{{ book.videoLinkFr }}">ici</a></p>
+        {% elseif lang == 'Es' %}
+            <p>Puedes ver el vídeo <a href="{{ book.videoLinkEs }}">aquí</a></p>
+        {% else %}
+            <p>Videot näed <a href="{{ book.videoLinkEt }}">siit</a></p>
+        {% endif %}
+        {% if book.videoPassword %}
+            <p>{{'book.email.password'|trans}} {{ book.videoPassword }}</p>
+        {% endif %}
+    {% endif %}
+    {% if free is defined %}
+        {% if book.bookFr or book.bookEs or book.bookEt %}
+            <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token, 'free': 1}) }}">{{ 'downloadBook'|trans }}</a>
+        {% endif %}
+    {% else %}
+        <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
+    {% endif %}
+    <p class="fs-6">{{ 'book.buyed.email.p.end'|trans|raw }}</p>
+</body>
+</html>

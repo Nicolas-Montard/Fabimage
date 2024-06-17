@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid d-flex justify-content-between">
+        <div>
+            <a href="{{ path('app_home') }}">
+                <div class="ms-0 ms-md-3 d-flex">
+                    <div class="logo-div">
+                        <img src="{{ asset('build/images/logo-Fabimage-F-seul-fond-blanc.png') }}" alt="Logo de Fabimage" class="logo">
+                    </div>
+                    <div class="d-flex flex-column d-none d-md-block">
+                        <h1 class="fs-3 text-primary ms-1 ms-md-2 mb-0 mt-auto">Fabimage</h1>
+                        <p class="mt-0 ms-1 ms-md-2 text-primary mb-0 mb-auto">{{ 'navbar.CoachingAndImage'|trans }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle text-white me-2 me-md-0" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ 'navbar.language'|trans }}
+                </button>
+                {% set routeName = app.request.attributes.get('_route') %}
+                {% set paramFr = app.request.attributes.get('_route_params') %}
+                {% set paramFr = paramFr|merge({'_locale': 'fr'}) %}
+                {% set paramEs = app.request.attributes.get('_route_params') %}
+                {% set paramEs = paramEs|merge({'_locale': 'es'}) %}
+                {% set paramEt = app.request.attributes.get('_route_params') %}
+                {% set paramEt = paramEt|merge({'_locale': 'et'}) %}
+
+                <ul class="dropdown-menu language-menu">
+                    <li class="d-flex justify-content-around align-items-center">
+                        <a class="dropdown-item" href="{{ path(routeName, paramFr) }}">Français</a>
+                        <img src="{{ asset('build/images/france.png') }}" alt="{{ 'navbar.frenchFlag'|trans }}"
+                             class="flag d-inline me-4"></li>
+                    <li class="d-flex justify-content-around align-items-center">
+                        <a class="dropdown-item" href="{{ path(routeName, paramEs) }}">Español</a>
+                        <img src="{{ asset('build/images/spain.png') }}" alt="{{ 'navbar.spanishFlag'|trans }}"
+                             class="flag d-inline me-4"></li>
+                    <li class="d-flex justify-content-around align-items-center">
+                        <a class="dropdown-item" href="{{ path(routeName, paramEt) }}">Eesti</a>
+                        <img src="{{ asset('build/images/estonia.png') }}" alt="{{ 'navbar.estoniaFlag' }}"
+                             class="flag d-inline me-4"></li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="me-md-4 d-flex align-items-md-center my-md-auto flex-column flex-md-row">
+
+                    <a href="{{ path('app_image_coaching') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.coachingOfImage'|trans }}</a>
+                    <a href="{{ path('app_fabienne') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.fabienne'|trans }}</a>
+                    <a href="{{ path('app_service_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.services'|trans }}</a>
+                    <a href="{{ path('app_workshop_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.workshop'|trans }}</a>
+                    <a href="{{ path('app_company') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.company'|trans }}</a>
+                    <a href="{{ path('contact_service') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.contact'|trans }}</a>
+                    <a href="{{ path('app_book_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.book'|trans }}</a>
+                    <a href="{{ path('app_article_index', {page: 1}) }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.blog'|trans}}</a>
+                    {% if app.user %}
+                        <a href="{{ path('app_logout') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.deconnect'|trans }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,122 @@
+{{ form_start(form) }}
+    <div class="d-flex justify-content-around">
+        <div class="d-flex flex-column">
+            {{ form_label(form.titleFr, 'Titre Français') }}
+            {{ form_widget(form.titleFr) }}
+            {{ form_errors(form.titleFr) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.titleEs, 'Titre Espagnol') }}
+            {{ form_widget(form.titleEs) }}
+            {{ form_errors(form.titleEs) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.titleEt, 'Titre Estonien') }}
+            {{ form_widget(form.titleEt) }}
+            {{ form_errors(form.titleEt) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleFr, 'Résumé français') }}
+            {{ form_widget(form.underTitleFr) }}
+            {{ form_errors(form.underTitleFr) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleEs, 'Résumé espagnol') }}
+            {{ form_widget(form.underTitleEs) }}
+            {{ form_errors(form.underTitleEs) }}
+        </div>
+        <div class="d-flex flex-column">
+            {{ form_label(form.underTitleEt, 'Résumé estonien') }}
+            {{ form_widget(form.underTitleEt) }}
+            {{ form_errors(form.underTitleEt) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column me-5 mt-3">
+            {{ form_label(form.pictureFile, 'image de l\'atelier') }}
+            {{ form_widget(form.pictureFile) }}
+            {{ form_errors(form.pictureFile) }}
+        </div>
+        <div class="d-flex flex-column mt-4 mx-5">
+            {{ form_label(form.duration, 'Durée de l\'atelier') }}
+            {{ form_widget(form.duration) }}
+            {{ form_errors(form.duration) }}
+        </div>
+        <div class="d-flex flex-column ms-5 mt-3">
+            {{ form_label(form.smallPictureFile, 'Cadre de presentation de l\'atelier') }}
+            {{ form_widget(form.smallPictureFile) }}
+            {{ form_errors(form.smallPictureFile) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.minNbPlaces, 'Nombre minimum de place') }}
+            {{ form_widget(form.minNbPlaces) }}
+            {{ form_errors(form.minNbPlaces) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.maxNbPlaces, 'Nombre maximum de place') }}
+            {{ form_widget(form.maxNbPlaces) }}
+            {{ form_errors(form.maxNbPlaces) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.location, 'Location') }}
+            {{ form_widget(form.location) }}
+            {{ form_errors(form.location) }}
+        </div>
+        </div>
+    <div class="errors w-50 mt-3">
+        {{ form_errors(form) }}
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.descriptionFr, 'Description français') }}
+            {{ form_widget(form.descriptionFr) }}
+            {{ form_errors(form.descriptionFr) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.descriptionEs, 'Description espagnol') }}
+            {{ form_widget(form.descriptionEs) }}
+            {{ form_errors(form.descriptionEs) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.descriptionEt , 'Description estonien') }}
+            {{ form_widget(form.descriptionEt) }}
+            {{ form_errors(form.descriptionEt) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.optionalDescriptionFr, 'Description optionel français') }}
+            {{ form_widget(form.optionalDescriptionFr) }}
+            {{ form_errors(form.optionalDescriptionFr) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.optionalDescriptionEs, 'Description optionel espagnol') }}
+            {{ form_widget(form.optionalDescriptionEs) }}
+            {{ form_errors(form.optionalDescriptionEs) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
+            {{ form_label(form.optionalDescriptionEt, 'Description optionel estonien') }}
+            {{ form_widget(form.optionalDescriptionEt) }}
+            {{ form_errors(form.optionalDescriptionEt) }}
+        </div>
+    </div>
+    <div class="mt-4 d-flex justify-content-center">
+        <button class="btn btn-secondary text-white">{{ button_label|default('Sauvegarder') }}</button>
+    </div>
+{{ form_end(form) }}
