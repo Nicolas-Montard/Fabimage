@@ -142,19 +142,14 @@ class Book
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $VideoLinkEs = null;
 
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $FollowUpEmailFr = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $FollowUpEmailEs = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $FollowUpEmailEt = null;
+    #[ORM\OneToMany(mappedBy: 'book', targetEntity: FollowUpEmail::class, orphanRemoval: true)]
+    private Collection $followUpEmails;
 
     public function __construct()
     {
         $this->tokens = new ArrayCollection();
         $this->promotionalCodes = new ArrayCollection();
+        $this->followUpEmails = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -598,38 +593,32 @@ class Book
         return $this;
     }
 
-    public function getFollowUpEmailFr(): ?string
+    /**
+     * @return Collection<int, FollowUpEmail>
+     */
+    public function getFollowUpEmails(): Collection
     {
-        return $this->FollowUpEmailFr;
+        return $this->followUpEmails;
     }
 
-    public function setFollowUpEmailFr(string $FollowUpEmailFr): static
+    public function addFollowUpEmail(FollowUpEmail $followUpEmail): static
     {
-        $this->FollowUpEmailFr = $FollowUpEmailFr;
+        if (!$this->followUpEmails->contains($followUpEmail)) {
+            $this->followUpEmails->add($followUpEmail);
+            $followUpEmail->setBook($this);
+        }
 
         return $this;
     }
 
-    public function getFollowUpEmailEs(): ?string
+    public function removeFollowUpEmail(FollowUpEmail $followUpEmail): static
     {
-        return $this->FollowUpEmailEs;
-    }
-
-    public function setFollowUpEmailEs(string $FollowUpEmailEs): static
-    {
-        $this->FollowUpEmailEs = $FollowUpEmailEs;
-
-        return $this;
-    }
-
-    public function getFollowUpEmailEt(): ?string
-    {
-        return $this->FollowUpEmailEt;
-    }
-
-    public function setFollowUpEmailEt(string $FollowUpEmailEt): static
-    {
-        $this->FollowUpEmailEt = $FollowUpEmailEt;
+        if ($this->followUpEmails->removeElement($followUpEmail)) {
+            // set the owning side to null (unless already changed)
+            if ($followUpEmail->getBook() === $this) {
+                $followUpEmail->setBook(null);
+            }
+        }
 
         return $this;
     }

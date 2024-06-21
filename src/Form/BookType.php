@@ -208,42 +208,6 @@ class BookType extends AbstractType
                     'enterMode' => 'CKEDITOR.ENTER_BR'
                 ],
             ])
-            ->add('FollowUpEmailFr', CKEditorType::class, [
-                'required' => true,
-                'attr' => [
-                    'class' => 'description-widget rounded'
-                ],
-                'label_attr' => [
-                    'class' => 'label'
-                ],
-                'config' => [
-                    'enterMode' => 'CKEDITOR.ENTER_BR'
-                ],
-            ])
-            ->add('FollowUpEmailEs', CKEditorType::class, [
-                'required' => true,
-                'attr' => [
-                    'class' => 'description-widget rounded'
-                ],
-                'label_attr' => [
-                    'class' => 'label'
-                ],
-                'config' => [
-                    'enterMode' => 'CKEDITOR.ENTER_BR'
-                ],
-            ])
-            ->add('FollowUpEmailEt', CKEditorType::class, [
-                'required' => true,
-                'attr' => [
-                    'class' => 'description-widget rounded'
-                ],
-                'label_attr' => [
-                    'class' => 'label'
-                ],
-                'config' => [
-                    'enterMode' => 'CKEDITOR.ENTER_BR'
-                ],
-            ])
             ->add('videoLinkFr', TextType::class,[
                 'required' => false,
                 'attr' => [
