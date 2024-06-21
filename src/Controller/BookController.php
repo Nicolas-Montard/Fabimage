@@ -57,7 +57,7 @@ class BookController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData() || !$form->get("FollowUpEmailFr")->getData() || !$form->get("FollowUpEmailEs")->getData() || !$form->get("FollowUpEmailEt")->getData() || !$form->get("emailFr")->getData() || !$form->get("emailEs")->getData() || !$form->get("emailEt")->getData()){
+            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData() || !$form->get("emailFr")->getData() || !$form->get("emailEs")->getData() || !$form->get("emailEt")->getData()){
                 return $this->redirectToRoute('app_book_new', ['error' => 1], Response::HTTP_SEE_OTHER);
             }
             $bookRepository->save($book, true);
@@ -82,7 +82,7 @@ class BookController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData() || !$form->get("FollowUpEmailFr")->getData() || !$form->get("FollowUpEmailEs")->getData() || !$form->get("FollowUpEmailEt")->getData() || !$form->get("emailFr")->getData() || !$form->get("emailEs")->getData() || !$form->get("emailEt")->getData()){
+            if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData() || !$form->get("emailFr")->getData() || !$form->get("emailEs")->getData() || !$form->get("emailEt")->getData()){
                 return $this->redirectToRoute('app_book_new', ['error' => 1], Response::HTTP_SEE_OTHER);
             }
             $bookRepository->save($book, true);
