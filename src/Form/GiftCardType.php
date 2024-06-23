@@ -102,6 +102,7 @@ class GiftCardType extends AbstractType
                 ]
             ])
             ->add('isComing', CheckboxType::class, [
+                'required' => false,
                 'attr' => [
                     'class' => ''
                 ],
