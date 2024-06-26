@@ -6,11 +6,11 @@
 </head>
 <body>
     {% if lang == 'Fr' %}
-        <p class="">{{ book.emailFr|nl2br }}</p>
+        <p class="">{{ book.emailFr|raw }}</p>
         {% elseif lang == 'Es' %}
-        <p class="">{{ book.emailEs|nl2br }}</p>
+        <p class="">{{ book.emailEs|raw }}</p>
         {% else %}
-        <p class="">{{ book.emailEt|nl2br }}</p>
+        <p class="">{{ book.emailEt|raw }}</p>
     {% endif %}
     {% if book.videoLinkFr or book.videoLinkEs or book.videoLinkEt %}
         {% if lang == 'Fr' %}

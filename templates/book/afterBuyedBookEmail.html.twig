@@ -6,11 +6,11 @@
 </head>
 <body>
     {% if token.language == 'fr' %}
-        {{ token.book.FollowUpEmailFr}}
+        {{ emailData.contentFr|raw}}
     {% elseif token.language == 'es' %}
-        {{ token.book.FollowUpEmailEs}}
+        {{ emailData.contentEs|raw}}
     {% else %}
-        {{ token.book.FollowUpEmailEt}}  
+        {{ emailData.contentEt|raw}}  
     {% endif %}
 </body>
 </html>

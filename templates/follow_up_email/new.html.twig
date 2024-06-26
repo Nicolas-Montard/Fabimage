@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FollowUpEmail{% endblock %}
+
+{% block body %}
+<div class="followUpEmail-form mb-3">
+    <h1 class="text-center text-primary">Créer un nouvelle email</h1>
+    {% if error %}
+    <p class="text-center"> vous devez remplir tous les champs</p>
+    {% endif %}
+{{ include('follow_up_email/_form.html.twig') }}
+</div>
+{% endblock %}
