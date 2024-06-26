@@ -2,19 +2,46 @@
 
 namespace App\Form;
 
-use App\Entity\Book;
 use App\Entity\FollowUpEmail;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 class FollowUpEmailType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+        ->add('subjectFr', TextType::class,[
+            'required' => true,
+            'attr' => [
+                'class' => 'widget rounded'
+            ],
+            'label_attr' => [
+                'class' => 'label'
+            ]
+        ])
+        ->add('subjectEs', TextType::class,[
+            'required' => true,
+            'attr' => [
+                'class' => 'widget rounded'
+            ],
+            'label_attr' => [
+                'class' => 'label'
+            ]
+        ])
+        ->add('subjectEt', TextType::class,[
+            'required' => true,
+            'attr' => [
+                'class' => 'widget rounded'
+            ],
+            'label_attr' => [
+                'class' => 'label'
+            ]
+        ])
         ->add('contentFr', CKEditorType::class, [
             'required' => true,
             'attr' => [
@@ -51,11 +78,16 @@ class FollowUpEmailType extends AbstractType
                 'enterMode' => 'CKEDITOR.ENTER_BR'
             ],
         ])
-            ->add('sendAfter')
-            ->add('book', EntityType::class, [
-                'class' => Book::class,
-                'choice_label' => 'id',
-            ])
+        ->add('sendAfter', NumberType::class, [
+            'required' => true,
+            'scale' => 0,
+            'attr' => [
+            'class' => 'number-widget rounded'
+            ],
+            'label_attr' => [
+                'class' => 'label'
+            ],
+        ])
         ;
     }
 
