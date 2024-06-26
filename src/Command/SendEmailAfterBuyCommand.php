@@ -40,36 +40,41 @@ class SendEmailAfterBuyCommand extends Command
     {
         $now = new \DateTimeImmutable('now');
         foreach($this->tokenRepository->findAll() as $token){
-            if ($token->getEmail() && $now->diff($token->getCreatedAt())->d > $now->diff($now->modify('-7 days'))->d && $token->getBook()->getFollowUpEmailFr() && $token->getBook()->getFollowUpEmailEs() && $token->getBook()->getFollowUpEmailEt() ) {
-                $lang = $token->getLanguage();
-                if ($lang == 'fr') {
-                    $subject = 'Qu\'avez-vous pensé du livre électronique ?';
-                } elseif ($lang == 'es') {
-                    $subject = '¿Qué te ha parecido el e-Book?';
-                } else {
-                    $subject = 'Mida sa e-raamatust arvad?';
-                }
-                $email = (new TemplatedEmail())
-                    ->from($this->params->get('mailer_from'))
-                    ->to($this->params->get('mailer_to'))
-                    ->subject($subject)
-                    ->htmlTemplate('book/afterBuyedBookEmail.html.twig')
-                    ->context(['token' => $token]);
-                $maxAttempts = 5;
-                $attempts = 0;
-                while ($attempts < $maxAttempts) {
-                    $emailNotSent = true;
-                    try {
-                        $this->mailer->send($email);
-                        $emailNotSent = false;
-                        $this->tokenRepository->remove($token, true);
-                        break;
-                    } catch (TransportExceptionInterface $e) {
-                        $attempts++;
+            foreach($token->getBook()->getFollowUpEmails() as $email){
+                $sendAfter = $email->getSendAfter();
+                $createdAt = $token->getCreatedAt();
+                $createdAtF = $token->getCreatedAt()->format('Y-m-d');
+                if ($token->getEmail() && $now->diff($createdAt)->format('%a') == $now->diff($now->modify('-' . $sendAfter . 'days'))->format('%a')) {
+                    $testData = [$now->diff($createdAt)->format('%a') > $now->diff($now->modify('-60 days'))->format('%a')];
+                    $lang = $token->getLanguage();
+                    if ($lang == 'fr') {
+                        $subject = $email->getSubjectFr();
+                    } elseif ($lang == 'es') {
+                        $subject = $email->getSubjectEs();
+                    } else {
+                        $subject = $email->getSubjectEt();
                     }
+                    $email = (new TemplatedEmail())
+                        ->from($this->params->get('mailer_from'))
+                        ->to($this->params->get('mailer_to'))
+                        ->subject($subject)
+                        ->htmlTemplate('book/afterBuyedBookEmail.html.twig')
+                        ->context(['emailData' => $email, 'token' => $token]);
+                    $maxAttempts = 5;
+                    $attempts = 0;
+                    while ($attempts < $maxAttempts) {
+                        $emailNotSent = true;
+                        try {
+                            $this->mailer->send($email);
+                            $emailNotSent = false;
+                            break;
+                        } catch (TransportExceptionInterface $e) {
+                            $attempts++;
+                        }
+                    }
+                } elseif ($now->diff($createdAt)->format('%a') > $now->diff($now->modify('-60 days'))->format('%a')) {
+                    $this->tokenRepository->remove($token, true);
                 }
-            } elseif (!$token->getEmail() && $now->diff($token->getCreatedAt())->d > $now->diff($now->modify('-7 days'))->d) {
-                $this->tokenRepository->remove($token, true);
             }
         }
         file_put_contents(dirname(__FILE__)."/logs.txt", "exec2");
