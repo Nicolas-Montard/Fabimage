@@ -83,7 +83,7 @@ class BookController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             if (!$form->get("descriptionFr")->getData() || !$form->get("descriptionEs")->getData() || !$form->get("descriptionEt")->getData() || !$form->get("emailFr")->getData() || !$form->get("emailEs")->getData() || !$form->get("emailEt")->getData()){
-                return $this->redirectToRoute('app_book_new', ['error' => 1], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('app_book_edit', ['error' => 1, 'id' => $book->getId()], Response::HTTP_SEE_OTHER);
             }
             $bookRepository->save($book, true);
 

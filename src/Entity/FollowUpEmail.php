@@ -14,13 +14,13 @@ class FollowUpEmail
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $contentFr = null;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $contentEs = null;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $contentEt = null;
 
     #[ORM\Column]
@@ -29,6 +29,15 @@ class FollowUpEmail
     #[ORM\ManyToOne(inversedBy: 'followUpEmails')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Book $book = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $subjectFr = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $subjectEs = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $subjectEt = null;
 
     public function getId(): ?int
     {
@@ -40,7 +49,7 @@ class FollowUpEmail
         return $this->contentFr;
     }
 
-    public function setContentFr(string $contentFr): static
+    public function setContentFr(?string $contentFr): static
     {
         $this->contentFr = $contentFr;
 
@@ -52,7 +61,7 @@ class FollowUpEmail
         return $this->contentEs;
     }
 
-    public function setContentEs(string $contentEs): static
+    public function setContentEs(?string $contentEs): static
     {
         $this->contentEs = $contentEs;
 
@@ -64,7 +73,7 @@ class FollowUpEmail
         return $this->contentEt;
     }
 
-    public function setContentEt(string $contentEt): static
+    public function setContentEt(?string $contentEt): static
     {
         $this->contentEt = $contentEt;
 
@@ -91,6 +100,42 @@ class FollowUpEmail
     public function setBook(?Book $book): static
     {
         $this->book = $book;
+
+        return $this;
+    }
+
+    public function getSubjectFr(): ?string
+    {
+        return $this->subjectFr;
+    }
+
+    public function setSubjectFr(?string $subjectFr): static
+    {
+        $this->subjectFr = $subjectFr;
+
+        return $this;
+    }
+
+    public function getSubjectEs(): ?string
+    {
+        return $this->subjectEs;
+    }
+
+    public function setSubjectEs(?string $subjectEs): static
+    {
+        $this->subjectEs = $subjectEs;
+
+        return $this;
+    }
+
+    public function getSubjectEt(): ?string
+    {
+        return $this->subjectEt;
+    }
+
+    public function setSubjectEt(?string $subjectEt): static
+    {
+        $this->subjectEt = $subjectEt;
 
         return $this;
     }

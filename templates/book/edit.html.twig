@@ -20,5 +20,13 @@
                 Mettre a jour les codes promotionnels
             </button></a>
     </div>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{{ path('app_follow_up_email_new', {id: book.id}) }}" class=""><button class="btn btn-secondary text-white">
+                Créer un Email de suivie
+            </button></a>
+        <a href="{{ path('app_follow_up_email_index', {id: book.id}) }}" class="mx-3"><button class="btn btn-secondary text-white">
+                Mettre a jour les Emails de suivie
+            </button></a>
+    </div>
     </div>
 {% endblock %}
