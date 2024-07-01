@@ -56,7 +56,7 @@ class SendEmailAfterBuyCommand extends Command
                     }
                     $email = (new TemplatedEmail())
                         ->from($this->params->get('mailer_from'))
-                        ->to($this->params->get($token->getEmail()))
+                        ->to($token->getEmail())
                         ->subject($subject)
                         ->htmlTemplate('book/afterBuyedBookEmail.html.twig')
                         ->context(['emailData' => $email, 'token' => $token]);
