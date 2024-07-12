@@ -1,4 +1,4 @@
-home.title: 'Eres tú el artista de tu  imagen.'
+home.title: 'Libera tu Corazón y revela tu Estilo: tu imagen, tu bienestar'
 home.underTitle: 'Fabienne Chmara<br>Coach y creadora de bienestar a través de la imagen'
 home.video: __home.video
 home.presentaion.head.title: '¿Cómo puedo apoyarte en la realización de tus sueños?'
@@ -123,7 +123,7 @@ book.buyed.hello: Tere
 book.buyed.email.p: 'Mul on hea meel kinnitada Sinu tellimus.<br><br>Ma olen rõõmus, et oled huvitatud minu seitsme universaalse stiili juhendist. Sain selleks inspiratsiooni omaenda teekonnast, mil katsetasin neid ükshaaval enda peal mitme kuu jooksul!<br><br>Minu tõeline lootus seda Sinuga jagades on, et Sa valid kõige efektiivsema, kiirema ja säästlikuma tee, et saada endale garderoob, mis peegeldab Sind, millega oled 100% rahul ja milles Sa tunned end imeliselt ja enesekindlalt.<br><br>See on minu esimene e-raamat ja see on Sulle mõeldud! Loodan, et loed seda hoolikalt ja hakkad oma ideaalset garderoobi ehitama sisemistest tugevustest lähtuvalt, jättes kõrvale kõik, mis piirab sinu sisemist heaolu.<br><br>Kui Sul on selle sisu kohta kommentaare, siis palun jaga neid minuga julgelt!<br><br>Tänan Sind usalduse eest ja kohtumiseni peagi www.fabimage.coach !'
 book.index.buyedBook: 'Recibirás un correo electrónico con la confirmación de tu compra y el enlace para descargar la guía. Si no lo recibes por favor revisa tu bandeja de spam.<br><br>Si tienes cualquier duda puedes escribirme a : fabimage.coach@gmail.com'
 downloadBook: '[Descarga ahora tu guía].'
-book.buyed.email.p.end: 'Fabienne Chmara,<br> Coach, Creadora de bienestar a través de la imagen Fabimage.coach@gmail.com'
+book.buyed.email.p.end: 'Gracias por tu confianza y ¡hasta pronto!<br>Fabienne'
 coachingImage.iframe.p: '¿<strong>Imagen y estilo</strong> son lo mismo? ¿Qué nos impide ser nosotros mismos y de dónde sacamos la inspiración para seguir siendo auténticos? ¿Por qué hablo tanto de <strong>autoconocimiento</strong> y qué es exactamente? ¿Cómo se puede trabajar la imagen?<br><br>Respondo a esas preguntas de Risto sobre imagen y estilo en el siguiente <strong>podcast de Õpetajate Maja</strong> (La Casa del Profesor).'
 book.head.title: 'Guías de coaching de imagen'
 book.head.metaDescription: 'Guías para inspirarte y ayudarte a desarrollar un estilo más auténtico'
@@ -175,11 +175,16 @@ book.createNewArticle: 'Crear un nuevo artículo'
 navbar.blog: Blog
 article.index.title: Blog
 article.show.title: Blog
-_include._actuality.h2: "Sígueme en un viaje al corazón de tu imagen"
+_include._actuality.h2: 'Sígueme en un viaje al corazón de tu imagen'
 _include._actuality.p.1: 'Descubre mis reflexiones y mi actualidad como si estuvieras explorando nuevos destinos.'
 _include._actuality.p.2: 'Participa en mis experiencias y descubrimientos.'
-_include._actuality.firstName: 'Nombre'
-_include._actuality.email: 'Email'
+_include._actuality.firstName: Nombre
+_include._actuality.email: Email
 _include._actuality.button: 'Me apunto!'
 _include._actuality.sent: 'Su solicitud de suscripción ha sido enviada.'
 _include._actuality.subscribe: 'Suscríbete ahora para no perderte nada.'
+book.buyed.email.p.end.2: '<strong>Fabienne Chmara</strong><br>Coach | Creadora de bienestar a través de la imagen<br><i>Mi misión es guiarte con respeto y delicadeza para :</i>'
+book.buyed.email.li.1: <strong>liberarte</strong> de la vergüenza, el miedo y un vestuario aburrido
+book.buyed.email.li.2: <strong>amarte</strong> a ti misma y valorar el tesoro que llevas dentro
+book.buyed.email.li.3: <strong>celebrar</strong> tus contradicciones y convertir tu imagen en una fuente de bienestar.
+book.buyed.email.p.end.3: <a href="https://www.fabimage.coach/es/">Fabimage Website</a><br><a href="https://www.facebook.com/FabimageCoach/">Facebook</a><br><a href="https://www.instagram.com/fabimagecoach/">Instagram</a><br><a href="https://www.linkedin.com/in/fabienne-chmara-9a3812187/">LinkedIn</a><br>

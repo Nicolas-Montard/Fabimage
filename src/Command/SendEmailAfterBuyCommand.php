@@ -43,9 +43,7 @@ class SendEmailAfterBuyCommand extends Command
             foreach($token->getBook()->getFollowUpEmails() as $email){
                 $sendAfter = $email->getSendAfter();
                 $createdAt = $token->getCreatedAt();
-                $createdAtF = $token->getCreatedAt()->format('Y-m-d');
                 if ($token->getEmail() && $now->diff($createdAt)->format('%a') == $now->diff($now->modify('-' . $sendAfter . 'days'))->format('%a')) {
-                    $testData = [$now->diff($createdAt)->format('%a') > $now->diff($now->modify('-60 days'))->format('%a')];
                     $lang = $token->getLanguage();
                     if ($lang == 'fr') {
                         $subject = $email->getSubjectFr();
@@ -63,10 +61,8 @@ class SendEmailAfterBuyCommand extends Command
                     $maxAttempts = 5;
                     $attempts = 0;
                     while ($attempts < $maxAttempts) {
-                        $emailNotSent = true;
                         try {
                             $this->mailer->send($email);
-                            $emailNotSent = false;
                             break;
                         } catch (TransportExceptionInterface $e) {
                             $attempts++;

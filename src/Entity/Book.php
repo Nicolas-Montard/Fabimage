@@ -145,6 +145,36 @@ class Book
     #[ORM\OneToMany(mappedBy: 'book', targetEntity: FollowUpEmail::class, orphanRemoval: true)]
     private Collection $followUpEmails;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $annexFr = null;
+
+    #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexFr')]
+    #[Assert\File(
+        maxSize: '10M',
+        mimeTypes: ['application/pdf'],
+    )]
+    private ?File $annexFrFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $annexEs = null;
+
+    #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexEs')]
+    #[Assert\File(
+        maxSize: '10M',
+        mimeTypes: ['application/pdf'],
+    )]
+    private ?File $annexEsFile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $annexEt = null;
+
+    #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexEt')]
+    #[Assert\File(
+        maxSize: '10M',
+        mimeTypes: ['application/pdf'],
+    )]
+    private ?File $annexEtFile = null;
+
     public function __construct()
     {
         $this->tokens = new ArrayCollection();
@@ -621,5 +651,83 @@ class Book
         }
 
         return $this;
+    }
+
+    public function getAnnexFr(): ?string
+    {
+        return $this->annexFr;
+    }
+
+    public function setAnnexFr(?string $annexFr): static
+    {
+        $this->annexFr = $annexFr;
+
+        return $this;
+    }
+
+    public function setAnnexFrFile(File $file = null): Book
+    {
+        $this->annexFrFile = $file;
+        if ($file) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getAnnexFrFile(): ?File
+    {
+        return $this->annexFrFile;
+    }
+
+    public function getAnnexEs(): ?string
+    {
+        return $this->annexEs;
+    }
+
+    public function setAnnexEs(?string $annexEs): static
+    {
+        $this->annexEs = $annexEs;
+
+        return $this;
+    }
+
+    public function setAnnexEsFile(File $file = null): Book
+    {
+        $this->annexEsFile = $file;
+        if ($file) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getAnnexEsFile(): ?File
+    {
+        return $this->annexEsFile;
+    }
+
+    public function getAnnexEt(): ?string
+    {
+        return $this->annexEt;
+    }
+
+    public function setAnnexEt(?string $annexEt): static
+    {
+        $this->annexEt = $annexEt;
+
+        return $this;
+    }
+
+    public function setAnnexEtFile(File $file = null): Book
+    {
+        $this->annexEtFile = $file;
+        if ($file) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getAnnexEtFile(): ?File
+    {
+        return $this->annexEtFile;
     }
 }

@@ -98,10 +98,26 @@
         {{ form_errors(form.bookEtFile) }}
     </div>
 </div>
+<div class="d-flex justify-content-around mt-3">
+    <div class="d-flex flex-column">
+        {{ form_label(form.annexFrFile, 'Annexe français') }}
+        {{ form_widget(form.annexFrFile) }}
+        {{ form_errors(form.annexFrFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.annexEsFile, 'Annexe espagnol') }}
+        {{ form_widget(form.annexEsFile) }}
+        {{ form_errors(form.annexEsFile) }}
+    </div>
+    <div class="d-flex flex-column">
+        {{ form_label(form.annexEtFile, 'Annexe estonien') }}
+        {{ form_widget(form.annexEtFile) }}
+        {{ form_errors(form.annexEtFile) }}
+    </div>
+</div>
 <div class="errors w-50 mt-3">
     {{ form_errors(form) }}
 </div>
-
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-column mt-5">
         {{ form_label(form.descriptionFr, 'Description français') }}

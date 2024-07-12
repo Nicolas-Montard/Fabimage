@@ -1,4 +1,4 @@
-home.title: "Vous êtes l'artiste de votre image"
+home.title: "Libérez votre Cœur et dévoilez votre Style : votre image, votre bien-être"
 home.underTitle: 'Fabienne Chmara<br>Coach et créatrice de bien-être à travers l’image'
 home.video: 'Vidéo de la coach en image Fabienne Shmara'
 home.presentaion.head.title: 'Comment puis-je vous accompagner dans la réalisation de vos rêves ?'
@@ -134,7 +134,7 @@ book.buyed.hello: Bonjour
 book.buyed.email.p: 'J’ai le plaisir de confirmer votre commande.<br><br>Je suis heureuse que vous vous soyez intéressée à mon guide sur les sept styles universels. Je me suis inspirée de mon propre parcours pendant lequel je les ai testés un par un sur moi-même pendant plusieurs mois !<br><br>Mon véritable souhait en le partageant avec vous est que vous preniez le chemin le plus efficace, le plus rapide et le plus économique vers une garde-robe à votre image, qui vous plait à 100% et dans laquelle vous vous sentez à merveille et en toute confiance.<br><br>C’est mon premier livre électronique et il est disponible pour vous ! J’espère que vous le lirez attentivement et que vous commencerez à construire votre armoire idéale sur la base de vos forces intérieures, laissant de côté tout ce qui limite votre bien être intérieur.<br><br>Si vous souhaitez me faire part de vos commentaires sur ce contenu, n’hésitez pas à me les partager !<br><br>Merci de votre confiance et à bientôt sur www.fabimage.coach!'
 book.index.buyedBook: "Vous allez recevoir un courriel avec la confirmation de votre achat et le lien de téléchargement de votre guide. Si vous ne le recevez pas, vérifiez votre dossier spam.<br><br>Si vous avez des questions, vous pouvez m'écrire à : fabimage.coach@gmail.com"
 downloadBook: '[Téléchargez maintenant votre guide !]'
-book.buyed.email.p.end: 'Fabienne Chmara, Coach, Créatrice de bien être par l’image fabienne@fabimage.coach'
+book.buyed.email.p.end: "Merci de votre confiance et à bientôt\_!<br>Fabienne"
 coachingImage.iframe.p: "<strong>L'image et le style</strong> sont-ils la même chose ? Qu'est-ce qui nous empêche d'être nous-mêmes et où trouver <strong>l'inspiration</strong> pour rester authentiques ? Pourquoi est-ce que je parle tant de <strong>connaissance de soi</strong> et qu'est-ce que c'est exactement ? Comment peut-on développer son image ?<br><br>Je réponds à ces questions de Risto sur l'image et le style dans le podcast de <strong>Õpetajate Maja</strong> (la Maison des enseignants)."
 book.head.title: 'Guides de coaching en image'
 book.head.metaDescription: 'Des guides pour vous inspirer et vous développer un style plus authentique'
@@ -187,8 +187,13 @@ article.show.title: Blog
 _include._actuality.h2: 'Suivez-moi dans un voyage au cœur de votre image'
 _include._actuality.p.1: 'Retrouvez mes réflexions et mes actualités comme si vous exploriez de nouvelles destinations.'
 _include._actuality.p.2: 'Accompagnez-moi à travers mes activités et mes découvertes.'
-_include._actuality.firstName: 'Prénom'
-_include._actuality.email: 'Email'
+_include._actuality.firstName: Prénom
+_include._actuality.email: Email
 _include._actuality.button: 'Je m’abonne!'
 _include._actuality.sent: "Votre demande d'abonnement à été envoyé."
 _include._actuality.subscribe: 'Abonnez-vous dès maintenant pour ne rien manquer !'
+book.buyed.email.p.end.2: <strong>Fabienne Chmara</strong><br>Coach | Créatrice de bien-être par l\'image<br><br><i>Ma mission est de vous accompagner en douceur et dans le respect pour :</i>
+book.buyed.email.li.1: "vous <strong>libérer</strong> de la honte, de la peur et d'une garde-robe monotone"
+book.buyed.email.li.2: "vous <strong>aimer</strong> vous-même et valoriser le trésor qui est en vous"
+book.buyed.email.li.3: "<strong>célébrer</strong> vos contradictions et faire de votre image une source de bien-être!"
+book.buyed.email.p.end.3: '<a href="https://www.fabimage.coach/fr/">Fabimage Website</a><br><a href="https://www.facebook.com/FabimageCoach/">Facebook</a><br><a href="https://www.instagram.com/fabimagecoach/">Instagram</a><br><a href="https://www.linkedin.com/in/fabienne-chmara-9a3812187/">LinkedIn</a><br>'

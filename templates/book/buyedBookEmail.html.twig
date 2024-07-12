@@ -32,5 +32,12 @@
         <a href="{{ app.request.getSchemeAndHttpHost() ~ path('app_download', {'token': token}) }}">{{ 'downloadBook'|trans }}</a>
     {% endif %}
     <p class="fs-6">{{ 'book.buyed.email.p.end'|trans|raw }}</p>
+    <p class=""><small>{{ 'book.buyed.email.p.end.2'|trans|raw }}</small></p>
+    <ul>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.1'|trans|raw}}</small></i></li>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.2'|trans|raw}}</small></i></li>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.3'|trans|raw}}</small></i></li>
+    </ul>
+    <p class=""><small>{{'book.buyed.email.p.end.3'|trans|raw}}</small></p>
 </body>
 </html>

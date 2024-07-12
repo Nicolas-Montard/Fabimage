@@ -245,6 +245,27 @@ class BookType extends AbstractType
                     'class' => 'label'
                 ]
             ])
+            ->add('annexFrFile', VichFileType::class, [
+                'required' => false,
+                'label' => 'AnnexeFr',
+                'attr' => [
+                    'placeholder' => 'Ajouter un fichier',
+                ]
+            ])
+            ->add('annexEsFile', VichFileType::class, [
+                'required' => false,
+                'label' => 'AnnexeEs',
+                'attr' => [
+                    'placeholder' => 'Ajouter un fichier',
+                ]
+            ])
+            ->add('annexEtFile', VichFileType::class, [
+                'required' => false,
+                'label' => 'AnnexeEt',
+                'attr' => [
+                    'placeholder' => 'Ajouter un fichier',
+                ]
+            ])
         ;
     }
 

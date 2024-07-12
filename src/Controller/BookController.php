@@ -141,6 +141,7 @@ class BookController extends AbstractController
         } else{
             $bookName = $book->getNameEs();
         }
+        $scheme = $request->getScheme();
         $checkout=$this->gateway->checkout->sessions->create(
             [
                 'payment_method_types' => ['card'],
@@ -156,8 +157,8 @@ class BookController extends AbstractController
                     'quantity'=> 1
                 ]],
                 'mode'=> 'payment',
-                'success_url'=> "https://" . $_SERVER['HTTP_HOST'] . "/" . $request->getLocale() .'/book/success/'. $book->getId() . '?id_sessions={CHECKOUT_SESSION_ID}',
-                'cancel_url'=> "https://" . $_SERVER['HTTP_HOST'] . "/" . $request->getLocale() . '/book/cancel?id_sessions={CHECKOUT_SESSION_ID}',
+                'success_url'=> $scheme . "://" . $_SERVER['HTTP_HOST'] . "/" . $request->getLocale() .'/book/success/'. $book->getId() . '?id_sessions={CHECKOUT_SESSION_ID}',
+                'cancel_url'=> $scheme . "://" . $_SERVER['HTTP_HOST'] . "/" . $request->getLocale() . '/book/cancel?id_sessions={CHECKOUT_SESSION_ID}',
             ]
         );
         return $this->redirect($checkout->url);
@@ -167,27 +168,31 @@ class BookController extends AbstractController
     public function success(Request $request, MailerInterface $mailer, Book $book, TokenRepository $tokenRepository): Response
     {
        $id_sessions=$request->query->get('id_sessions');
+       $customer=$this->gateway->checkout->sessions->retrieve(
+        $id_sessions,
+        []
+    );
+       $customerEmail = $customer["customer_details"]["email"];
+       $paymentStatus = $customer["payment_status"];
        $token = new Token();
        $token->setContent($id_sessions);
        $token->setCreatedAt(now());
        $token->setIsValid(true);
        $token->setBook($book);
        $token->setLanguage($request->getLocale());
-       $token->setEmail($request->query->get('email'));
+       $token->setEmail($customerEmail);
        $tokenRepository->save($token, true);
-       $customer=$this->gateway->checkout->sessions->retrieve(
-           $id_sessions,
-           []
-       );
-       $customerEmail = $customer["customer_details"]["email"];
-       $paymentStatus = $customer["payment_status"];
+
        $local = $request->getLocale();
        if ($local == 'fr'){
            $subject = $book->getNameFr();
+           $annex = $book->getAnnexFr();
        }elseif ($local == 'es'){
            $subject = $book->getNameEs();
+           $annex = $book->getAnnexEs();
        }else{
            $subject = $book->getNameEt();
+           $annex = $book->getAnnexEt();
        }
        $email = (new Email())
            ->from($this->getParameter('mailer_from'))
@@ -195,6 +200,13 @@ class BookController extends AbstractController
            ->subject($subject)
            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => ucfirst($local), 'free' => 0, 'book' => $book]))
        ;
+       if (
+        $book->getAnnexFr() && $local == 'fr' ||
+        $book->getAnnexEs() && $local == 'es' ||
+        $book->getAnnexEt() && $local == 'et'
+       ) {
+        $email->attachFromPath(__DIR__ . '/../../private/uploads/annex/' . $annex);
+       }
         $maxAttempts = 3;
         $attempts = 0;
         while ($attempts < $maxAttempts) {
@@ -243,10 +255,13 @@ class BookController extends AbstractController
         $tokenRepository->save($token, true);
         if ($language == 'fr'){
             $subject = $book->getNameFr();
+            $annex = $book->getAnnexFr();
         }elseif ($language == 'es'){
             $subject = $book->getNameES();
+            $annex = $book->getAnnexEs();
         }else{
             $subject = $book->getNameEt();
+            $annex = $book->getAnnexEt();
         }
         $email = (new Email())
             ->from($this->getParameter('mailer_from'))
@@ -254,6 +269,13 @@ class BookController extends AbstractController
             ->subject($subject)
             ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => ucfirst($language), 'free' => 1, 'book' => $book]))
         ;
+        if (
+            $book->getAnnexFr() && $language == 'fr' ||
+            $book->getAnnexEs() && $language == 'es' ||
+            $book->getAnnexEt() && $language == 'et'
+           ) {
+            $email->attachFromPath(__DIR__ . '/../../private/uploads/annex/' . $annex);
+           }
         $maxAttempts = 3;
         $attempts = 0;
         while ($attempts < $maxAttempts) {

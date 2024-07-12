@@ -1,4 +1,4 @@
-home.title: 'Sa oled ise oma imago looja'
+home.title: 'Vabastage oma süda ja paljastage oma stiil: teie imago, teie heaolu'
 home.underTitle: 'Fabienne Chmara<br>Olen ainus coach Eestis, kelle eriala on imago'
 home.video: 'Video pilditreener Fabienne Shmara'
 home.presentaion.head.title: 'Kuidas saan toetada sind oma unistuste elluviimisel?'
@@ -123,7 +123,7 @@ book.buyed.hello: Tere
 book.buyed.email.p: 'Mul on hea meel kinnitada Sinu tellimus.<br><br>Ma olen rõõmus, et oled huvitatud minu seitsme universaalse stiili juhendist. Sain selleks inspiratsiooni omaenda teekonnast, mil katsetasin neid ükshaaval enda peal mitme kuu jooksul!<br><br>Minu tõeline lootus seda Sinuga jagades on, et Sa valid kõige efektiivsema, kiirema ja säästlikuma tee, et saada endale garderoob, mis peegeldab Sind, millega oled 100% rahul ja milles Sa tunned end imeliselt ja enesekindlalt.<br><br>See on minu esimene e-raamat ja see on Sulle mõeldud! Loodan, et loed seda hoolikalt ja hakkad oma ideaalset garderoobi ehitama sisemistest tugevustest lähtuvalt, jättes kõrvale kõik, mis piirab sinu sisemist heaolu.<br><br>Kui Sul on selle sisu kohta kommentaare, siis palun jaga neid minuga julgelt!<br><br>Tänan Sind usalduse eest ja kohtumiseni peagi www.fabimage.coach !'
 book.index.buyedBook: 'Sulle saadetakse e-kiri, mis kinnitab sinu ostu ja sisaldab linki e-raamatu allalaadimiseks. Kui sa kirja ei saa, kontrolli oma rämpsposti kausta.<br><br>Küsimuste korral palun kirjuta: fabimage.coach@gmail.com'
 downloadBook: '[Lae oma juhend nüüd alla].'
-book.buyed.email.p.end: 'Fabienne Chmara, Coach, Heaolu looja läbi imago Fabimage.coach@gmail.com'
+book.buyed.email.p.end: 'Tänan Sind usalduse eest ja kohtumiseni peagi !<br>Fabienne'
 coachingImage.iframe.p: 'Kas <strong>imago ja stiil</strong> on üks ja seesama asi? Mis takistab meid olemast meie ise ja kust saame <strong>inspiratsiooni</strong>, et jääda ehedaks? Miks ma räägin nii palju <strong>enese tundmisest</strong> ja mis see täpselt on? Kuidas parandada oma imagot?<br><br>Vastan Risto küsimustele imago ja stiili kohta Õpetajate Maja podcastis.'
 book.head.title: 'Imago coachingu juhendid'
 book.head.metaDescription: 'Juhendid, mis inspireerivad teid ja aitavad teil arendada autentsemat stiili'
@@ -173,11 +173,16 @@ book.createNewArticle: 'Loo uus artikkel'
 navbar.blog: Blogi
 article.index.title: Blogi
 article.show.title: Blogi
-_include._actuality.h2: "Astu minuga teekonnale oma imago südamesse"
-_include._actuality.p.1: "Avasta minu mõtted ja uudised nagu avastaksid uusi sihtkohti! "
+_include._actuality.h2: 'Astu minuga teekonnale oma imago südamesse'
+_include._actuality.p.1: 'Avasta minu mõtted ja uudised nagu avastaksid uusi sihtkohti! '
 _include._actuality.p.2: 'Läbi koos minuga teekond minu tegemistesse ja avastustesse.'
-_include._actuality.firstName: 'Eesnimi'
-_include._actuality.email: 'Email'
-_include._actuality.button: 'Registreerun!'
+_include._actuality.firstName: Eesnimi
+_include._actuality.email: Email
+_include._actuality.button: Registreerun!
 _include._actuality.sent: 'Teie liitumistaotlus on saadetud.'
 _include._actuality.subscribe: 'Registreeru kohe, et mitte midagi maha magada!'
+book.buyed.email.p.end.2: '<strong>Fabienne Chmara</strong><br>Coach | heaolu looja läbi imago<br><i>Minu missioon on toetada sind hellalt ja austavalt, et:</i>'
+book.buyed.email.li.1: <strong>vabastada</strong> sind häbelikkusest, hirmust, eelarvamustest ja üksluisest riidekapist
+book.buyed.email.li.2: <strong>armastada</strong> iseennast ja väärtustada sinu sees olevat aaret
+book.buyed.email.li.3: <strong>tähistada</strong> sinu vastuolusid ja muuta sinu imago heaolu allikaks
+book.buyed.email.p.end.3: '<a href="https://www.fabimage.coach/et/">Fabimage Website</a><br><a href="https://www.facebook.com/FabimageCoach/">Facebook</a><br><a href="https://www.instagram.com/fabimagecoach/">Instagram</a><br><a href="https://www.linkedin.com/in/fabienne-chmara-9a3812187/">LinkedIn</a><br>'
