@@ -27,7 +27,7 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 /public/uploads/images/pictures
 /private/uploads/books
-
+/private/uploads/annex
 ###> symfony/asset-mapper ###
 /public/assets/
 ###< symfony/asset-mapper ###
