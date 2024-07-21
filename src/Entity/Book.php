@@ -150,7 +150,7 @@ class Book
 
     #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexFr')]
     #[Assert\File(
-        maxSize: '10M',
+        maxSize: '500M',
         mimeTypes: ['application/pdf'],
     )]
     private ?File $annexFrFile = null;
@@ -160,7 +160,7 @@ class Book
 
     #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexEs')]
     #[Assert\File(
-        maxSize: '10M',
+        maxSize: '500M',
         mimeTypes: ['application/pdf'],
     )]
     private ?File $annexEsFile = null;
@@ -170,7 +170,7 @@ class Book
 
     #[Vich\UploadableField(mapping: 'annex_file', fileNameProperty: 'annexEt')]
     #[Assert\File(
-        maxSize: '10M',
+        maxSize: '500M',
         mimeTypes: ['application/pdf'],
     )]
     private ?File $annexEtFile = null;
