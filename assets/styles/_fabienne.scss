@@ -84,7 +84,6 @@
   }
   .image-2{
     @include media-breakpoint-down(md){
-      display: none;
     }
   }
   .container-row{
@@ -97,6 +96,14 @@
         margin-right: 0;
         margin-left: 0;
       }
+    }
+  }
+  .container-end{
+    width: 50%;
+    @include media-breakpoint-down(md){
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 }

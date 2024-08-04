@@ -10,6 +10,9 @@
   }
   .title-container{
     width: 600px;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
   }
   .text-video{
     width: 450px;
@@ -148,6 +151,12 @@
       p{
         font-weight: bold;
       }
+    }
+  }
+  .middle-text{
+    width: 65%;
+    @include media-breakpoint-down(md){
+      width: 90%;
     }
   }
 }

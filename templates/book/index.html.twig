@@ -5,6 +5,10 @@
 
 {% block body %}
     <div class="book-index">
+        {% if buyed %}
+        <button type="button" class="btn btn-modal-hidden" data-bs-toggle="modal" data-bs-target="#buyedModal" id="modalButton"></button>
+        {% endif %}
+        
         <div class="top-container">
             <div class="title-image-container">
                 <img src="{{ asset('build/images/Fabienne-EBOOKS.jpg') }}" alt="" class="w-100 h-100">
@@ -13,9 +17,19 @@
                 <h1 class="text-primary fs-2">{{ 'book.index.h1'|trans }}</h1>
             </div>
         </div>
-        {% if buyed %}
-            <p class="buyed-text mx-auto optional-message">{{ 'book.index.buyedBook'|trans|raw }}</p>
-        {% endif %}
+  <div class="modal fade" id="buyedModal" tabindex="-1" aria-labelledby="buyedModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p class="">{{ 'book.index.buyedBook'|trans|raw }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
         <div class="d-flex flex-wrap justify-content-center book-card-container mx-auto">
             {% for book in books %}
                 <div class="book-card mt-5 d-flex flex-column">
@@ -32,4 +46,15 @@
         {% endif %}
     </div>
     {{ render(controller('App\\Controller\\ContactController::actuality')) }}
+
+{% endblock %}
+{% block script %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var button = document.querySelector('#modalButton');
+            if (button) {
+                button.click();
+            }
+        });
+    </script>
 {% endblock %}

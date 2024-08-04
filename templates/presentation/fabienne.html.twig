@@ -17,11 +17,8 @@
         <div class="container-content mx-auto">
             <div class="container-column d-flex flex-column-reverse flex-md-row justify-content-around">
                 <div class="column">
+                    <h5 class="mb-4 mt-3 mt-md-0">{{ 'fabienne.leftColumn.h5.1'|trans|raw }}</h5>
                     <p>{{ 'fabienne.leftColumn.p.1'|trans|raw }}</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="{{ path("app_service_index") }}"><button class="btn btn-secondary text-white px-4">{{ 'fabienne.Idiscover'|trans }}</button></a>
-                    </div>
-
                 </div>
                 <div class="column">
                     <img src="{{ asset('build/images/fabienne-1.png') }}" alt="" class="w-100 image-1">
@@ -33,10 +30,33 @@
                     <img src="{{ asset('build/images/fabienne-2.png') }}" alt="" class="w-100 mt-5 image-2">
                 </div>
                 <div class="column">
-                    <img src="{{ asset("build/images/AFIPP.png") }}" alt="" class="w-100 mt-5 mt-md-0 image-AFIPP">
+                    <h5 class="mb-4 mt-3 mt-md-0">{{ 'fabienne.rightColumn.h5.1'|trans|raw }}</h5>
+                    <p> {{"fabienne.rightColumn.p.1"|trans|raw}} </p>
+                </div>
+            </div>
+            <div class="container-column d-flex flex-column flex-md-row justify-content-around">
+                <div class="column">
+                    <h5 class="mb-4 mt-3 mt-md-0">{{ 'fabienne.leftColumn.h5.2'|trans|raw }}</h5>
+                    <p>{{ 'fabienne.leftColumn.p.2'|trans|raw }}</p>
+                    <ul>
+                        {{ 'fabienne.leftcolumn.ul.1'|trans|raw }}
+                    </ul>
+                    <p>{{ 'fabienne.leftColumn.p.3'|trans|raw }}</p>
+                </div>
+                <div class="column">
+                    <img src="{{ asset("build/images/AFIPP.png") }}" alt="" class="w-100 mt-5 image-AFIPP">
                     <p class="mt-4">{{ 'fabienne.AFIPP'|trans|raw }}</p>
                 </div>
             </div>
+            <div class="bg-white py-5">
+                <div class="container-end mx-auto mt-5">
+                    <h5 class="mb-4 mt-3 mt-md-0">{{ 'fabienne.h5.end'|trans|raw }}</h5>
+                    <p>{{"fabienne.p.end"|trans|raw}}</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ path('contact_service') }}"><button class="btn btn-secondary text-white my-3"> {{ 'button.i-reserve-my-session'|trans|raw }}</button></a>
+                    </div>
+                </div>
+            </div> 
         </div>
     </div>
     {{ render(controller('App\\Controller\\ContactController::actuality')) }}

@@ -47,15 +47,12 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
                 <div class="me-md-4 d-flex align-items-md-center my-md-auto flex-column flex-md-row">
-
-                    <a href="{{ path('app_image_coaching') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.coachingOfImage'|trans }}</a>
                     <a href="{{ path('app_fabienne') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.fabienne'|trans }}</a>
                     <a href="{{ path('app_service_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.services'|trans }}</a>
                     <a href="{{ path('app_workshop_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.workshop'|trans }}</a>
-                    <a href="{{ path('app_company') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.company'|trans }}</a>
-                    <a href="{{ path('contact_service') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.contact'|trans }}</a>
                     <a href="{{ path('app_book_index') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.book'|trans }}</a>
                     <a href="{{ path('app_article_index', {page: 1}) }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.blog'|trans}}</a>
+                    <a href="{{ path('contact_service') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.contact'|trans }}</a>
                     {% if app.user %}
                         <a href="{{ path('app_logout') }}" class="ms-4 mt-3 mt-md-0 text-md-center">{{ 'navbar.deconnect'|trans }}</a>
                     {% endif %}

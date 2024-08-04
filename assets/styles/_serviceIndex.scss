@@ -55,4 +55,10 @@
   .top-container{
     margin-bottom: 150px;
   }
+  .text-offer{
+    width: 50%;
+    @include media-breakpoint-down(md){
+      width: 90%;
+    }
+  }
 }

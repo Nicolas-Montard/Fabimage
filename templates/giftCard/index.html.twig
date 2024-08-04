@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ 'giftCard.head.title'|trans }}{% endblock %}
 {% block body %}
     <div class="giftCard-index">
         <h1 class="text-center mb-5 text-primary">{{ 'giftCard.index.h1'|trans }}</h1>
@@ -17,7 +18,11 @@
                 {{ 'giftCard.index.sent'|trans }}
             </h5>
         {% endif %}
-        <p class="main-p mx-auto mt-5 mb-5"> {{ 'giftCard.index.p'|trans|raw }}</p>
+        <h5 class="main-p mx-auto mt-5 fw-bold"> {{ 'giftCard.index.h5.1'|trans|raw }}</h5>
+        <p class="main-p mx-auto "> {{ 'giftCard.index.p.1'|trans|raw }}</p>
+        <h5 class="main-p mx-auto fw-bold"> {{ 'giftCard.index.h5.2'|trans|raw }}</h5>
+        <ol class="main-p mx-auto "> {{ 'giftCard.index.ol.1'|trans|raw }}</ol>
+        <p class="main-p mx-auto mb-5"> {{ 'giftCard.index.p.2'|trans|raw }}</p>
         <div class="form-container mx-auto">
             {{ form_start(form) }}
                 <div class="d-flex flex-column mt-3">
