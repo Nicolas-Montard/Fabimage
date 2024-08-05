@@ -217,21 +217,38 @@ service.index.offer.ul.3: '<li>sa tahad kiireid tulemusi</li> <li>sa otsid lihts
 service.index.offer.h5.3: 'Kas oled valmis oma valgust ilmutama?'
 service.index.offer.p.4: 'Iga naine on ainulaadne ja on aeg, et maailm näeks <strong>sinu erilist valgust.</strong> Koos avame selle <strong>sisemise šampanjapudeli</strong> ja laseme sinu ilu, enesekindluse ja vabaduse nektaril voolata.<br><br> Alusta oma teekonda sisemise vabaduse ja oma tõelise mina väljendamise suunas, broneerides <strong>tasuta</strong> 30-minutilise avastamissessiooni.'
 button.MyFreeSession: 'Minu tasuta seanss'
-giftCard.head.title: "Fabimage kinkekaart"
+giftCard.head.title: 'Fabimage kinkekaart'
 giftCard.index.p.1: "Olgu see siis värvide avastamine, mis toovad välja nende näo, või sukeldumine imago coaching'u põnevasse maailma, <strong>Fabimage'i kinkekaart</strong> on ideaalne kingitus neile, kellest sa lugu pead. "
-giftCard.index.h5.1: "Kingi eheda heaolu kingitus! Vali summa ja lase õnnelikul saajal vabastada välimus, mis peegeldab tema tõelist isiksust!"
-giftCard.index.ol.1: '<li><strong>Vali summa :</strong> Vali summa, mida soovid kinkida "Värvid ja heaolu" seansi jaoks või coaching-paketti panustamiseks.<br> 
-NB: Kui soovid kinkida coaching-paketti (osaliselt või täielikult), veendu, et inimene on valmis ja tahab sellesse seiklusesse minna!
-</li>
-<li><strong>Telli:</strong> Täida allolev tellimisvorm.
-</li>
-<li><strong>Kiire kinnitus:</strong> Niipea kui oled tellimuse esitanud, saadan sulle hiljemalt järgmisel tööpäeval arve sinu e-posti aadressile.
-</li>
-<li><strong>Kinkekaardi kättesaamine:</strong> Pärast maksmist saadan kinkekaardi märgitud aadressile.<br>
-Kas eelistad isiklikku kohaletoimetamist? Kohtume minu stuudios (Süda tn 13, Tallinna kesklinn) sulle sobival ajal.
-</li>'
-giftCard.index.p.2: "<strong>Märkus:</strong> kinkekaart on nominaalne ja soovi korral võib märkida nende inimeste nimed, kes on kingitusse panustanud. Veenduge, et kingituse saaja <strong>on sellega nõus ja innustunud,</strong> eriti kui valite coachingu programmi.<br>
-Kui sul on küsimusi, võta minuga julgelt ühendust
-"
-home.giftCard.p: "Autentsuse kingitus: anna oma lähedastele võimalus avastada oma varjatud väärtust"
-giftCard.index.h5.2: "Kuidas see toimib?"
+giftCard.index.h5.1: 'Kingi eheda heaolu kingitus! Vali summa ja lase õnnelikul saajal vabastada välimus, mis peegeldab tema tõelist isiksust!'
+giftCard.index.ol.1: '<li><strong>Vali summa :</strong> Vali summa, mida soovid kinkida "Värvid ja heaolu" seansi jaoks või coaching-paketti panustamiseks.<br>  NB: Kui soovid kinkida coaching-paketti (osaliselt või täielikult), veendu, et inimene on valmis ja tahab sellesse seiklusesse minna! </li> <li><strong>Telli:</strong> Täida allolev tellimisvorm. </li> <li><strong>Kiire kinnitus:</strong> Niipea kui oled tellimuse esitanud, saadan sulle hiljemalt järgmisel tööpäeval arve sinu e-posti aadressile. </li> <li><strong>Kinkekaardi kättesaamine:</strong> Pärast maksmist saadan kinkekaardi märgitud aadressile.<br> Kas eelistad isiklikku kohaletoimetamist? Kohtume minu stuudios (Süda tn 13, Tallinna kesklinn) sulle sobival ajal. </li>'
+giftCard.index.p.2: '<strong>Märkus:</strong> kinkekaart on nominaalne ja soovi korral võib märkida nende inimeste nimed, kes on kingitusse panustanud. Veenduge, et kingituse saaja <strong>on sellega nõus ja innustunud,</strong> eriti kui valite coachingu programmi.<br> Kui sul on küsimusi, võta minuga julgelt ühendust '
+home.giftCard.p: 'Autentsuse kingitus: anna oma lähedastele võimalus avastada oma varjatud väärtust'
+giftCard.index.h5.2: 'Kuidas see toimib?'
+smallCommentary.h3.1: "TEIE VABASTAMISE LOOD"
+smallCommentary.h5.1: "Kuidas minu kliendid taastasid
+enesekindluse ja nähtavuse ning
+avaldasid oma tõelise väärtuse"
+smallCommentary.p.1: "<i>&quot;Olen avastanud endas sisemise kunstniku,
+kes teab, mis on õige ja mis on vale.&quot;</i> -
+Margit, 48-aastane<br><br>
+<i>&quot;Enne seda programmi tundsin end olevat
+põnevil. Elasin kiires tempos ja endas
+kaheldes. Nüüd võin elada hetkes ja olla
+tänulik.&quot;</i> - Anneli, 50<br><br>
+<i>&quot;Värvisessioon lükkas ümber kõik minu
+senised arvamused enda kohta... Tulin
+kohale ja lahkusin väga hea tundega.
+Fabienne on tõeliselt põnev ja soe inimene.&quot;</i>
+- Kersti, 27-aastane<br><br>
+<i>&quot;Peaaegu aasta pärast minu
+coachinguprotsessi lõpetamist olen ma
+lõpmatult tänulik kogu selle lihtsustamise
+eest.&quot;</i> - Ghislaine, 49-aastane<br><br>
+<i>&quot;Tänan sind väga selle sessiooni eest.
+Heledate värvidega mängimine on palju
+lõbusam kui tumedate värvidega. Olen oma
+naiselikkuse tugevdamise teel ja uued värvid
+aitavad mind väga. Need teadmised on väga
+kasulikud minu korteri sisustamisel ja
+võtavad survet maha kui kellelgi, kes on
+sageli stressis.&quot;</i> - Kristyna, 30-aastane"

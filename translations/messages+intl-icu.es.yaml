@@ -216,21 +216,41 @@ service.index.offer.ul.3: '<li>Quieres resultados rápidos.</li> <li>Buscas cons
 service.index.offer.h5.3: '¿Lista para revelar tu luz?'
 service.index.offer.p.4: 'Cada mujer es única, y es hora de que el mundo vea <strong>tu luz especial.</strong> Juntas, vamos a descorchar esa botella de champán interior y <strong>dejar que fluya</strong> tu néctar de belleza, confianza y libertad.<br><br> Comienza tu viaje hacia la libertad interior y la expresión de tu verdadero yo reservando tu sesión de valoración <strong>gratuita</strong> de 30 minutos.'
 button.MyFreeSession: 'Mi sesión gratuita'
-giftCard.head.title: "Tarjeta regalo Fabimage"
-giftCard.index.p.1: "Ya sea para revelar los colores que iluminan sus rostros o para sumergirse en el fascinante mundo del coaching de imagen, la <strong>tarjeta regalo Fabimage</strong> es el regalo perfecto para quienes aprecias."
-giftCard.index.h5.1: "¡Regala bienestar auténtico! Elije la cantidad y deja que el agraciado beneficiario revele su potencial."
-giftCard.index.ol.1: '<li><strong>Selecciona el importe:</strong> Elige una cantidad para ofrecer por una sesión de "Colores y Bienestar" o para contribuir a una fórmula de coaching.<br>
-Nota: Si quieres ofrecer una fórmula de coaching (en parte o en su totalidad), asegúrate de que la persona está preparada y entusiasmada para embarcarse en esta aventura.
-</li>
-<li><strong>Realiza tu pedido:</strong> Rellena formulario que figura más abajo.
-</li>
-<li><strong>Confirmación rápida:</strong> En cuanto hayas realizado tu pedido, te enviaré una factura a tu correo electrónico a más tardar el siguiente día laborable.
-</li>
-<li><strong>Recepción de la tarjeta regalo:</strong> Tras el pago, envío la tarjeta regalo a la dirección indicada. 
-¿Prefieres una entrega personal? Pásate por mi estudio (Süda tn 13, centro de Tallin) a la hora que más te convenga.
-</li>'
-giftCard.index.p.2: "<strong>Nota:</strong> La tarjeta regalo es nominativa y puede, si lo deseas, indicar los nombres de las personas que han contribuido al regalo. Asegúrate de que el destinatario <strong>está de acuerdo y le entusiasma</strong> recibir el regalo, sobre todo si eliges un programa de coaching.<br>
-Si tiene alguna pregunta, no dudes en ponerte en contacto conmigo.
-"
-home.giftCard.p: "El regalo de la autenticidad: da a tus seres queridos la oportunidad de descubrir su valor oculto"
-giftCard.index.h5.2: "¿Cómo funciona?"
+giftCard.head.title: 'Tarjeta regalo Fabimage'
+giftCard.index.p.1: 'Ya sea para revelar los colores que iluminan sus rostros o para sumergirse en el fascinante mundo del coaching de imagen, la <strong>tarjeta regalo Fabimage</strong> es el regalo perfecto para quienes aprecias.'
+giftCard.index.h5.1: '¡Regala bienestar auténtico! Elije la cantidad y deja que el agraciado beneficiario revele su potencial.'
+giftCard.index.ol.1: '<li><strong>Selecciona el importe:</strong> Elige una cantidad para ofrecer por una sesión de "Colores y Bienestar" o para contribuir a una fórmula de coaching.<br> Nota: Si quieres ofrecer una fórmula de coaching (en parte o en su totalidad), asegúrate de que la persona está preparada y entusiasmada para embarcarse en esta aventura. </li> <li><strong>Realiza tu pedido:</strong> Rellena formulario que figura más abajo. </li> <li><strong>Confirmación rápida:</strong> En cuanto hayas realizado tu pedido, te enviaré una factura a tu correo electrónico a más tardar el siguiente día laborable. </li> <li><strong>Recepción de la tarjeta regalo:</strong> Tras el pago, envío la tarjeta regalo a la dirección indicada.  ¿Prefieres una entrega personal? Pásate por mi estudio (Süda tn 13, centro de Tallin) a la hora que más te convenga. </li>'
+giftCard.index.p.2: '<strong>Nota:</strong> La tarjeta regalo es nominativa y puede, si lo deseas, indicar los nombres de las personas que han contribuido al regalo. Asegúrate de que el destinatario <strong>está de acuerdo y le entusiasma</strong> recibir el regalo, sobre todo si eliges un programa de coaching.<br> Si tiene alguna pregunta, no dudes en ponerte en contacto conmigo. '
+home.giftCard.p: 'El regalo de la autenticidad: da a tus seres queridos la oportunidad de descubrir su valor oculto'
+giftCard.index.h5.2: '¿Cómo funciona?'
+smallCommentary.h5.1: "Descubre cómo mis clientes
+recuperaron la confianza, conquistaron
+la visibilidad y revelaron su verdadero
+valor"
+smallCommentary.p.1: "<i>&quot;He descubierto en mí una artista interior
+que sabe lo que es justo y lo que no&quot;.</i> -
+Marga, 48 años<br><br>
+<i>&quot;Antes de este programa, me sentía
+excitada. Vivía a un ritmo frenético y
+dudaba de mí misma. Ahora soy capaz de
+vivir el momento presente y ser agradecida&quot;.</i>
+- Anneli, 50 años<br><br>
+<i>&quot;La sesión de color desmintió todas mis
+opiniones previas sobre mí misma... Llegué y
+me fui con muy buen feeling. Fabienne es
+una persona realmente fascinante y cálida&quot;.</i>
+- Cristel, 27 años<br><br>
+<i>&quot;Casi un año después de terminar mi
+proceso de coaching, estoy infinitamente
+agradecida por toda esta simplificación&quot;.</i> -
+Ghislaine, 49 años<br><br>
+<i>&quot;Muchas gracias por esta sesión. Jugar con
+colores claros es mucho más divertido que
+con colores oscuros. Estoy en proceso de
+reforzar mi feminidad y los nuevos colores
+me están ayudando mucho. Estos
+conocimientos me serán muy útiles para
+decorar mi piso y quitarme presión como
+alguien que suele estar estresada.&quot;</i> -
+Cristina, 30 años"
+smallCommentary.h3.1: "VUESTRAS HISTORIAS DE LIBERACION"

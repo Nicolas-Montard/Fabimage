@@ -14,6 +14,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class WorkshopType extends AbstractType
 {
@@ -198,6 +199,19 @@ class WorkshopType extends AbstractType
                 ],
                 'label_attr' => [
                     'class' => 'label'
+                ]
+            ])
+            ->add('type', ChoiceType::class, [
+                'required' => true,
+                'attr' => [
+                    'class' => ''
+                ],
+                'label_attr' => [
+                    'class' => 'label'
+                ],
+                'choices' => [
+                    'ATELIER' => 'workshop',
+                    'MASTERCLASS EN LIGNE' => 'masterclass',
                 ]
             ])
         ;

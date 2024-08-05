@@ -23,3 +23,11 @@ h1{
 p{
   font-size: 18px;
 }
+.small-commentary-container{
+  width: 50%;
+  @include media-breakpoint-down(md){
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

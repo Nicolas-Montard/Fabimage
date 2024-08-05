@@ -229,17 +229,40 @@ service.index.offer.h5.3: 'Prête à révéler votre lumière ?'
 service.index.offer.p.4: 'Chaque femme est unique, et il est temps que le monde voie <strong>votre lumière particulière.</strong> Ensemble, nous allons déboucher cette bouteille de champagne intérieure, et <strong>laisser jaillir</strong> votre nectar de beauté, de confiance et de liberté.<br><br> Commencez votre voyage vers la liberté intérieure et l’expression de votre véritable vous en réservant votre session de découverte <strong>gratuite</strong> de 30 min.'
 button.MyFreeSession: 'Ma session gratuite'
 giftCard.head.title: 'Carte Cadeau Fabimage'
-giftCard.index.p.1: "Que ce soit pour révéler les couleurs qui illuminent leur visage ou pour plonger dans l’univers fascinant du coaching en image, la <strong>Carte Cadeau Fabimage</strong> est le présent idéal pour ceux que vous appréciez."
-giftCard.index.h5.1: "Offrez le cadeau du bien-être authentique. Choisissez le montant et permettez à l’heureux bénéficiaire de révéler une apparence qui reflète sa véritable personnalité !"
-giftCard.index.ol.1: "<li><strong>Sélectionnez le montant :</strong> Choisissez un montant à offrir pour une session « Couleurs et Bien-être » ou pour contribuer à un pack de coaching. 
-NB : Si vous souhaitez offrir une formule de coaching (en partie ou totalité), assurez-vous que la personne est prête et enthousiaste à l’idée de s’engager dans cette aventure !</li>
-<li><strong>Passez commande :</strong> Remplissez le formulaire de commande disponible ci-dessous.</li>
-<li><strong>Confirmation rapide :</strong> Dès que vous aurez passé votre commande, je vous enverrai une facture à votre adresse électronique au plus tard le premier jour ouvrable suivant.</li>
-<li><strong>Réception de la carte-cadeau :</strong> Après le paiement, la carte-cadeau sera envoyée à l’adresse indiquée.<br>
-Vous préférez une remise en mains propres ? Rendez-vous à mon studio (Süda tn 13, centre-ville Tallinn) à un moment qui vous convient.
-</li>"
-giftCard.index.p.2: "<strong>Note:</strong> La carte-cadeau est nominative et peut, si vous le souhaitez, indiquer les noms des personnes ayant contribué au cadeau. Assurez-vous que la personne bénéficiaire est<strong> d'accord et enthousiaste</strong> à l'idée de recevoir ce cadeau, surtout si vous choisissez un programme de coaching.<br>
-Pour toute question, n’hésitez pas à me contacter.
-"
+giftCard.index.p.1: 'Que ce soit pour révéler les couleurs qui illuminent leur visage ou pour plonger dans l’univers fascinant du coaching en image, la <strong>Carte Cadeau Fabimage</strong> est le présent idéal pour ceux que vous appréciez.'
+giftCard.index.h5.1: "Offrez le cadeau du bien-être authentique. Choisissez le montant et permettez à l’heureux bénéficiaire de révéler une apparence qui reflète sa véritable personnalité\_!"
+giftCard.index.ol.1: "<li><strong>Sélectionnez le montant :</strong> Choisissez un montant à offrir pour une session « Couleurs et Bien-être » ou pour contribuer à un pack de coaching.  NB\_: Si vous souhaitez offrir une formule de coaching (en partie ou totalité), assurez-vous que la personne est prête et enthousiaste à l’idée de s’engager dans cette aventure\_!</li> <li><strong>Passez commande :</strong> Remplissez le formulaire de commande disponible ci-dessous.</li> <li><strong>Confirmation rapide :</strong> Dès que vous aurez passé votre commande, je vous enverrai une facture à votre adresse électronique au plus tard le premier jour ouvrable suivant.</li> <li><strong>Réception de la carte-cadeau :</strong> Après le paiement, la carte-cadeau sera envoyée à l’adresse indiquée.<br> Vous préférez une remise en mains propres ? Rendez-vous à mon studio (Süda tn 13, centre-ville Tallinn) à un moment qui vous convient. </li>"
+giftCard.index.p.2: "<strong>Note:</strong> La carte-cadeau est nominative et peut, si vous le souhaitez, indiquer les noms des personnes ayant contribué au cadeau. Assurez-vous que la personne bénéficiaire est<strong> d'accord et enthousiaste</strong> à l'idée de recevoir ce cadeau, surtout si vous choisissez un programme de coaching.<br> Pour toute question, n’hésitez pas à me contacter. "
 home.giftCard.p: 'Le cadeau de l’authenticité : donnez à vos proches l’occasion de découvrir leur valeur cachée'
-giftCard.index.h5.2: "Comment ça marche ?"
+giftCard.index.h5.2: 'Comment ça marche ?'
+smallCommentary.h5.1: "Témoignages de celles qui ont trouvé
+confiance, harmonie et leur style
+authentique"
+smallCommentary.p.1: '<i>&quot;J&#39;ai découvert en moi une artiste intérieure
+qui sait ce qui est juste et ce qui est faux.&quot; -
+Margit, 48 ans</i><br><br>
+<i>&quot;Avant ce programme, je me sentais
+surexcitée. Je vivais à un rythme trépidant et
+je doutais de moi. Aujourd&#39;hui, je suis
+capable de vivre le moment présent et d&#39;être
+reconnaissante&quot;.</i> - Anneli, 50 ans<br><br>
+<i>&quot;La session sur les couleurs a réfuté toutes
+mes opinions précédentes sur moi-même... Je
+suis arrivée et repartie avec un très bon
+feeling. Fabienne est une personne vraiment
+fascinante et chaleureuse.&quot;</i> - Christelle, 27
+ans<br><br>
+<i>&quot;Presque un an après avoir terminé mon
+processus de coaching, je suis infiniment
+reconnaissante pour toute cette
+simplification.&quot;</i> - Ghislaine, 49 ans<br><br>
+<i>&quot;Merci beaucoup pour cette séance. Jouer
+avec des couleurs claires est tellement plus
+amusant que des couleurs foncées. Je suis en
+train de renforcer ma féminité et les
+nouvelles couleurs m&#39;y aident beaucoup. Ces
+connaissances me seront très utiles pour
+décorer mon appartement et baisser la
+pression en tant que personne souvent
+stressée.&quot;</i> – Christine, 30 ans'
+smallCommentary.h3.1: "VOS HISTOIRES DE LIBERATION"

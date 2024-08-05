@@ -97,6 +97,9 @@ class Workshop
     #[ORM\Column(type: Types::TEXT)]
     private ?string $underTitleEt = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $type = null;
+
     public function __construct()
     {
         $this->commentaries = new ArrayCollection();
@@ -404,6 +407,18 @@ class Workshop
     public function setUnderTitleEt(string $underTitleEt): static
     {
         $this->underTitleEt = $underTitleEt;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): static
+    {
+        $this->type = $type;
 
         return $this;
     }
