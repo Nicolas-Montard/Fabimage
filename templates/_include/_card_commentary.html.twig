@@ -1,0 +1,79 @@
+{% if commentaries is defined and commentaries|length > 0 %}
+    <div class="commentaryCard">
+        <div id="carouselExampleIndicators" class="carousel slide mt-5">
+            <h5 class="fw-bold commentary-introduction mx-auto">{{'smallCommentary.h5.1'|trans|raw}}</h5>
+            <div class="carousel-inner commentaries-carousel d-flex align-items-center">
+                {% for commentary in commentaries %}
+                    {% if loop.first %}
+                        <div class="carousel-item active h-100">
+                            <div class="h-100 commentary d-flex align-items-center">
+                                <div class="mx-auto">
+                                    {% if app.request.locale == 'fr' %}
+                                        <h3 class="mt-4">{{ commentary.titleFr }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentFr|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                    {% elseif app.request.locale == 'es' %}
+                                        <h3 class="mt-4">{{ commentary.titleEs }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentEs|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                    {% else %}
+                                        <h3 class="mt-4">{{ commentary.titleEt }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentEt|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                    {% endif %}
+                                    {% if app.user %}
+                                        <div class="d-flex justify-content-center mt-5">
+                                            <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="carousel-item h-100">
+                            <div class="h-100 commentary d-flex align-items-center">
+                                <div class="mx-auto">
+                                    {% if app.request.locale == 'fr' %}
+                                        <h3 class="mt-4">{{ commentary.titleFr }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentFr|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
+                                    {% elseif app.request.locale == 'es' %}
+                                        <h3 class="mt-4">{{ commentary.titleEs }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentEs|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
+                                    {% else %}
+                                        <h3 class="mt-4">{{ commentary.titleEt }}</h3>
+                                        <p class="mt-4 text-break">{{ commentary.contentEt|raw }}</p>
+                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
+                                    {% endif %}
+                                    {% if app.user %}
+                                        <div class="d-flex justify-content-center mt-5">
+                                            <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
+                                                <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
+            </button>
+        </div>
+    </div>
+{% endif %}
+{% if app.user %}
+<div class="d-flex justify-content-center mt-3">
+    <a href="{{ path('app_commentary_home_new') }}">
+        <button class="btn btn-secondary text-white">{{'commentaryHome.new'|trans}}</button>
+    </a>
+</div>
+{% endif %}

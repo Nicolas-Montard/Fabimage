@@ -78,57 +78,7 @@
                 </div>
             </div>
         </div>
-            <div id="carouselExampleIndicators" class="carousel slide mt-5">
-                <p class="commentary-introduction mx-auto">{{ 'home.CommmentaryIntroduction'|trans|raw }}</p>
-                <div class="carousel-inner commentaries-carousel d-flex align-items-center">
-                    <div class="carousel-item active h-100">
-                        <div class="h-100 commentary d-flex align-items-center">
-                            <div class="mx-auto">
-                                <h5 class="fw-bold">{{'smallCommentary.h5.1'|trans|raw}}</h5>
-                                <p class="mt-4"> {{'smallCommentary.p.1'|trans|raw}} </p>
-                            </div>
-                        </div>
-                    </div>
-                    {% for commentary in commentaries %}
-                        <div class="carousel-item h-100">
-                            <div class="h-100 commentary d-flex align-items-center">
-                                <div class="mx-auto">
-                                    {% if app.request.locale == 'fr' %}
-                                        <p class="mt-4 text-break">{{ commentary.contentFr|raw }}</p>
-                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorFr|raw }}</p>
-                                    {% elseif app.request.locale == 'es' %}
-                                        <p class="mt-4 text-break">{{ commentary.contentEs|raw }}</p>
-                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEs|raw }}</p>
-                                    {% else %}
-                                        <p class="mt-4 text-break">{{ commentary.contentEt|raw }}</p>
-                                        <p class="fst-italic fw-bold fs-5 mt-4">{{ commentary.authorEt|raw }}</p>
-                                    {% endif %}
-                                    {% if app.user %}
-                                        <div class="d-flex justify-content-center mt-5">
-                                            <a href="{{ path('app_commentary_home_edit', {'id': commentary.id}) }}">
-                                                <button class="btn btn-secondary text-white">{{'commentaryHome.edit'|trans}}</button>
-                                            </a>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <img src="{{ asset('build/images/icons8-arrière-50.png') }}" alt="">
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <img src="{{ asset('build/images/icons8-avant-50.png') }}" alt="">
-                </button>
-            </div>
-        {% if app.user %}
-            <div class="d-flex justify-content-center mt-5">
-                <a href="{{ path('app_commentary_home_new') }}">
-                    <button class="btn btn-secondary text-white">{{'commentaryHome.new'|trans}}</button>
-                </a>
-            </div>
-        {% endif %}
+        {{ render(controller('App\\Controller\\CommentaryHomeController::commentaryCard')) }}
     </div>
     {{ render(controller('App\\Controller\\ContactController::actuality')) }}
 {% endblock %}
