@@ -69,6 +69,9 @@ class Service
     #[ORM\Column(type: Types::TEXT)]
     private ?string $underTitleEt = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $priority = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -222,5 +225,17 @@ class Service
     public function setUpdatedAt(?DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
+    }
+
+    public function getPriority(): ?int
+    {
+        return $this->priority;
+    }
+
+    public function setPriority(?int $priority): static
+    {
+        $this->priority = $priority;
+
+        return $this;
     }
 }

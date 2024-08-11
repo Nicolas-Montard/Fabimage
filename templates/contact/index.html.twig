@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ 'contact.head.title'|trans }}{% endblock %}
+{% block title %}{{ 'contact.contactMe'|trans }}{% endblock %}
 {% block metaDescription %}{{ "contact.head.metaDescription"|trans }}{% endblock %}
 
 {% block body %}
@@ -43,7 +43,7 @@
                 {{ form_widget(form.message) }}
                 {{ form_errors(form.message) }}
             </div>
-            <p class="mb-0 mt-4">{{ 'contact.workshop.form.agreements.info'|trans|raw }}</p>
+            <p class="mb-0 mt-4 true-p">{{ 'contact.workshop.form.agreements.info'|trans|raw }}</p>
             <div class="d-flex mt-3">
                 {{ form_widget(form.agreements) }}
                 {{ form_label(form.agreements, 'contact.workshop.form.agreements'|trans) }}

@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Service{% endblock %}
+{% block title %}{% if app.request.locale == 'fr' %}
+{{ service.titleFr }}
+{% elseif app.request.locale == 'es' %}
+{{ service.titleEs }}
+{% else %}
+{{ service.titleEt }}
+{% endif %}{% endblock %}
 
 {% block body %}
     <div class="service-show">
@@ -20,11 +26,11 @@
                 </h1>
                 <p class="mt-4">
                     {% if app.request.locale == 'fr' %}
-                        {{ service.underTitleFr }}
+                        {{ service.underTitleFr|nl2br }}
                     {% elseif app.request.locale == 'es' %}
-                        {{ service.underTitleEs }}
+                        {{ service.underTitleEs|nl2br }}
                     {% else %}
-                        {{ service.underTitleEt }}
+                        {{ service.underTitleEt|nl2br }}
                     {% endif %}
                 </p>
             </div>

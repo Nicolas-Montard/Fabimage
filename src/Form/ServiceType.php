@@ -3,13 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Service;
-use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Vich\UploaderBundle\Form\Type\VichFileType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ServiceType extends AbstractType
 {
@@ -112,6 +113,14 @@ class ServiceType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Ajouter un fichier',
                 ]
+            ])
+            ->add('priority', IntegerType::class, [
+                'label_attr' => [
+                    'class' => 'label'
+                ],
+                'attr' => [
+                    'class' => 'widget rounded'
+                ],
             ])
         ;
     }

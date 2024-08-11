@@ -98,7 +98,7 @@ company.bottom-section.list.treeOfLife: 'l’arbre de vie de l’image (travail 
 company.bottom-section.endText: "<small><i>*Les participants à ces ateliers bénéficient d'une réduction de 10% sur tous les autres services de Fabimage.</i></small><br><br>Demandez les tarifs sans engagement."
 navbar.fabienne: Fabienne
 navbar.services: Prestations
-service.index.body.title: 'Choisissez votre chemin : services personnalisés pour transformez votre invisibilité en lumière'
+service.index.body.title: 'Choisissez votre chemin : services personnalisés pour transformer votre invisibilité en lumière'
 service.index.myOffer: 'Mes offres'
 service.index.admin.newService: 'Créer une nouvelle prestation'
 workshop.index.body.title: Ateliers
@@ -154,7 +154,7 @@ home.head.metaDescription: 'Avoir un style authentique, « sur-mesure », c’es
 book.index.error: "Votre paiement n'a pas pu étre effectué"
 commentaryHome.new: 'Créer un nouveau temoignage'
 commentaryHome.edit: 'Editer le temoignage'
-home.textVideo: "« Dans ma conception du coaching en image il n'y a pas de standard de beauté, la véritable et unique beauté c'est la vôtre. Il y a une lumière en vous, qui ne demande qu'à rayonner ! »<br><br>Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
+home.textVideo: "Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
 home.CommmentaryIntroduction: 'Mes clients partagent leur expérience<br><br> <strong>Découvrez comment mes clientes ont repris confiance, conquis leur visibilité et révélé leur véritable valeur</strong>'
 company.button.quote: 'Je prends contact'
 footer.home: Accueil

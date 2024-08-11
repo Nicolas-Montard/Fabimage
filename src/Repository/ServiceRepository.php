@@ -39,6 +39,16 @@ class ServiceRepository extends ServiceEntityRepository
         }
     }
 
+    public function findByOrder(): ?array
+    {
+        return $this->createQueryBuilder('s')
+            ->orderBy('s.priority', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+
 //    /**
 //     * @return Service[] Returns an array of Service objects
 //     */

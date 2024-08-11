@@ -35,6 +35,13 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="d-flex flex-column mt-4">
+            {{ form_label(form.priority, 'Ordre') }}
+            {{ form_widget(form.priority) }}
+            {{ form_errors(form.priority) }}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4">
             {{ form_label(form.pictureFile, 'Image de la prestation') }}
             {{ form_widget(form.pictureFile) }}
             {{ form_errors(form.pictureFile) }}
