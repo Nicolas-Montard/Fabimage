@@ -238,7 +238,7 @@ class BookController extends AbstractController
        return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
 
-    #[Route('/cancel', name: 'app_cancel')]
+    #[Route('/cancel', name: 'app_cancel', authority: 'admin.fabimage.coach')]
     public function cancel(Request $request): Response
     {
         return $this->redirectToRoute('app_book_index', ['error' => 1]);
