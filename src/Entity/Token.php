@@ -3,7 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\TokenRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Nullable;
 
 #[ORM\Entity(repositoryClass: TokenRepository::class)]
 class Token
@@ -30,6 +33,21 @@ class Token
 
     #[ORM\Column(length: 255)]
     private ?string $email = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $firstName = null;
+
+    #[ORM\OneToMany(mappedBy: 'token', targetEntity: BookEmail::class)]
+    private Collection $bookEmails;
+
+    #[ORM\OneToMany(mappedBy: 'token', targetEntity: FollowupemailHasToken::class, orphanRemoval: true)]
+    private Collection $followupemailHasTokens;
+
+    public function __construct()
+    {
+        $this->bookEmails = new ArrayCollection();
+        $this->followupemailHasTokens = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -104,6 +122,78 @@ class Token
     public function setEmail(string $email): static
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(?string $firstName): static
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, BookEmail>
+     */
+    public function getBookEmails(): Collection
+    {
+        return $this->bookEmails;
+    }
+
+    public function addBookEmail(BookEmail $bookEmail): static
+    {
+        if (!$this->bookEmails->contains($bookEmail)) {
+            $this->bookEmails->add($bookEmail);
+            $bookEmail->setToken($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBookEmail(BookEmail $bookEmail): static
+    {
+        if ($this->bookEmails->removeElement($bookEmail)) {
+            // set the owning side to null (unless already changed)
+            if ($bookEmail->getToken() === $this) {
+                $bookEmail->setToken(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, FollowupemailHasToken>
+     */
+    public function getFollowupemailHasTokens(): Collection
+    {
+        return $this->followupemailHasTokens;
+    }
+
+    public function addFollowupemailHasToken(FollowupemailHasToken $followupemailHasToken): static
+    {
+        if (!$this->followupemailHasTokens->contains($followupemailHasToken)) {
+            $this->followupemailHasTokens->add($followupemailHasToken);
+            $followupemailHasToken->setToken($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFollowupemailHasToken(FollowupemailHasToken $followupemailHasToken): static
+    {
+        if ($this->followupemailHasTokens->removeElement($followupemailHasToken)) {
+            // set the owning side to null (unless already changed)
+            if ($followupemailHasToken->getToken() === $this) {
+                $followupemailHasToken->setToken(null);
+            }
+        }
 
         return $this;
     }

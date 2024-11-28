@@ -12,5 +12,13 @@
     {% else %}
         {{ emailData.contentEt|raw}}  
     {% endif %}
+    <p class="fs-6">{{ 'book.buyed.email.p.end'|trans({}, 'messages', token.language)|raw }}</p>
+    <p class=""><small>{{ 'book.buyed.email.p.end.2'|trans({}, 'messages', token.language)|raw }}</small></p>
+    <ul>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.1'|trans({}, 'messages', token.language)|raw}}</small></i></li>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.2'|trans({}, 'messages', token.language)|raw}}</small></i></li>
+        <li class="small-fs"><i><small>{{'book.buyed.email.li.3'|trans({}, 'messages', token.language)|raw}}</small></i></li>
+    </ul>
+    <p class=""><small>{{'book.buyed.email.p.end.3'|trans({}, 'messages', token.language)|raw}}</small></p>
 </body>
 </html>

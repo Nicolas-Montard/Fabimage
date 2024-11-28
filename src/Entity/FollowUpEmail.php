@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FollowUpEmailRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -38,6 +40,14 @@ class FollowUpEmail
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $subjectEt = null;
+
+    #[ORM\OneToMany(mappedBy: 'followUpEmail', targetEntity: FollowupemailHasToken::class, orphanRemoval: true)]
+    private Collection $followupemailHasTokens;
+
+    public function __construct()
+    {
+        $this->followupemailHasTokens = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -136,6 +146,36 @@ class FollowUpEmail
     public function setSubjectEt(?string $subjectEt): static
     {
         $this->subjectEt = $subjectEt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, FollowupemailHasToken>
+     */
+    public function getFollowupemailHasTokens(): Collection
+    {
+        return $this->followupemailHasTokens;
+    }
+
+    public function addFollowupemailHasToken(FollowupemailHasToken $followupemailHasToken): static
+    {
+        if (!$this->followupemailHasTokens->contains($followupemailHasToken)) {
+            $this->followupemailHasTokens->add($followupemailHasToken);
+            $followupemailHasToken->setFollowUpEmail($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFollowupemailHasToken(FollowupemailHasToken $followupemailHasToken): static
+    {
+        if ($this->followupemailHasTokens->removeElement($followupemailHasToken)) {
+            // set the owning side to null (unless already changed)
+            if ($followupemailHasToken->getFollowUpEmail() === $this) {
+                $followupemailHasToken->setFollowUpEmail(null);
+            }
+        }
 
         return $this;
     }

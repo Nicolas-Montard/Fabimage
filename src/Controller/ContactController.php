@@ -6,19 +6,20 @@ use App\Form\ActualityType;
 use App\Form\ServiceContactType;
 use App\Form\WorkshopContactType;
 use ReCaptcha\RequestMethod\Post;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
-use Symfony\Component\Routing\Annotation\Route;
+use function Symfony\Component\Clock\now;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Crypto\DkimSigner;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-use function Symfony\Component\Clock\now;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 #[Route('/contact', name: 'contact_')]
 class ContactController extends AbstractController
@@ -36,17 +37,12 @@ class ContactController extends AbstractController
                 ->subject($form->get('firstName')->getData() . ' ' . $form->get('lastName')->getData() .
                     ' Vous a envoyé une ' . $form->get('type')->getData())
                 ->html($this->renderView('contact/serviceContactEmail.html.twig', ['form' => $formData]));
-            $maxAttempts = 5;
-            $attempts = 0;
-            while ($attempts < $maxAttempts) {
-                $emailNotSent = true;
-                try {
-                    $mailer->send($email);
-                    $emailNotSent = false;
-                    break;
-                } catch (TransportExceptionInterface $e) {
-                    $attempts++;
-                }
+                $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+                $signedEmail = $signer->sign($email);
+            try {
+                $mailer->send($signedEmail);
+            } catch (TransportExceptionInterface $e) {
+
             }
             $form = $this->createForm(ServiceContactType::class);
             return $this->redirectToRoute('contact_service', ['formSent' => true], Response::HTTP_SEE_OTHER);
@@ -69,17 +65,11 @@ class ContactController extends AbstractController
                 ->subject($form->get('firstName')->getData() . ' ' . $form->get('lastName')->getData() .
                     ' vous contacte pour un atelier')
                 ->html($this->renderView('contact/workshopContactEmail.html.twig', ['form' => $formData]));
-            $maxAttempts = 5;
-            $attempts = 0;
-            while ($attempts < $maxAttempts) {
-                $emailNotSent = true;
-                try {
-                    $mailer->send($email);
-                    $emailNotSent = false;
-                    break;
-                } catch (TransportExceptionInterface $e) {
-                    $attempts++;
-                }
+            $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+            $signedEmail = $signer->sign($email);
+            try {
+                $mailer->send($signedEmail);
+            } catch (TransportExceptionInterface $e) {
             }
             $form = $this->createForm(ServiceContactType::class);
             return $this->redirectToRoute('contact_workshop', ['formSent' => true], Response::HTTP_SEE_OTHER);
@@ -115,7 +105,9 @@ class ContactController extends AbstractController
                 ->to($this->getParameter('mailer_to'))
                 ->subject($form->get('firstName')->getData() . ' souhaite s\'inscrire à la newsletter')
                 ->html($this->renderView('contact/ActualityEmail.html.twig', ['form' => $formData, 'lang' => $local]));
-            $mailer->send($email);
+            $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+            $signedEmail = $signer->sign($email);
+            $mailer->send($signedEmail);
             $form = $this->createForm(ActualityType::class);
             return new RedirectResponse($previousPage, Response::HTTP_SEE_OTHER);
         }

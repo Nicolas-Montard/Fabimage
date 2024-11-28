@@ -11,14 +11,14 @@ navbar.language: Español
 navbar.coachingOfImage: 'Coaching de imagen'
 navbar.workshop: Talleres
 navbar.contact: Contacto
-contact.contactMe: "Contacta conmigo"
+contact.contactMe: 'Contacta conmigo'
 contact.service.form.type: 'Mi solicitud se refiere a :'
 contact.service.form.client: 'Soy :'
 contact.form.firstName: Nombre
 contact.form.lastName: Apellidos
 contact.form.Email: 'Correo electrónico'
 contact.form.phoneNumber: Teléfono
-contact.service.form.message: 'Mensaje'
+contact.service.form.message: Mensaje
 contact.workshop.validation: 'Gracias por su mensaje.<br><br>Si no ha recibido respuesta en dos o tres días, es posible que el mensaje haya llegado como Spam o “correo no deseado” o, si utiliza Gmail, mire en la pestaña Notificaciones.'
 contact.workshop.title: 'Deseo inscribirme en un taller de Fabimage o en un masterclass en línea'
 contact.workshop.undertitle: 'Los talleres tienen lugar en : P. Süda 13, centro de la ciudad de Tallin.<br><br>Las clases magistrales en línea tienen lugar en Zoom. El enlace para participar se enviará a tu dirección de correo electrónico el día antes del taller.'
@@ -88,7 +88,7 @@ service.index.myOffer: 'Mis ofertas'
 service.index.admin.newService: 'crear un nuevo servicio'
 workshop.index.body.title: Talleres
 workshop.index.admin.newWorkshop: 'crear un nuevo taller'
-navbar.fabienne: 'Fabienne'
+navbar.fabienne: Fabienne
 navbar.services: Servicios
 navbar.book: Ebooks
 book.buy: Compro
@@ -185,7 +185,7 @@ book.buyed.email.li.2: '<strong>amarte</strong> a ti misma y valorar el tesoro q
 book.buyed.email.li.3: '<strong>celebrar</strong> tus contradicciones y convertir tu imagen en una fuente de bienestar.'
 book.buyed.email.p.end.3: '<a href="https://www.fabimage.coach/es/">Fabimage Website</a><br><a href="https://www.facebook.com/FabimageCoach/">Facebook</a><br><a href="https://www.instagram.com/fabimagecoach/">Instagram</a><br><a href="https://www.linkedin.com/in/fabienne-chmara-9a3812187/">LinkedIn</a><br>'
 home.middle-text.p1: '<strong>Recupera tu poder: Transforma tu imagen y revela tu valor oculto - Un viaje hacia tu verdadero yo<br><br>El proceso:</strong>'
-home.middle-text.p1.ol: '<li><strong>Exploración interior: Revelamos tu identidad interior, tus emociones y tus valores.</strong></li> <li><strong>Conexión:</strong> A través de un coaching 3D, conectamos tu imagen interna, corporal y externa -identidad, interioridad, apariencia física y estilo único- para que puedas verte y mostrarte como realmente eres.</li> <li><strong>Liberación y celebración:</strong> Se acabaron los bloqueos y la vergüenza. Aprenderás a apreciar tus cualidades y a celebrar tu singularidad.</li>'
+home.middle-text.p1.ol: '<li><strong>Exploración interior:</strong> Revelamos tu identidad interior, tus emociones y tus valores.</li> <li><strong>Conexión:</strong> A través de un coaching 3D, conectamos tu imagen interna, corporal y externa -identidad, interioridad, apariencia física y estilo único- para que puedas verte y mostrarte como realmente eres.</li> <li><strong>Liberación y celebración:</strong> Se acabaron los bloqueos y la vergüenza. Aprenderás a apreciar tus cualidades y a celebrar tu singularidad.</li>'
 home.middle-text.p2: '<strong>¿Por qué yo?</strong><br><br> <strong>Porque he estado allí.</strong><br><br> He experimentado el dolor de la <strong>invisibilidad</strong> y el peso del <strong>juicio.</strong> Mi trayectoria personal y mi formación única me han permitido desarrollar una metodología a la vez realista y profunda. Te ofrezco algo más que una solución estética: una reconciliación del interior con el exterior para ocupar tu lugar en el universo, sentirte más a gusto y tener <strong>una imagen más “completa” (y no perfecta), coherente con tu identidad.</strong><br><br> <strong>Lo que vas a ganar:</strong>'
 home.middle-text.p2.ul: '<li>Una imagen que refleja tu verdadera identidad</li> <li>La capacidad de gestionar tus emociones y superar el miedo y la vergüenza</li> <li>Más libertad interior y confianza en ti misma</li> <li>Dejar que hable tu creatividad</li>'
 home.middle-text.p3: '<strong>Tú eres única, tu viaje también</strong> Cada mujer es <strong>única</strong>, y es hora de que el mundo vea <strong>tu luz especial</strong>. Juntas, vamos a descorchar esa botella de champán interior y dejar que fluya tu néctar de belleza, confianza y libertad.<br><br> <strong>¿Lista para comenzar tu viaje?</strong><br><br> Ponte en contacto conmigo y comienza tu viaje hacia la libertad interior y la expresión de tu verdadero yo. Reserva tu sesión de valoración <strong>gratuita</strong> de 30 minutos.'
@@ -223,34 +223,8 @@ giftCard.index.ol.1: '<li><strong>Selecciona el importe:</strong> Elige una cant
 giftCard.index.p.2: '<strong>Nota:</strong> La tarjeta regalo es nominativa y puede, si lo deseas, indicar los nombres de las personas que han contribuido al regalo. Asegúrate de que el destinatario <strong>está de acuerdo y le entusiasma</strong> recibir el regalo, sobre todo si eliges un programa de coaching.<br> Si tiene alguna pregunta, no dudes en ponerte en contacto conmigo. '
 home.giftCard.p: 'El regalo de la autenticidad: da a tus seres queridos la oportunidad de descubrir su valor oculto'
 giftCard.index.h5.2: '¿Cómo funciona?'
-smallCommentary.h5.1: "Descubre cómo mis clientes
-recuperaron la confianza, conquistaron
-la visibilidad y revelaron su verdadero
-valor"
-smallCommentary.p.1: "<i>&quot;He descubierto en mí una artista interior
-que sabe lo que es justo y lo que no&quot;.</i> -
-Marga, 48 años<br><br>
-<i>&quot;Antes de este programa, me sentía
-excitada. Vivía a un ritmo frenético y
-dudaba de mí misma. Ahora soy capaz de
-vivir el momento presente y ser agradecida&quot;.</i>
-- Anneli, 50 años<br><br>
-<i>&quot;La sesión de color desmintió todas mis
-opiniones previas sobre mí misma... Llegué y
-me fui con muy buen feeling. Fabienne es
-una persona realmente fascinante y cálida&quot;.</i>
-- Cristel, 27 años<br><br>
-<i>&quot;Casi un año después de terminar mi
-proceso de coaching, estoy infinitamente
-agradecida por toda esta simplificación&quot;.</i> -
-Ghislaine, 49 años<br><br>
-<i>&quot;Muchas gracias por esta sesión. Jugar con
-colores claros es mucho más divertido que
-con colores oscuros. Estoy en proceso de
-reforzar mi feminidad y los nuevos colores
-me están ayudando mucho. Estos
-conocimientos me serán muy útiles para
-decorar mi piso y quitarme presión como
-alguien que suele estar estresada.&quot;</i> -
-Cristina, 30 años"
-smallCommentary.h3.1: "VUESTRAS HISTORIAS DE LIBERACION"
+smallCommentary.h5.1: 'Descubre cómo mis clientes recuperaron la confianza, conquistaron la visibilidad y revelaron su verdadero valor'
+smallCommentary.p.1: '<i>&quot;He descubierto en mí una artista interior que sabe lo que es justo y lo que no&quot;.</i> - Marga, 48 años<br><br> <i>&quot;Antes de este programa, me sentía excitada. Vivía a un ritmo frenético y dudaba de mí misma. Ahora soy capaz de vivir el momento presente y ser agradecida&quot;.</i> - Anneli, 50 años<br><br> <i>&quot;La sesión de color desmintió todas mis opiniones previas sobre mí misma... Llegué y me fui con muy buen feeling. Fabienne es una persona realmente fascinante y cálida&quot;.</i> - Cristel, 27 años<br><br> <i>&quot;Casi un año después de terminar mi proceso de coaching, estoy infinitamente agradecida por toda esta simplificación&quot;.</i> - Ghislaine, 49 años<br><br> <i>&quot;Muchas gracias por esta sesión. Jugar con colores claros es mucho más divertido que con colores oscuros. Estoy en proceso de reforzar mi feminidad y los nuevos colores me están ayudando mucho. Estos conocimientos me serán muy útiles para decorar mi piso y quitarme presión como alguien que suele estar estresada.&quot;</i> - Cristina, 30 años'
+smallCommentary.h3.1: 'VUESTRAS HISTORIAS DE LIBERACION'
+button.service: SERVICIOS
+navbar.marquee: 'Barra de anuncios'

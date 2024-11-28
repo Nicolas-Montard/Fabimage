@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Marquee{% endblock %}
+
+{% block body %}
+<div class="marquee-form">
+    {{ include('marquee/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+</div>
+{% endblock %}

@@ -5,12 +5,13 @@ namespace App\Controller;
 use App\Form\GiftCardType;
 use App\Form\ServiceContactType;
 use App\Form\WorkshopContactType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Crypto\DkimSigner;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/giftCard', name: 'giftCard_')]
 class GiftCardController extends AbstractController
 {
@@ -26,7 +27,9 @@ class GiftCardController extends AbstractController
                 ->to($this->getParameter('mailer_to'))
                 ->subject($form->get('name')->getData() . ' souhaite acheter une carte cadeau')
                 ->html($this->renderView('giftCard/giftCardEmail.html.twig', ['form' => $formData]));
-            $mailer->send($email);
+            $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+            $signedEmail = $signer->sign($email);
+            $mailer->send($signedEmail);
             $form = $this->createForm(GiftCardType::class);
             return $this->redirectToRoute('giftCard_index', ['formSent' => true], Response::HTTP_SEE_OTHER);
         }

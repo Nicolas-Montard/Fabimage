@@ -52,33 +52,9 @@
             </div>
             <p>{{'home.middle-text.p4'|trans|raw}}</p>
         </div>
-        <div class="container-service-card-container">
-            <div class="d-flex flex-wrap justify-content-center service-card-container mx-auto">
-                {% for service in services %}
-                    <div class="service-card mt-5 d-flex flex-column">
-                        {% include '_include/_card_service.html.twig' %}
-                    </div>
-                {% endfor %}
-                <div class="service-card mt-5 d-flex flex-column">
-                    <div class="image-container mx-auto">
-                        <img src="{{ asset('build/images/Fabimage-carte-cadeau-FR-1-petit.png') }}" alt="" class="w-100 h-100">
-                    </div>
-                    <div>
-                        <div class="d-flex flex-column text-container mx-auto rounded-1">
-                            <div class="content-container">
-                                <h3 class="font-weight-bold text-center mt-3 fst-italic fs-6 mb-4">{{ 'home.giftCard.title'|trans }}</h3>
-                                <p class="mt-2 mx-3"> {{ 'home.giftCard.p'|trans|raw}} </p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <a href="{{ path('giftCard_index') }}"><button class="btn btn-secondary text-white">
-                                        {{ 'Service.readMore'|trans }}</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="d-flex justify-content-center">
+            <a href="{{ path('app_service_index') }}"><button class="btn btn-secondary text-white my-3"> {{ 'button.service'|trans }}</button></a>
         </div>
-        {{ render(controller('App\\Controller\\CommentaryHomeController::commentaryCard')) }}
     </div>
     {{ render(controller('App\\Controller\\ContactController::actuality')) }}
 {% endblock %}

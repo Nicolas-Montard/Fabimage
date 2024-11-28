@@ -1,0 +1,29 @@
+.marquee {
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: -50px;
+
+    p {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        white-space: nowrap;
+        min-width: 100%;
+        transform: translateX(100%);
+        animation: scroll-left 35s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

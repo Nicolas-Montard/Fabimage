@@ -154,7 +154,7 @@ home.head.metaDescription: 'Avoir un style authentique, « sur-mesure », c’es
 book.index.error: "Votre paiement n'a pas pu étre effectué"
 commentaryHome.new: 'Créer un nouveau temoignage'
 commentaryHome.edit: 'Editer le temoignage'
-home.textVideo: "Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise."
+home.textVideo: 'Faisons connaissance ! Regardez ma vidéo, je vous raconte en quoi un coaching d’image peut vous aider et quels sont les outils que j’utilise.'
 home.CommmentaryIntroduction: 'Mes clients partagent leur expérience<br><br> <strong>Découvrez comment mes clientes ont repris confiance, conquis leur visibilité et révélé leur véritable valeur</strong>'
 company.button.quote: 'Je prends contact'
 footer.home: Accueil
@@ -198,7 +198,7 @@ book.buyed.email.li.3: '<strong>célébrer</strong> vos contradictions et faire 
 book.buyed.email.p.end.3: '<a href="https://www.fabimage.coach/fr/">Fabimage Website</a><br><a href="https://www.facebook.com/FabimageCoach/">Facebook</a><br><a href="https://www.instagram.com/fabimagecoach/">Instagram</a><br><a href="https://www.linkedin.com/in/fabienne-chmara-9a3812187/">LinkedIn</a><br>'
 home.middle-text.p1: '<strong>Reprenez votre pouvoir : Dévoilez votre valeur cachée et commencez un voyage vers votre véritable vous – faites de votre image une source de bien-être. Le processus:<br><br>Le processus:</strong>'
 home.middle-text.p1.ol: "<li><strong>Exploration intérieure :</strong> Nous dévoilons votre identité profonde, vos émotions et vos valeurs.</li> <li><strong>Connexion :</strong> À travers un coaching en 3D, nous connectons votre image interne, corporelle et externe\_- identité, intériorité, apparence physique et style unique - pour que vous puissiez vous voir et vous montrer telle que vous êtes vraiment.</li> <li><strong>Libération et célébration :</strong> Finis les blocages et la honte. Vous apprendrez à apprécier vos qualités et à célébrer votre unicité.</li>"
-home.middle-text.p2: '<strong>Pourquoi moi ?<br><br></strong> <strong>Parce que je suis passée par là.<br><br></strong> J’ai connu la douleur de <strong>l’;invisibilité</strong> et le poids du <strong>jugement.</strong> Mon parcours personnel et ma formation unique m’;ont permis de développer une méthodologie réaliste et profonde. Je vous offre plus qu’;une simple solution esthétique : une réconciliation de l’;intérieur avec l’;extérieur pour prendre votre place dans le monde, vous sentir plus à l’aise et avoir <strong>une image plus complète (et non parfaite) cohérence avec votre identité. </strong><br><br><strong>Ce que vous allez gagner :</strong>'
+home.middle-text.p2: '<strong>Pourquoi moi ?<br><br></strong> <strong>Parce que je suis passée par là.<br><br></strong> J’ai connu la douleur de <strong>l’invisibilité</strong> et le poids du <strong>jugement.</strong> Mon parcours personnel et ma formation unique m’;ont permis de développer une méthodologie réaliste et profonde. Je vous offre plus qu’;une simple solution esthétique : une réconciliation de l’;intérieur avec l’;extérieur pour prendre votre place dans le monde, vous sentir plus à l’aise et avoir <strong>une image plus complète (et non parfaite) cohérence avec votre identité. </strong><br><br><strong>Ce que vous allez gagner :</strong>'
 home.middle-text.p2.ul: '<li>Une image qui reflète votre véritable identité</li> <li>La capacité de gérer vos émotions et de surmonter la peur et la honte</li> <li>Plus de liberté intérieure et de confiance en vous</li> <li>Faire parler votre créativité</li>'
 home.middle-text.p3: '<strong>Vous êtes unique, votre parcours aussi</strong><br><br> Chaque femme est <strong>unique,</strong> et il est temps que le monde voit <strong>votre lumière</strong> <strong>particulière.</strong> Ensemble, nous allons déboucher cette bouteille de champagne intérieur, et laisser jaillir votre nectar de beauté, de confiance et de liberté.<br><br> <strong>Prête à commencer votre voyage ?</strong><br><br> Contactez-moi et commencez votre voyage vers la liberté intérieure et l’expression de votre véritable vous. Réservez votre session de découverte <strong>gratuite</strong> de 30 minutes.'
 home.middle-text.p4: 'Découvrez ce que je peux faire pour votre bien-être et votre style !'
@@ -235,34 +235,8 @@ giftCard.index.ol.1: "<li><strong>Sélectionnez le montant :</strong> Choisissez
 giftCard.index.p.2: "<strong>Note:</strong> La carte-cadeau est nominative et peut, si vous le souhaitez, indiquer les noms des personnes ayant contribué au cadeau. Assurez-vous que la personne bénéficiaire est<strong> d'accord et enthousiaste</strong> à l'idée de recevoir ce cadeau, surtout si vous choisissez un programme de coaching.<br> Pour toute question, n’hésitez pas à me contacter. "
 home.giftCard.p: 'Le cadeau de l’authenticité : donnez à vos proches l’occasion de découvrir leur valeur cachée'
 giftCard.index.h5.2: 'Comment ça marche ?'
-smallCommentary.h5.1: "Témoignages de celles qui ont trouvé
-confiance, harmonie et leur style
-authentique"
-smallCommentary.p.1: '<i>&quot;J&#39;ai découvert en moi une artiste intérieure
-qui sait ce qui est juste et ce qui est faux.&quot; -
-Margit, 48 ans</i><br><br>
-<i>&quot;Avant ce programme, je me sentais
-surexcitée. Je vivais à un rythme trépidant et
-je doutais de moi. Aujourd&#39;hui, je suis
-capable de vivre le moment présent et d&#39;être
-reconnaissante&quot;.</i> - Anneli, 50 ans<br><br>
-<i>&quot;La session sur les couleurs a réfuté toutes
-mes opinions précédentes sur moi-même... Je
-suis arrivée et repartie avec un très bon
-feeling. Fabienne est une personne vraiment
-fascinante et chaleureuse.&quot;</i> - Christelle, 27
-ans<br><br>
-<i>&quot;Presque un an après avoir terminé mon
-processus de coaching, je suis infiniment
-reconnaissante pour toute cette
-simplification.&quot;</i> - Ghislaine, 49 ans<br><br>
-<i>&quot;Merci beaucoup pour cette séance. Jouer
-avec des couleurs claires est tellement plus
-amusant que des couleurs foncées. Je suis en
-train de renforcer ma féminité et les
-nouvelles couleurs m&#39;y aident beaucoup. Ces
-connaissances me seront très utiles pour
-décorer mon appartement et baisser la
-pression en tant que personne souvent
-stressée.&quot;</i> – Christine, 30 ans'
-smallCommentary.h3.1: "VOS HISTOIRES DE LIBERATION"
+smallCommentary.h5.1: 'Témoignages de celles qui ont trouvé confiance, harmonie et leur style authentique'
+smallCommentary.p.1: '<i>&quot;J&#39;ai découvert en moi une artiste intérieure qui sait ce qui est juste et ce qui est faux.&quot; - Margit, 48 ans</i><br><br> <i>&quot;Avant ce programme, je me sentais surexcitée. Je vivais à un rythme trépidant et je doutais de moi. Aujourd&#39;hui, je suis capable de vivre le moment présent et d&#39;être reconnaissante&quot;.</i> - Anneli, 50 ans<br><br> <i>&quot;La session sur les couleurs a réfuté toutes mes opinions précédentes sur moi-même... Je suis arrivée et repartie avec un très bon feeling. Fabienne est une personne vraiment fascinante et chaleureuse.&quot;</i> - Christelle, 27 ans<br><br> <i>&quot;Presque un an après avoir terminé mon processus de coaching, je suis infiniment reconnaissante pour toute cette simplification.&quot;</i> - Ghislaine, 49 ans<br><br> <i>&quot;Merci beaucoup pour cette séance. Jouer avec des couleurs claires est tellement plus amusant que des couleurs foncées. Je suis en train de renforcer ma féminité et les nouvelles couleurs m&#39;y aident beaucoup. Ces connaissances me seront très utiles pour décorer mon appartement et baisser la pression en tant que personne souvent stressée.&quot;</i> – Christine, 30 ans'
+smallCommentary.h3.1: 'VOS HISTOIRES DE LIBERATION'
+button.service: PRESTATIONS
+navbar.marquee: "Bar d'annonce"

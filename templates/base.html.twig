@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" name="description" content="{% block metaDescription %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Fabimage{% endblock %}</title>
         <link rel="icon" href="{{ asset('build/images/favicon.ico') }}">
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
@@ -17,10 +17,10 @@
     </head>
     <body class="d-flex flex-column">
     {% include '_include/_navbar.html.twig' %}
+    {{ render(controller('App\\Controller\\MarqueeController::marqueeBar')) }}
     <main class="body">
         {% block body %}
         {% endblock %}
-
     </main>
     {% include '_include/_footer.html.twig' %}
     {% block script %}

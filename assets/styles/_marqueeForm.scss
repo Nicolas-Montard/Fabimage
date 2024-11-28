@@ -1,0 +1,12 @@
+.marquee-form{
+    .widget{
+      height: 40px;
+      width: 1000px;
+      @include media-breakpoint-down(xl){
+        width: 90vw;
+      }
+    }
+    .field-container{
+        margin-top: 20px!important;
+      }
+  }

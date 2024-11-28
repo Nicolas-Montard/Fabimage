@@ -3,25 +3,36 @@
 namespace App\Controller;
 
 use App\Entity\Book;
-use App\Entity\PromotionalCode;
 use App\Entity\Token;
 use App\Form\BookType;
-use App\Repository\BookRepository;
-use App\Repository\PromotionalCodeRepository;
-use App\Repository\TokenRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Stripe\StripeClient;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\SecurityBundle\Security;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\Mailer;
-use Symfony\Component\Mailer\MailerInterface;
+use App\Entity\BookEmail;
+use App\Entity\PromotionalCode;
 use Symfony\Component\Mime\Email;
-use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\BookRepository;
+use App\Repository\TokenRepository;
+use Symfony\Component\Mailer\Mailer;
+use App\Entity\FollowupemailHasToken;
+use App\Repository\BookEmailRepository;
+use Doctrine\ORM\EntityManagerInterface;
+
+use function PHPUnit\Framework\throwException;
 use function Symfony\Component\Clock\now;
+use Symfony\Bundle\SecurityBundle\Security;
+use App\Repository\PromotionalCodeRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\FollowupemailHasTokenRepository;
+use DateTimeImmutable;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\Mailer\Exception\TransportException;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Psr\Cache\CacheItemPoolInterface as AdapterInterface;
+use Symfony\Component\Mime\Crypto\DkimSigner;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 #[Route('/book')]
 class BookController extends AbstractController
@@ -165,7 +176,7 @@ class BookController extends AbstractController
     }
 
     #[Route('/success/{id}', name: 'app_success')]
-    public function success(Request $request, MailerInterface $mailer, Book $book, TokenRepository $tokenRepository): Response
+    public function success(Request $request, MailerInterface $mailer, Book $book, TokenRepository $tokenRepository, BookEmailRepository $bookEmailRepository, FollowupemailHasTokenRepository $followupemailHasTokenRepository): Response
     {
        $id_sessions=$request->query->get('id_sessions');
        $customer=$this->gateway->checkout->sessions->retrieve(
@@ -182,7 +193,12 @@ class BookController extends AbstractController
        $token->setLanguage($request->getLocale());
        $token->setEmail($customerEmail);
        $tokenRepository->save($token, true);
-
+       foreach ($book->getFollowUpEmails() as $followUpEmail) {
+        $followupemailHasToken = new FollowupemailHasToken;
+        $followupemailHasToken->setToken($token);
+        $followupemailHasToken->setFollowUpEmail($followUpEmail);
+        $followupemailHasTokenRepository->save($followupemailHasToken, true);
+    }
        $local = $request->getLocale();
        if ($local == 'fr'){
            $subject = $book->getNameFr();
@@ -198,7 +214,7 @@ class BookController extends AbstractController
            ->from($this->getParameter('mailer_from'))
            ->to($customerEmail)
            ->subject($subject)
-           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => ucfirst($local), 'free' => 0, 'book' => $book]))
+           ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $id_sessions, 'lang' => $local, 'free' => 0, 'book' => $book]))
        ;
        if (
         $book->getAnnexFr() && $local == 'fr' ||
@@ -207,17 +223,17 @@ class BookController extends AbstractController
        ) {
         $email->attachFromPath(__DIR__ . '/../../private/uploads/annex/' . $annex);
        }
-        $maxAttempts = 3;
-        $attempts = 0;
-        while ($attempts < $maxAttempts) {
-            $emailNotSent = true;
-            try {
-                $mailer->send($email);
-                $emailNotSent = false;
-                break;
-            } catch (TransportExceptionInterface $e) {
-                $attempts++;
-            }
+       $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+       $signedEmail = $signer->sign($email);
+        try {
+            $mailer->send($signedEmail);
+        } catch (TransportExceptionInterface $e) {
+            $bookEmail = new BookEmail();
+            $bookEmail->setToken($token);
+            $bookEmail->setType('customerBook');
+            $bookEmail->setCreatedAt(new DateTimeImmutable());
+            $bookEmailRepository->save($bookEmail, true);
+            file_put_contents('errorLogBookCustomer', $e . " - " . date('Y-m-d H:i') . "\n", FILE_APPEND);
         }
        return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }
@@ -229,7 +245,7 @@ class BookController extends AbstractController
     }
 
     #[Route('/downloadFree/{id}', name: 'app_download_free')]
-    public function downloadFree(Request $request, TokenRepository $tokenRepository, Book $book, PromotionalCodeRepository $promotionalCodeRepository, MailerInterface $mailer): Response
+    public function downloadFree(Request $request, TokenRepository $tokenRepository, Book $book, PromotionalCodeRepository $promotionalCodeRepository, MailerInterface $mailer, BookEmailRepository $bookEmailRepository, FollowupemailHasTokenRepository $followupemailHasTokenRepository): Response
     {
         if ($request->query->get('promoCode')){
             $promotionalCode = $promotionalCodeRepository->findOneBy(['name' => $request->query->get('promoCode'), 'Book' => $book]);
@@ -252,7 +268,15 @@ class BookController extends AbstractController
         $token->setBook($book);
         $token->setLanguage($language);
         $token->setEmail($request->query->get('email'));
+        $token->setFirstName($request->query->get('firstName'));
         $tokenRepository->save($token, true);
+        foreach ($book->getFollowUpEmails() as $followUpEmail) {
+            $followupemailHasToken = new FollowupemailHasToken;
+            $followupemailHasToken->setToken($token);
+            $followupemailHasToken->setFollowUpEmail($followUpEmail);
+            $followupemailHasTokenRepository->save($followupemailHasToken, true);
+        }
+
         if ($language == 'fr'){
             $subject = $book->getNameFr();
             $annex = $book->getAnnexFr();
@@ -267,7 +291,7 @@ class BookController extends AbstractController
             ->from($this->getParameter('mailer_from'))
             ->to($request->query->get('email'))
             ->subject($subject)
-            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => ucfirst($language), 'free' => 1, 'book' => $book]))
+            ->html($this->renderView('book/buyedBookEmail.html.twig', ['token' => $token->getContent(), 'lang' => $language, 'free' => 1, 'book' => $book]))
         ;
         if (
             $book->getAnnexFr() && $language == 'fr' ||
@@ -276,34 +300,34 @@ class BookController extends AbstractController
            ) {
             $email->attachFromPath(__DIR__ . '/../../private/uploads/annex/' . $annex);
            }
-        $maxAttempts = 3;
-        $attempts = 0;
-        while ($attempts < $maxAttempts) {
-            $emailNotSent = true;
-            try {
-                $mailer->send($email);
-                $emailNotSent = false;
-                break;
-            } catch (TransportExceptionInterface $e) {
-                $attempts++;
-            }
+        $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+        $signedEmail = $signer->sign($email);
+        try {
+            $mailer->send($signedEmail);
+        } catch (TransportExceptionInterface $e) {
+            $bookEmail = new BookEmail();
+            $bookEmail->setToken($token);
+            $bookEmail->setType('customerBook');
+            $bookEmail->setCreatedAt(new DateTimeImmutable());
+            $bookEmailRepository->save($bookEmail, true);
+            file_put_contents('errorLogBookCustomer', $e . " - " . date('Y-m-d H:i') . "\n", FILE_APPEND);
         }
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
                 ->to($this->getParameter('mailer_to'))
-                ->subject($request->query->get('firstName') . " " . $request->query->get('name') . ' a telechargé ' . $subject)
-                ->html($this->renderView('book/downloadBookEmail.html.twig', ['nom' => $request->query->get('name'), 'firstName' => $request->query->get('firstName'), 'email' => $request->query->get('email'), 'book' => $subject]));
-            $maxAttempts = 3;
-            $attempts = 0;
-            while ($attempts < $maxAttempts) {
-                $emailNotSent = true;
-                try {
-                    $mailer->send($email);
-                    $emailNotSent = false;
-                    break;
-                } catch (TransportExceptionInterface $e) {
-                    $attempts++;
-                }
+                ->subject($request->query->get('firstName') . ' a teléchargé ' . $subject)
+                ->html($this->renderView('book/downloadBookEmail.html.twig', ['nom' => $request->query->get('name'), 'firstName' => $request->query->get('firstName'), 'mail' => $request->query->get('email'), 'book' => $subject]));
+            $signer = new DkimSigner($this->getParameter('dkim_key'), 'fabimage.coach', 'symfony');
+            $signedEmail = $signer->sign($email);
+            try {
+                $mailer->send($signedEmail);
+            } catch (TransportExceptionInterface $e) {
+                $bookEmail = new BookEmail();
+                $bookEmail->setToken($token);
+                $bookEmail->setType('adminBook');
+                $bookEmail->setCreatedAt(new DateTimeImmutable());
+                $bookEmailRepository->save($bookEmail, true);
+                file_put_contents('errorLogBookAdmin', $e . " - " . date('Y-m-d H:i') . "/n", FILE_APPEND);
             }
         return $this->redirectToRoute('app_book_index', ['buyed' => 1]);
     }

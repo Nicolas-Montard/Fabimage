@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\FollowUpEmail;
+use App\Entity\FollowupemailHasToken;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<FollowUpEmail>
+ * @extends ServiceEntityRepository<FollowupemailHasToken>
  *
- * @method FollowUpEmail|null find($id, $lockMode = null, $lockVersion = null)
- * @method FollowUpEmail|null findOneBy(array $criteria, array $orderBy = null)
- * @method FollowUpEmail[]    findAll()
- * @method FollowUpEmail[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method FollowupemailHasToken|null find($id, $lockMode = null, $lockVersion = null)
+ * @method FollowupemailHasToken|null findOneBy(array $criteria, array $orderBy = null)
+ * @method FollowupemailHasToken[]    findAll()
+ * @method FollowupemailHasToken[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class FollowUpEmailRepository extends ServiceEntityRepository
+class FollowupemailHasTokenRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, FollowUpEmail::class);
+        parent::__construct($registry, FollowupemailHasToken::class);
     }
 
-    public function save(FollowUpEmail $entity, bool $flush = false): void
+    public function save(FollowupemailHasToken $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,8 +30,16 @@ class FollowUpEmailRepository extends ServiceEntityRepository
         }
     }
 
+    public function remove($entity, bool $flush = false): void
+{
+    $this->_em->remove($entity);
+    if ($flush) {
+        $this->_em->flush();
+    }
+}
+
 //    /**
-//     * @return FollowUpEmail[] Returns an array of FollowUpEmail objects
+//     * @return FollowupemailHasToken[] Returns an array of FollowupemailHasToken objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -45,7 +53,7 @@ class FollowUpEmailRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?FollowUpEmail
+//    public function findOneBySomeField($value): ?FollowupemailHasToken
 //    {
 //        return $this->createQueryBuilder('f')
 //            ->andWhere('f.exampleField = :val')

@@ -17,7 +17,7 @@ contact.service.form.client: 'Ma olen :'
 contact.form.firstName: Eesnimi
 contact.form.lastName: Perekonnanimi
 contact.form.phoneNumber: Telefon
-contact.service.form.message: 'Sõnum'
+contact.service.form.message: Sõnum
 contact.workshop.validation: 'Tänan kirjutamast!<br><br>Kui te ei ole saanud vastust 2-3 päeva jooksul, siis võis see minna rämpsposti või kui kasutate<br>Gmaili, Notifications vahekaardile.<br>Võite olla kindel, et teie andmeid hoitakse turvaliselt ja need jäävad meie vahele.'
 contact.workshop.title: 'Registreerin Fabimage õpituppa/online meistriklassi<br>Tulevased õpitoad / meistriklassid:'
 contact.workshop.undertitle: 'Õpitoad toimuvad aadressil: P. Süda 13, Tallinna kesklinnas.<br><br>Online meistriklassid toimuvad Zoomi keskkonnas. Lingi osalemiseks saab iga registreerunu päev enne toimumist oma e-posti aadressile.'
@@ -224,31 +224,8 @@ giftCard.index.ol.1: '<li><strong>Vali summa :</strong> Vali summa, mida soovid 
 giftCard.index.p.2: '<strong>Märkus:</strong> kinkekaart on nominaalne ja soovi korral võib märkida nende inimeste nimed, kes on kingitusse panustanud. Veenduge, et kingituse saaja <strong>on sellega nõus ja innustunud,</strong> eriti kui valite coachingu programmi.<br> Kui sul on küsimusi, võta minuga julgelt ühendust '
 home.giftCard.p: 'Autentsuse kingitus: anna oma lähedastele võimalus avastada oma varjatud väärtust'
 giftCard.index.h5.2: 'Kuidas see toimib?'
-smallCommentary.h3.1: "TEIE VABASTAMISE LOOD"
-smallCommentary.h5.1: "Kuidas minu kliendid taastasid
-enesekindluse ja nähtavuse ning
-avaldasid oma tõelise väärtuse"
-smallCommentary.p.1: "<i>&quot;Olen avastanud endas sisemise kunstniku,
-kes teab, mis on õige ja mis on vale.&quot;</i> -
-Margit, 48-aastane<br><br>
-<i>&quot;Enne seda programmi tundsin end olevat
-põnevil. Elasin kiires tempos ja endas
-kaheldes. Nüüd võin elada hetkes ja olla
-tänulik.&quot;</i> - Anneli, 50<br><br>
-<i>&quot;Värvisessioon lükkas ümber kõik minu
-senised arvamused enda kohta... Tulin
-kohale ja lahkusin väga hea tundega.
-Fabienne on tõeliselt põnev ja soe inimene.&quot;</i>
-- Kersti, 27-aastane<br><br>
-<i>&quot;Peaaegu aasta pärast minu
-coachinguprotsessi lõpetamist olen ma
-lõpmatult tänulik kogu selle lihtsustamise
-eest.&quot;</i> - Ghislaine, 49-aastane<br><br>
-<i>&quot;Tänan sind väga selle sessiooni eest.
-Heledate värvidega mängimine on palju
-lõbusam kui tumedate värvidega. Olen oma
-naiselikkuse tugevdamise teel ja uued värvid
-aitavad mind väga. Need teadmised on väga
-kasulikud minu korteri sisustamisel ja
-võtavad survet maha kui kellelgi, kes on
-sageli stressis.&quot;</i> - Kristyna, 30-aastane"
+smallCommentary.h3.1: 'TEIE VABASTAMISE LOOD'
+smallCommentary.h5.1: 'Kuidas minu kliendid taastasid enesekindluse ja nähtavuse ning avaldasid oma tõelise väärtuse'
+smallCommentary.p.1: '<i>&quot;Olen avastanud endas sisemise kunstniku, kes teab, mis on õige ja mis on vale.&quot;</i> - Margit, 48-aastane<br><br> <i>&quot;Enne seda programmi tundsin end olevat põnevil. Elasin kiires tempos ja endas kaheldes. Nüüd võin elada hetkes ja olla tänulik.&quot;</i> - Anneli, 50<br><br> <i>&quot;Värvisessioon lükkas ümber kõik minu senised arvamused enda kohta... Tulin kohale ja lahkusin väga hea tundega. Fabienne on tõeliselt põnev ja soe inimene.&quot;</i> - Kersti, 27-aastane<br><br> <i>&quot;Peaaegu aasta pärast minu coachinguprotsessi lõpetamist olen ma lõpmatult tänulik kogu selle lihtsustamise eest.&quot;</i> - Ghislaine, 49-aastane<br><br> <i>&quot;Tänan sind väga selle sessiooni eest. Heledate värvidega mängimine on palju lõbusam kui tumedate värvidega. Olen oma naiselikkuse tugevdamise teel ja uued värvid aitavad mind väga. Need teadmised on väga kasulikud minu korteri sisustamisel ja võtavad survet maha kui kellelgi, kes on sageli stressis.&quot;</i> - Kristyna, 30-aastane'
+button.service: TEENUSED
+navbar.marquee: "Teadaannete riba"
