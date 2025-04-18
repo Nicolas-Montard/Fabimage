@@ -1,14 +1,16 @@
-{% if app.request.locale == 'fr' and marquee.contentFr %}
-    <div class="marquee bg-primary">
-        <p class="text-white">{{ marquee.contentFr }}</p>
-    </div>
-{% elseif app.request.locale == 'es' and marquee.contentEs %}
-    <div class="marquee bg-primary">
-        <p class="text-white">{{ marquee.contentEs }}</p>
-    </div>
-{% elseif app.request.locale == 'et' and marquee.contentEt %}
-    <div class="marquee bg-primary">
-        <p class="text-white">{{ marquee.contentEt }}</p>
-    </div>
+{% if marquee %}
+    {% if app.request.locale == 'fr' and marquee.contentFr %}
+        <div class="marquee bg-primary">
+            <p class="text-white">{{ marquee.contentFr|make_links_clickable|raw }}</p>
+        </div>
+    {% elseif app.request.locale == 'es' and marquee.contentEs %}
+        <div class="marquee bg-primary">
+            <p class="text-white">{{ marquee.contentEs|make_links_clickable|raw }}</p>
+        </div>
+    {% elseif app.request.locale == 'et' and marquee.contentEt %}
+        <div class="marquee bg-primary">
+            <p class="text-white">{{ marquee.contentEt|make_links_clickable|raw }}</p>
+        </div>
+    {% endif %}
 {% endif %}
 
